@@ -1,7 +1,6 @@
 $color-blue: #0aaed3
 $color-nonactivegrey: #bcbcbc
 
-
 .clearfix
   &:before
     content: " "
@@ -503,7 +502,7 @@ label
   margin-bottom: 70px
 
 .select-apartment
-  min-height: 1320px
+  min-height: 1420px
   .sortby
     margin-bottom: 45px
     span
@@ -605,11 +604,54 @@ label
   .apartment-list-item
     padding: 0
     list-style: none
+    .main-desc
+      margin-left: -25px
+      width: 180px
+      .title
+        width: 180px
+        color: $color-blue
+        font-size: 18px
+        font-weight: bold
+        margin-bottom: 10px
+      i
+        display: block
+        float: left
+        margin-right: 3px
+      span
+        display: block
+        float: left
+        margin-right: 5px
+        width: 65px
+        
     li
       display: inline-block
       margin-bottom: 52px
       float: left
+      margin-right: 30px
+      &:last-child
+        margin-right: 0px
+      i
+        float: left
+        margin-right: 10px
+      span
+        width: 110px
+        display: block
+        float: left
+      .pricee
+        width: 190px
+        font-size: 30px !important
+        font-weight: bold
+        color: $color-blue
 
+.show-else
+  width: 160px
+  margin: auto
+  i
+    float: left
+    margin-right: 10px
+  span
+    float: left
+    font-size: 20px
 
 
 .autoparking

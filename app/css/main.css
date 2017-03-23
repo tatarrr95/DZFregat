@@ -502,7 +502,7 @@ label {
   margin-bottom: 70px; }
 
 .select-apartment {
-  min-height: 1320px; }
+  min-height: 1420px; }
   .select-apartment .sortby {
     margin-bottom: 45px; }
     .select-apartment .sortby span {
@@ -601,10 +601,53 @@ label {
   .apartment-list .apartment-list-item {
     padding: 0;
     list-style: none; }
+    .apartment-list .apartment-list-item .main-desc {
+      margin-left: -25px;
+      width: 180px; }
+      .apartment-list .apartment-list-item .main-desc .title {
+        width: 180px;
+        color: #0aaed3;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px; }
+      .apartment-list .apartment-list-item .main-desc i {
+        display: block;
+        float: left;
+        margin-right: 3px; }
+      .apartment-list .apartment-list-item .main-desc span {
+        display: block;
+        float: left;
+        margin-right: 5px;
+        width: 65px; }
     .apartment-list .apartment-list-item li {
       display: inline-block;
       margin-bottom: 52px;
-      float: left; }
+      float: left;
+      margin-right: 30px; }
+      .apartment-list .apartment-list-item li:last-child {
+        margin-right: 0px; }
+      .apartment-list .apartment-list-item li i {
+        float: left;
+        margin-right: 10px; }
+      .apartment-list .apartment-list-item li span {
+        width: 110px;
+        display: block;
+        float: left; }
+      .apartment-list .apartment-list-item li .pricee {
+        width: 190px;
+        font-size: 30px !important;
+        font-weight: bold;
+        color: #0aaed3; }
+
+.show-else {
+  width: 160px;
+  margin: auto; }
+  .show-else i {
+    float: left;
+    margin-right: 10px; }
+  .show-else span {
+    float: left;
+    font-size: 20px; }
 
 .autoparking {
   width: 100%;
