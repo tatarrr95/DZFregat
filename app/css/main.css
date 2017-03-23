@@ -558,3 +558,39 @@ body p, span {
         margin-right: 10px;
         background-color: #6f6f6f;
         margin-bottom: 0px; }
+
+.dom-rasp {
+  height: 340px;
+  width: 100%;
+  background-color: #FFF; }
+  .dom-rasp .header {
+    font-size: 46px;
+    text-align: center;
+    color: #0aaed3;
+    display: block;
+    font-weight: bold;
+    margin-top: 70px; }
+  .dom-rasp .description {
+    text-align: center;
+    display: block;
+    font-size: 20px; }
+
+.map {
+  height: 676px;
+  width: 100%;
+  background-color: #e0d6a9; }
+
+.complete-objects {
+  height: 710px; }
+  .complete-objects .header {
+    font-size: 46px;
+    text-align: center;
+    color: #0aaed3;
+    display: block;
+    font-weight: bold;
+    margin-top: 70px; }
+  .complete-objects .complete-objects-list li {
+    display: inline-block; }
+  .complete-objects .buttons {
+    margin: auto;
+    width: 680px; }
