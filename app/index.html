@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="css/sprite.css">
 		<!-- <link rel="stylesheet" href="css/style.css"> -->
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/nouislider.css">
 		<!-- modernizer -->
 		<script src="bower/modernizer/modernizr.js"></script>
 	</head>
@@ -241,6 +242,155 @@
 						На генплане
 					</button>
 				</div>
+				<div class="select-apartment-body">
+					<div class="select-apartment-filter">
+						<div class="select-apartment-filter-regulators clearfix">
+							<div class="floor">
+								<span class="title">Выберете этаж</span>
+								<div class="inputs clearfix">
+									<div class="from">
+										<span>от</span>
+										<input id="floor-from" type="text" placeholder="1">
+									</div>
+									<div class="to">
+										<span>до</span>
+										<input id="floor-to" type="text" placeholder="25">
+									</div>
+								</div>
+								<div class="range" id="floorRange"></div>
+								<div class="range-vals" style="width: 250px">
+									<span class="left-val">1</span>
+									<span class="right-val">25</span>
+								</div>
+							</div>
+							<div class="area">
+								<span class="title">Выберете площадь</span>
+								<div class="inputs clearfix">
+									<div class="from">
+										<span>от</span>
+										<input id="area-from" type="text" placeholder="27">
+									</div>
+									<div class="to">
+										<span>до</span>
+										<input id="area-to" type="text" placeholder="72">
+									</div>
+								</div>
+								<div class="range" id="areaRange"></div>
+								<div class="range-vals" style="width: 250px">
+									<span class="left-val">27</span>
+									<span class="right-val">72</span>
+								</div>
+							</div>
+							<div class="price">
+								<span class="title">Цена квартиры</span>
+								<div class="inputs clearfix">
+									<div class="from">
+										<span>от</span>
+										<input id="price-from" type="text" placeholder="1 700 000">
+									</div>
+									<div class="to">
+										<span>до</span>
+										<input id="price-to" type="text" placeholder="4 000 000">
+									</div>
+								</div>
+								<div class="range" id="priceRange"></div>
+								<div class="range-vals" style="width: 550px">
+									<span class="left-val">1,7 млн</span>
+									<span class="right-val">4 млн</span>
+								</div>
+							</div>
+						</div>
+						<div class="select-apartment-filter-bot clearfix">
+							<div class="filter-checkboxes">
+								<input class="checkbox" type="checkbox" id="1room">
+								<label for="1room">1 комната</label>
+								<input class="checkbox" type="checkbox" id="3room">
+								<label for="3room">3 комнаты</label>
+							</div>
+							<button>ПОДОБРАТЬ</button>
+						</div>
+					</div>
+
+					<div class="sortby clearfix">
+						<span class="title">Сортировка</span>
+						<span class="sortby-value">Этаж</span>
+						<span class="sortby-value">Количество комнат</span>
+						<span class="sortby-value">Площадь</span>
+						<span class="sortby-value">Цена</span>
+					</div>
+					<ul class="apartment-list">
+						<li>
+							<ul class="apartment-list-item clearfix">
+								<li><i class="sprite sprite-dom"></i></li>
+								<li></li>
+								<li><span>Добавить к сравнению</span></li>
+								<li><span>Забронировать</span></li>
+								<li><span>Распечатать предложение</span></li>
+								<li><span>Рассчитать ипотеку</span></li>
+								<li><span>1 700 000 руб</span></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="apartment-list-item clearfix">
+								<li><i class="sprite sprite-dom"></i></li>
+								<li></li>
+								<li><span>Добавить к сравнению</span></li>
+								<li><span>Забронировать</span></li>
+								<li><span>Распечатать предложение</span></li>
+								<li><span>Рассчитать ипотеку</span></li>
+								<li><span>1 700 000 руб</span></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="apartment-list-item clearfix">
+								<li><i class="sprite sprite-dom"></i></li>
+								<li></li>
+								<li><span>Добавить к сравнению</span></li>
+								<li><span>Забронировать</span></li>
+								<li><span>Распечатать предложение</span></li>
+								<li><span>Рассчитать ипотеку</span></li>
+								<li><span>1 700 000 руб</span></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="apartment-list-item clearfix">
+								<li><i class="sprite sprite-dom"></i></li>
+								<li></li>
+								<li>
+									<i class="sprite sprite-dom"></i>
+									<span>Добавить к сравнению</span>
+								</li>
+								<li><span>Забронировать</span></li>
+								<li><span>Распечатать предложение</span></li>
+								<li><span>Рассчитать ипотеку</span></li>
+								<li><span>1 700 000 руб</span></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="apartment-list-item clearfix">
+								<li><i class="sprite sprite-dom"></i></li>
+								<li></li>
+								<li><span>Добавить к сравнению</span></li>
+								<li><span>Забронировать</span></li>
+								<li><span>Распечатать предложение</span></li>
+								<li><span>Рассчитать ипотеку</span></li>
+								<li><span>1 700 000 руб</span></li>
+							</ul>
+						</li>
+						<li>
+							<ul class="apartment-list-item clearfix">
+								<li><i class="sprite sprite-dom"></i></li>
+								<li></li>
+								<li><span>Добавить к сравнению</span></li>
+								<li><span>Забронировать</span></li>
+								<li><span>Распечатать предложение</span></li>
+								<li><span>Рассчитать ипотеку</span></li>
+								<li><span>1 700 000 руб</span></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
 			</div>
 		</div>
 
@@ -282,6 +432,24 @@
 				</div>
 				<div class="news-body">
 					<span class="header">НОВОСТИ</span>
+					<ul class="news-body-list">
+						<li>
+							<span class="news-list-item-date">03 февраля 2017</span>
+							<span class="news-list-item-title">Умножаем Материнский Капитал!</span>
+							<span class="new-list-item-description">Узнайте, как можно получить отличную скидку на приобретение квартиры с использованием материнского капитала!</span>
+							<button>Подробнее</button>
+						</li>
+						<li>
+							<span class="news-list-item-date">03 февраля 2017</span>
+							<span class="news-list-item-title">Умножаем Материнский Капитал!</span>
+							<span class="new-list-item-description">Узнайте, как можно получить отличную скидку на приобретение квартиры с использованием материнского капитала!</span>
+							<button>Подробнее</button>
+						</li>
+					</ul>
+					<div class="else clerafix">
+						<i class="sprite sprite-refresh"></i>
+						<span>Показать еще</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -302,9 +470,18 @@
 			<div class="sub-width clearfix">
 				<span class="header">ПОСТРОЕННЫЕ ОБЪЕКТЫ ВО ВЛАДИВОСТОКЕ</span>
 				<ul class="complete-objects-list">
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>
+						<img src="img/complete-objects1.png" alt="">
+						<span>Дом Ватутина, 4а сдан в 2007</span>
+					</li>
+					<li>
+						<img src="img/complete-objects2.png" alt="">
+						<span>Дом Ватутина, 4в сдан в 2013</span>
+					</li>
+					<li>
+						<img src="img/complete-objects3.png" alt="">
+						<span>Дом Ватутина, 4д сдан в 2016</span>
+					</li>
 				</ul>
 				<div class="buttons">
 					<button class="features-buttons-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
@@ -313,6 +490,142 @@
 			</div>
 		</div>
 
+		<div class="about">
+			<div class="sub-width clearfix">
+				<span class="header">О ЗАСТРОЙЩИКЕ</span>
+				<div class="about-body clearfix">
+					<div class="description">
+						<p>ООО «Жилкапинвест» с 2004 года успешно работает на строительном рынке России и лижнего зарубежья и с самого начала зарекомендовала себя как стабильная, динамично развивающаяся компания, осуществляющая весь спектр строительных услуг. </p>
+
+						<p>Накопленный в течение 12-ти лет опыт позволяет компании решать практически любые задачи в области организационно-технологического обеспечения, строительства на протяжении всего цикла работ. </p>
+					</div>
+					<ul class="about-list">
+						<li class="clearfix">
+							<i class="sprite sprite-ozast-postr"></i>
+							<div class="about-list-item-description">
+								<span class="primary">>500 000 м²</span>
+								<span class="non-primary">жилья построено</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-ozast-invest"></i>
+							<div class="about-list-item-description">
+								<span class="primary">>20 млрд</span>
+								<span class="non-primary">инвестиций</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-ozast-kvart"></i>
+							<div class="about-list-item-description">
+								<span class="primary">>10 000</span>
+								<span class="non-primary">квартир</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-ozast-let"></i>
+							<div class="about-list-item-description">
+								<span class="primary">>13 лет</span>
+								<span class="non-primary">на рынке</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-ozast-happy"></i>
+							<div class="about-list-item-description">
+								<span class="primary">>30 000</span>
+								<span class="non-primary">счастливых жильцов</span>
+							</div>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-ozast-geo"></i>
+							<div class="about-list-item-description">
+								<span class="primary">>20 городов</span>
+								<span class="non-primary">в 3-ч странах</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<button>ПОДРОБНЕЕ</button>
+			</div>
+		</div>
+		
+		<div class="consulting">
+			<div class="sub-width clearfix">
+				<div class="consulting-personal">
+					
+				</div>
+				<div class="consulting-body">
+					<span class="header">
+						БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ
+					</span>
+					<span class="description">
+						Остались вопросы? Оставьте ваши контактные данные и менеджер нашей компании перезвонит вам, ответит на все вопросы и подберет для вас оптимальные условия
+					</span>
+					<form class="clearfix" action="">
+						<div class="form-left">
+							<input type="text" placeholder="Ваше имя">
+							<input type="text" placeholder="Ваш телефон">
+							<input type="text" placeholder="Ваше email">
+							<input type="checkbox" class="checkbox" id="consult-check">
+							<label for="consult-check">Продублировать это сообщение на мой e-mail</label>
+						</div>
+						<div class="form-right">
+							<textarea name=""></textarea>
+							<button class="features-buttons-select-apartment">ПОЛУЧИТЬ КОНСУЛЬТАУЦИЮ</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer clearfix">
+			<div class="footer-img">
+				<img src="img/sale-otdel.png" alt="">
+			</div>
+			<div class="footer-contact">
+					<span class="header">КОНТАКТЫ</span>
+					<ul class="footer-contact-list">
+						<li class="clearfix">
+							<i class="sprite sprite-geo"></i>
+							<div class="footer-contact-list-body">
+								<p>Офис продаж:</p>
+								<p>ул.Ватутина,4В, секция 5, офис 9</p>
+								<p>пн-чт: 09:00-18:00</p>
+								<p>пт: 00-17:00</p>
+							</div>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-footer-telephone"></i>
+							<div class="footer-contact-list-body">
+								<p>Телефон:</p>
+								<p>8 (423) 202-50-09</p>
+							</div>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-footer-mail"></i>
+							<div class="footer-contact-list-body">
+								<p>Email: info@fregat-vl.ru</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-map">
+					
+				</div>
+		</footer>
+
+		<div class="subfooter">
+			<div class="sub-width clearfix">
+				<div class="left">
+					<span>© «Жилкапинвест» — 2016</span>
+				</div>
+				<div class="center">
+					<a href="">Официальный сайт ООО "Жилакапинвест"</a>
+				</div>
+				<div class="right">
+					<a href="">Разработка сайта dizlab.com</a>
+				</div>
+			</div>
+		</div>
 
 
 	</div>
@@ -321,6 +634,62 @@
 	<!-- bower JS -->
 	<script src="bower/jquery/dist/jquery.js"></script>
 	<!-- JS -->
-	
+	<script src="js/nouislider.js"></script>
+	<script src="js/wNumb.js"></script>
+	<script>
+		var floorRange = document.getElementById('floorRange');
+		var areaRange = document.getElementById('areaRange');
+		var priceRange = document.getElementById('priceRange');
+
+		noUiSlider.create(floorRange, {
+			start: [1, 25],
+			connect: true,
+			step: 1,
+			format: wNumb({
+				decimals: 0
+			}),
+			range: {
+				'min': 1,
+				'max': 25
+			}
+		});
+		noUiSlider.create(areaRange, {
+			start: [27, 72],
+			connect: true,
+			step: 1,
+			format: wNumb({
+				decimals: 0
+			}),
+			range: {
+				'min': 27,
+				'max': 72
+			}
+		});
+		noUiSlider.create(priceRange, {
+			start: [1700000, 4000000],
+			connect: true,
+			step: 50000,
+			format: wNumb({
+				decimals: 0
+			}),
+			range: {
+				'min': 1700000,
+				'max': 4000000
+			}
+		});
+
+		floorRange.noUiSlider.on('slide', function(){
+			$('#floor-from').val(floorRange.noUiSlider.get()[0])
+			$('#floor-to').val(floorRange.noUiSlider.get()[1])
+		});
+		areaRange.noUiSlider.on('slide', function(){
+			$('#area-from').val(areaRange.noUiSlider.get()[0])
+			$('#area-to').val(areaRange.noUiSlider.get()[1])
+		});
+		priceRange.noUiSlider.on('slide', function(){
+			$('#price-from').val(priceRange.noUiSlider.get()[0])
+			$('#price-to').val(priceRange.noUiSlider.get()[1])
+		});
+	</script>
 	</body>
 </html>

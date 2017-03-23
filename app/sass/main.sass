@@ -15,6 +15,51 @@ body p, span
   font-family: 'PT Sans', sans-serif
   // color: #444444
   font-size: 16px
+  color: #444444
+
+a
+  color: $color-blue
+
+button
+  cursor: pointer
+
+input
+  border: 2px solid $color-blue
+  border-radius: 3px
+  font-size: 20px
+
+label 
+  display: inline-block
+  cursor: pointer
+  position: relative
+.checkbox:not(checked)
+  position: absolute
+  opacity: 0
+.checkbox:not(checked) + label
+  position: relative /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 30px /* оставляем слева от label место под псевдочекбокс */
+.checkbox:not(checked) + label:before
+  content: ''
+  position: absolute
+  background-image: url(../img/spritesheet.png)
+  background-repeat: no-repeat
+  width: 22px
+  height: 22px
+  background-position: -464px -100px
+  left: 0
+.checkbox:checked + label:before
+  content: ''
+  position: absolute
+  background-image: url(../img/spritesheet.png)
+  background-repeat: no-repeat
+  width: 22px
+  height: 22px
+  background-position: -5px -5px
+  left: 0
+label
+  margin-top: 15px
+  font-size: 18px
+  color: #444444
 
 .header
   width: 100%
@@ -422,7 +467,6 @@ body p, span
   text-align: center
 
 .select-apartment
-  height: 500px
   width: 100%
   background-color: #fafafa
 
@@ -456,12 +500,122 @@ body p, span
 .select-apartment-buttons
   margin: auto
   width: 490px
+  margin-bottom: 70px
+
+.select-apartment
+  min-height: 1320px
+  .sortby
+    margin-bottom: 45px
+    span
+      float: left
+      font-size: 16px
+      display: block
+      margin-right: 55px
+    .sortby-value
+      cursor: pointer
+    .sortby-value:after
+      content: ''
+      display: block
+      background-image: url(../img/spritesheet.png);
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 14px;
+      background-position: -353px -392px;
+      float: right
+      margin-left: 4px
+      margin-top: 3px 
+    .title
+      font-weight: bold
+  .select-apartment-filter
+    border-bottom: 3px dotted #a8a8a8
+    padding-bottom: 36px
+    margin-bottom: 30px
+    .floor
+      width: 25%
+    .area
+      width: 25%
+    .price
+      width: 50%
+    .floor, .area
+      input::-webkit-input-placeholder
+        text-align: center
+      input
+        text-align: center
+        width: 50px
+      .range
+        width: 210px
+    .price
+      input
+        padding-left: 15px
+        width: 213px
+      .range
+        width: 500px
+
+    .floor, .area, .price
+      float: left
+      .title
+        font-size: 18px
+        font-weight: bold
+        color: #444444
+        margin-bottom: 30px
+        display: block
+      input
+        height: 35px
+        box-sizing: border-box
+      .from
+        float: left
+        margin-right: 50px
+        span
+          font-size: 18px
+      .to
+        float: left
+        span
+          font-size: 18px
+      .inputs
+        margin-bottom: 25px
+      .range
+        margin-left: 20px
+      .range-vals
+        margin-top: 4px
+        font-size: 18px
+        .left-val
+          float: left
+        .right-val
+          float: right
+    .select-apartment-filter-bot
+      margin-top: 20px
+      .filter-checkboxes
+        float: left
+        label
+          margin-right: 30px
+      button
+        float: right
+        width: 220px
+        border: 2px solid $color-blue
+        font-size: 18px
+        height: 45px
+        border-radius: 5px
+        background-color: $color-blue
+        color: #fff
+        margin-right: 41px
+
+.apartment-list
+  padding: 0
+  list-style: none
+  .apartment-list-item
+    padding: 0
+    list-style: none
+    li
+      display: inline-block
+      margin-bottom: 52px
+      float: left
+
+
 
 .autoparking
   width: 100%
   box-sizing: content-box
-  max-height: 720px
-  min-height: 720px
+  height: 719px
   background: url('../img/autoparking.png') no-repeat
   background-position: center top
   .autoparking-header
@@ -521,6 +675,15 @@ body p, span
     width: 50%
     float: right
     padding-left: 40px
+    .else
+      i
+        float: left
+        margin-right: 10px
+      span
+        float: left
+        display: block
+        font-size: 20px
+        color: #444444
   .sub-width
     margin-top: 82px
   .header
@@ -564,6 +727,30 @@ body p, span
         background-color: #6f6f6f
         margin-bottom: 0px
 
+.news-body-list
+  padding: 0
+  list-style: none
+  li
+    border-left: 3px solid $color-blue
+    margin-bottom: 27px
+    padding-left: 26px
+    .news-list-item-date
+      display: block
+      font-size: 16px
+      color: #444444
+      margin-bottom: 20px
+    .news-list-item-title
+      display: block
+      font-size: 28px
+      font-weight: bold
+      color: $color-blue
+      margin-bottom: 20px
+    .new-list-item-description
+      display: block
+      font-size: 18px
+      color: #444444
+      margin-bottom: 20px
+
 .dom-rasp
   height: 340px
   width: 100%
@@ -594,11 +781,232 @@ body p, span
     font-weight: bold
     margin-top: 70px
   .complete-objects-list
+    margin-bottom: 55px
     li
+      width: 370px
       display: inline-block
+      span
+        display: block
+        text-align: center
+        font-size: 23px
+        color: #444444
+      img
+        display: block
+        margin: auto
+        margin-bottom: 53px
   .buttons
     margin: auto
     width: 680px
+
+.about
+  background: url('../img/about.png') no-repeat
+  height: 633px
+  .header
+    font-size: 46px
+    text-align: center
+    color: #fff
+    display: block
+    font-weight: bold
+    margin-top: 70px
+  .about-body
+    margin-bottom: 50px
+    .description
+      margin-right: 50px
+      float: left
+      display: block
+      width: 460px
+      color: #fff
+      p
+        font-size: 20px
+    .about-list
+      width: 605px
+      float: left
+      li
+        width: 300px
+        display: inline-block
+        margin-bottom: 20px
+        i
+          float: left
+          margin-right: 20px
+        .about-list-item-description
+          float: left
+          color: #fff
+          .primary
+            display: block
+            margin-top: 20px
+            font-size: 20px
+          .non-primary
+            font-size: 16px
+  button
+    width: 320px
+    height: 60px
+    background-color: #FFF
+    color: $color-blue
+    font-size: 18px
+    font-weight: bold
+    border: 2px solid #fff
+    border-radius: 5px
+    margin: auto
+    display: block
+
+.consulting
+  height: 614px
+  .consulting-personal
+    float: left
+    width: 487px;
+    height: 100%
+    background: url('../img/personal-item.png') no-repeat
+    margin-right: 10px
+  .consulting-body
+    float: left
+    width: 660px;
+    .header
+      font-size: 46px
+      color: $color-blue
+      display: block
+      font-weight: bold
+      margin-top: 65px
+    .description
+      font-size: 20px
+      color: #444444
+      margin-bottom: 40px
+      display: block
+    form
+      .form-left
+        float: left
+        width: 48%
+        input
+          box-sizing: border-box
+          width: 100%
+          margin-bottom: 23px
+          border: 2px solid $color-blue
+          border-radius: 3px
+          height: 53px
+          padding-left: 20px
+          padding-right: 10px
+          font-size: 20px
+        label 
+          display: inline-block
+          cursor: pointer
+          position: relative
+        .checkbox:not(checked)
+          position: absolute
+          opacity: 0
+        .checkbox:not(checked) + label
+          position: relative /* будем позиционировать псевдочекбокс относительно label */
+          padding: 0 0 0 35px /* оставляем слева от label место под псевдочекбокс */
+        .checkbox:not(checked) + label:before
+          content: ''
+          position: absolute
+          background-image: url(../img/spritesheet.png)
+          background-repeat: no-repeat
+          width: 22px
+          height: 22px
+          background-position: -464px -100px
+          left: 0
+        .checkbox:checked + label:before
+          content: ''
+          position: absolute
+          background-image: url(../img/spritesheet.png)
+          background-repeat: no-repeat
+          width: 22px
+          height: 22px
+          background-position: -5px -5px
+          left: 0
+        label
+          margin-top: 15px
+          width: 220px
+          font-size: 18px
+          color: #444444
+
+
+
+      .form-right
+        float: right
+        width: 48%
+        textarea
+          box-sizing: border-box
+          width: 100%
+          border: 2px solid $color-blue
+          border-radius: 3px
+          height: 205px
+          padding-left: 20px
+          padding-right: 10px
+          padding-top: 15px
+          font-size: 20px
+          overflow: hidden;
+          resize: none;
+          margin-bottom: 22px
+        button
+          width: 100%
+          height: 55px
+
+
+.footer
+  height: 525px;
+  .footer-img
+    overflow: hidden;
+    float: left
+    max-width: 660px
+    img
+      // width: 100%
+      height: 100%
+  .footer-contact
+    background-color: $color-blue
+    float: left
+    width: 500px
+    height: 100%
+    z-index: 2
+    .header
+      font-size: 46px
+      color: #fff
+      display: block
+      font-weight: bold
+      margin-top: 65px
+      margin-left: 55px
+    .footer-contact-list
+      margin-left: 55px
+      list-style: none
+      padding: 0
+      p
+        font-size: 24px
+        line-height: 39px
+        color: #fff
+        margin: 0
+      i
+        margin-top: 10px
+        float: left
+        margin-right: 20px
+      .footer-contact-list-body
+        float: left
+  .footer-map
+    float: left
+    background-color: #000
+    height: 100%
+
+.subfooter
+  height: 111px
+  .left
+    width: 33%
+    margin-top: 50px
+    float: left
+    text-align: left
+    font-size: 18px
+    span
+      font-size: 18px
+  .center
+    width: 33%
+    margin-top: 50px
+    float: left
+    text-align: center
+    font-size: 18px
+  .right
+    width: 33%
+    margin-top: 50px
+    float: left
+    text-align: right
+    font-size: 18px
+
 
 
 

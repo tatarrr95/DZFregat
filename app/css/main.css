@@ -9,7 +9,57 @@
 
 body p, span {
   font-family: 'PT Sans', sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #444444; }
+
+a {
+  color: #0aaed3; }
+
+button {
+  cursor: pointer; }
+
+input {
+  border: 2px solid #0aaed3;
+  border-radius: 3px;
+  font-size: 20px; }
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  position: relative; }
+
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0; }
+
+.checkbox:not(checked) + label {
+  position: relative;
+  padding: 0 0 0 30px; }
+
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  background-position: -464px -100px;
+  left: 0; }
+
+.checkbox:checked + label:before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  background-position: -5px -5px;
+  left: 0; }
+
+label {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #444444; }
 
 .header {
   width: 100%;
@@ -416,7 +466,6 @@ body p, span {
   text-align: center; }
 
 .select-apartment {
-  height: 500px;
   width: 100%;
   background-color: #fafafa; }
 
@@ -449,13 +498,118 @@ body p, span {
 
 .select-apartment-buttons {
   margin: auto;
-  width: 490px; }
+  width: 490px;
+  margin-bottom: 70px; }
+
+.select-apartment {
+  min-height: 1320px; }
+  .select-apartment .sortby {
+    margin-bottom: 45px; }
+    .select-apartment .sortby span {
+      float: left;
+      font-size: 16px;
+      display: block;
+      margin-right: 55px; }
+    .select-apartment .sortby .sortby-value {
+      cursor: pointer; }
+    .select-apartment .sortby .sortby-value:after {
+      content: '';
+      display: block;
+      background-image: url(../img/spritesheet.png);
+      background-repeat: no-repeat;
+      width: 8px;
+      height: 14px;
+      background-position: -353px -392px;
+      float: right;
+      margin-left: 4px;
+      margin-top: 3px; }
+    .select-apartment .sortby .title {
+      font-weight: bold; }
+  .select-apartment .select-apartment-filter {
+    border-bottom: 3px dotted #a8a8a8;
+    padding-bottom: 36px;
+    margin-bottom: 30px; }
+    .select-apartment .select-apartment-filter .floor {
+      width: 25%; }
+    .select-apartment .select-apartment-filter .area {
+      width: 25%; }
+    .select-apartment .select-apartment-filter .price {
+      width: 50%; }
+    .select-apartment .select-apartment-filter .floor input::-webkit-input-placeholder, .select-apartment .select-apartment-filter .area input::-webkit-input-placeholder {
+      text-align: center; }
+    .select-apartment .select-apartment-filter .floor input, .select-apartment .select-apartment-filter .area input {
+      text-align: center;
+      width: 50px; }
+    .select-apartment .select-apartment-filter .floor .range, .select-apartment .select-apartment-filter .area .range {
+      width: 210px; }
+    .select-apartment .select-apartment-filter .price input {
+      padding-left: 15px;
+      width: 213px; }
+    .select-apartment .select-apartment-filter .price .range {
+      width: 500px; }
+    .select-apartment .select-apartment-filter .floor, .select-apartment .select-apartment-filter .area, .select-apartment .select-apartment-filter .price {
+      float: left; }
+      .select-apartment .select-apartment-filter .floor .title, .select-apartment .select-apartment-filter .area .title, .select-apartment .select-apartment-filter .price .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #444444;
+        margin-bottom: 30px;
+        display: block; }
+      .select-apartment .select-apartment-filter .floor input, .select-apartment .select-apartment-filter .area input, .select-apartment .select-apartment-filter .price input {
+        height: 35px;
+        box-sizing: border-box; }
+      .select-apartment .select-apartment-filter .floor .from, .select-apartment .select-apartment-filter .area .from, .select-apartment .select-apartment-filter .price .from {
+        float: left;
+        margin-right: 50px; }
+        .select-apartment .select-apartment-filter .floor .from span, .select-apartment .select-apartment-filter .area .from span, .select-apartment .select-apartment-filter .price .from span {
+          font-size: 18px; }
+      .select-apartment .select-apartment-filter .floor .to, .select-apartment .select-apartment-filter .area .to, .select-apartment .select-apartment-filter .price .to {
+        float: left; }
+        .select-apartment .select-apartment-filter .floor .to span, .select-apartment .select-apartment-filter .area .to span, .select-apartment .select-apartment-filter .price .to span {
+          font-size: 18px; }
+      .select-apartment .select-apartment-filter .floor .inputs, .select-apartment .select-apartment-filter .area .inputs, .select-apartment .select-apartment-filter .price .inputs {
+        margin-bottom: 25px; }
+      .select-apartment .select-apartment-filter .floor .range, .select-apartment .select-apartment-filter .area .range, .select-apartment .select-apartment-filter .price .range {
+        margin-left: 20px; }
+      .select-apartment .select-apartment-filter .floor .range-vals, .select-apartment .select-apartment-filter .area .range-vals, .select-apartment .select-apartment-filter .price .range-vals {
+        margin-top: 4px;
+        font-size: 18px; }
+        .select-apartment .select-apartment-filter .floor .range-vals .left-val, .select-apartment .select-apartment-filter .area .range-vals .left-val, .select-apartment .select-apartment-filter .price .range-vals .left-val {
+          float: left; }
+        .select-apartment .select-apartment-filter .floor .range-vals .right-val, .select-apartment .select-apartment-filter .area .range-vals .right-val, .select-apartment .select-apartment-filter .price .range-vals .right-val {
+          float: right; }
+    .select-apartment .select-apartment-filter .select-apartment-filter-bot {
+      margin-top: 20px; }
+      .select-apartment .select-apartment-filter .select-apartment-filter-bot .filter-checkboxes {
+        float: left; }
+        .select-apartment .select-apartment-filter .select-apartment-filter-bot .filter-checkboxes label {
+          margin-right: 30px; }
+      .select-apartment .select-apartment-filter .select-apartment-filter-bot button {
+        float: right;
+        width: 220px;
+        border: 2px solid #0aaed3;
+        font-size: 18px;
+        height: 45px;
+        border-radius: 5px;
+        background-color: #0aaed3;
+        color: #fff;
+        margin-right: 41px; }
+
+.apartment-list {
+  padding: 0;
+  list-style: none; }
+  .apartment-list .apartment-list-item {
+    padding: 0;
+    list-style: none; }
+    .apartment-list .apartment-list-item li {
+      display: inline-block;
+      margin-bottom: 52px;
+      float: left; }
 
 .autoparking {
   width: 100%;
   box-sizing: content-box;
-  max-height: 720px;
-  min-height: 720px;
+  height: 719px;
   background: url("../img/autoparking.png") no-repeat;
   background-position: center top; }
   .autoparking .autoparking-header {
@@ -516,6 +670,14 @@ body p, span {
     width: 50%;
     float: right;
     padding-left: 40px; }
+    .hod-and-news-body .news-body .else i {
+      float: left;
+      margin-right: 10px; }
+    .hod-and-news-body .news-body .else span {
+      float: left;
+      display: block;
+      font-size: 20px;
+      color: #444444; }
   .hod-and-news-body .sub-width {
     margin-top: 82px; }
   .hod-and-news-body .header {
@@ -559,6 +721,30 @@ body p, span {
         background-color: #6f6f6f;
         margin-bottom: 0px; }
 
+.news-body-list {
+  padding: 0;
+  list-style: none; }
+  .news-body-list li {
+    border-left: 3px solid #0aaed3;
+    margin-bottom: 27px;
+    padding-left: 26px; }
+    .news-body-list li .news-list-item-date {
+      display: block;
+      font-size: 16px;
+      color: #444444;
+      margin-bottom: 20px; }
+    .news-body-list li .news-list-item-title {
+      display: block;
+      font-size: 28px;
+      font-weight: bold;
+      color: #0aaed3;
+      margin-bottom: 20px; }
+    .news-body-list li .new-list-item-description {
+      display: block;
+      font-size: 18px;
+      color: #444444;
+      margin-bottom: 20px; }
+
 .dom-rasp {
   height: 340px;
   width: 100%;
@@ -589,8 +775,223 @@ body p, span {
     display: block;
     font-weight: bold;
     margin-top: 70px; }
-  .complete-objects .complete-objects-list li {
-    display: inline-block; }
+  .complete-objects .complete-objects-list {
+    margin-bottom: 55px; }
+    .complete-objects .complete-objects-list li {
+      width: 370px;
+      display: inline-block; }
+      .complete-objects .complete-objects-list li span {
+        display: block;
+        text-align: center;
+        font-size: 23px;
+        color: #444444; }
+      .complete-objects .complete-objects-list li img {
+        display: block;
+        margin: auto;
+        margin-bottom: 53px; }
   .complete-objects .buttons {
     margin: auto;
     width: 680px; }
+
+.about {
+  background: url("../img/about.png") no-repeat;
+  height: 633px; }
+  .about .header {
+    font-size: 46px;
+    text-align: center;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    margin-top: 70px; }
+  .about .about-body {
+    margin-bottom: 50px; }
+    .about .about-body .description {
+      margin-right: 50px;
+      float: left;
+      display: block;
+      width: 460px;
+      color: #fff; }
+      .about .about-body .description p {
+        font-size: 20px; }
+    .about .about-body .about-list {
+      width: 605px;
+      float: left; }
+      .about .about-body .about-list li {
+        width: 300px;
+        display: inline-block;
+        margin-bottom: 20px; }
+        .about .about-body .about-list li i {
+          float: left;
+          margin-right: 20px; }
+        .about .about-body .about-list li .about-list-item-description {
+          float: left;
+          color: #fff; }
+          .about .about-body .about-list li .about-list-item-description .primary {
+            display: block;
+            margin-top: 20px;
+            font-size: 20px; }
+          .about .about-body .about-list li .about-list-item-description .non-primary {
+            font-size: 16px; }
+  .about button {
+    width: 320px;
+    height: 60px;
+    background-color: #FFF;
+    color: #0aaed3;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin: auto;
+    display: block; }
+
+.consulting {
+  height: 614px; }
+  .consulting .consulting-personal {
+    float: left;
+    width: 487px;
+    height: 100%;
+    background: url("../img/personal-item.png") no-repeat;
+    margin-right: 10px; }
+  .consulting .consulting-body {
+    float: left;
+    width: 660px; }
+    .consulting .consulting-body .header {
+      font-size: 46px;
+      color: #0aaed3;
+      display: block;
+      font-weight: bold;
+      margin-top: 65px; }
+    .consulting .consulting-body .description {
+      font-size: 20px;
+      color: #444444;
+      margin-bottom: 40px;
+      display: block; }
+    .consulting .consulting-body form .form-left {
+      float: left;
+      width: 48%; }
+      .consulting .consulting-body form .form-left input {
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 23px;
+        border: 2px solid #0aaed3;
+        border-radius: 3px;
+        height: 53px;
+        padding-left: 20px;
+        padding-right: 10px;
+        font-size: 20px; }
+      .consulting .consulting-body form .form-left label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative; }
+      .consulting .consulting-body form .form-left .checkbox:not(checked) {
+        position: absolute;
+        opacity: 0; }
+      .consulting .consulting-body form .form-left .checkbox:not(checked) + label {
+        position: relative;
+        padding: 0 0 0 35px; }
+      .consulting .consulting-body form .form-left .checkbox:not(checked) + label:before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/spritesheet.png);
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 22px;
+        background-position: -464px -100px;
+        left: 0; }
+      .consulting .consulting-body form .form-left .checkbox:checked + label:before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/spritesheet.png);
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 22px;
+        background-position: -5px -5px;
+        left: 0; }
+      .consulting .consulting-body form .form-left label {
+        margin-top: 15px;
+        width: 220px;
+        font-size: 18px;
+        color: #444444; }
+    .consulting .consulting-body form .form-right {
+      float: right;
+      width: 48%; }
+      .consulting .consulting-body form .form-right textarea {
+        box-sizing: border-box;
+        width: 100%;
+        border: 2px solid #0aaed3;
+        border-radius: 3px;
+        height: 205px;
+        padding-left: 20px;
+        padding-right: 10px;
+        padding-top: 15px;
+        font-size: 20px;
+        overflow: hidden;
+        resize: none;
+        margin-bottom: 22px; }
+      .consulting .consulting-body form .form-right button {
+        width: 100%;
+        height: 55px; }
+
+.footer {
+  height: 525px; }
+  .footer .footer-img {
+    overflow: hidden;
+    float: left;
+    max-width: 660px; }
+    .footer .footer-img img {
+      height: 100%; }
+  .footer .footer-contact {
+    background-color: #0aaed3;
+    float: left;
+    width: 500px;
+    height: 100%;
+    z-index: 2; }
+    .footer .footer-contact .header {
+      font-size: 46px;
+      color: #fff;
+      display: block;
+      font-weight: bold;
+      margin-top: 65px;
+      margin-left: 55px; }
+    .footer .footer-contact .footer-contact-list {
+      margin-left: 55px;
+      list-style: none;
+      padding: 0; }
+      .footer .footer-contact .footer-contact-list p {
+        font-size: 24px;
+        line-height: 39px;
+        color: #fff;
+        margin: 0; }
+      .footer .footer-contact .footer-contact-list i {
+        margin-top: 10px;
+        float: left;
+        margin-right: 20px; }
+      .footer .footer-contact .footer-contact-list .footer-contact-list-body {
+        float: left; }
+  .footer .footer-map {
+    float: left;
+    background-color: #000;
+    height: 100%; }
+
+.subfooter {
+  height: 111px; }
+  .subfooter .left {
+    width: 33%;
+    margin-top: 50px;
+    float: left;
+    text-align: left;
+    font-size: 18px; }
+    .subfooter .left span {
+      font-size: 18px; }
+  .subfooter .center {
+    width: 33%;
+    margin-top: 50px;
+    float: left;
+    text-align: center;
+    font-size: 18px; }
+  .subfooter .right {
+    width: 33%;
+    margin-top: 50px;
+    float: left;
+    text-align: right;
+    font-size: 18px; }
