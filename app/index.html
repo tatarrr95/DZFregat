@@ -14,6 +14,7 @@
 		<link rel="icon" href="" type="image/x-icon">
 		<!-- bower CSS -->
 		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="css/libs.min.css">
 		<link rel="stylesheet" href="css/main.css">
@@ -520,6 +521,7 @@
 		</div>
 
 		<div class="map">
+
 		</div>
 
 		<div class="complete-objects">
@@ -607,7 +609,18 @@
 		<div class="consulting">
 			<div class="sub-width clearfix">
 				<div class="consulting-personal">
-					
+					<!-- Slideshow HTML -->
+					<div id="slideshow">
+					  <div id="slidesContainer">
+					    <div class="slide">
+					      <img src="img/personal-item.png">
+					    </div>
+					    <div class="slide">
+					      <img src="img/personal-item.png">
+					    </div>
+					  </div>
+					</div>
+					<!-- Slideshow HTML -->
 				</div>
 				<div class="consulting-body">
 					<span class="header">
@@ -683,6 +696,21 @@
 			</div>
 		</div>
 
+		<div class="right-panel">
+			<div class="calc-panel">
+				<i class="sprite sprite-side-calculate"></i>
+			</div>
+			<div class="compare-panel">
+				<i class="sprite sprite-side-vote"></i>
+			</div>
+			<div class="consult-panel">
+				<i class="sprite sprite-side-comment"></i>
+			</div>
+			<div class="about-panel">
+				<i class="sprite sprite-side-logo"></i>
+			</div>
+		</div>
+
 
 	</div>
 
@@ -747,6 +775,55 @@
 			$('#price-from').val(priceRange.noUiSlider.get()[0])
 			$('#price-to').val(priceRange.noUiSlider.get()[1])
 		});
+
+
+		$(document).ready(function(){
+  var currentPosition = 0;
+  var slideWidth = 560;
+  var slides = $('.slide');
+  var numberOfSlides = slides.length;
+  // Убираем прокрутку
+  $('#slidesContainer').css('overflow', 'hidden');
+  // Вставляем все .slides в блок #slideInner
+  slides
+  .wrapAll('<div id="slideInner"></div>')
+  // Float left to display horizontally, readjust .slides width
+  .css({
+    'float' : 'left',
+    'width' : slideWidth
+  });
+  // Устанавливаем ширину #slideInner, равную ширине всех слайдов
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+  // Вставляем элементы контроля в DOM
+  $('#slideshow')
+    .prepend('<span class="control" id="leftControl">Move left</span>')
+    .append('<span class="control" id="rightControl">Move right</span>');
+  // Прячем правую стрелку при загрузке скрипта
+  manageControls(currentPosition);
+  // Отлавливаем клик на класс .controls
+  $('.control')
+    .bind('click', function(){
+    // Определение новой позиции
+      currentPosition = ($(this).attr('id')=='rightControl')
+    ? currentPosition+1 : currentPosition-1;
+      // Прячет / показывает элементы контроля
+      manageControls(currentPosition);
+      // Move slideInner using margin-left
+      $('#slideInner').animate({
+        'marginLeft' : slideWidth*(-currentPosition)
+      });
+    });
+  // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
+  function manageControls(position){
+    // Спрятать левую стрелку, если это левый слайд
+    if(position==0){ $('#leftControl').hide() }
+    else{ $('#leftControl').show() }
+    // Спрятать правую стрелку, если это последний слайд
+    if(position==numberOfSlides-1){ $('#rightControl').hide() }
+    else{ $('#rightControl').show() }
+    }
+  });
+
 	</script>
 	</body>
 </html>

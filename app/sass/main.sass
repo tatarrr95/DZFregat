@@ -812,7 +812,9 @@ label
 .map
   height: 676px
   width: 100%
-  background-color: #e0d6a9
+  background: url('../img/map-wide.jpeg') no-repeat
+  background-position: center top
+  background-size: cover
 
 .complete-objects
   height: 710px
@@ -858,9 +860,9 @@ label
       float: left
       display: block
       width: 460px
-      color: #fff
       p
         font-size: 20px
+        color: #fff
     .about-list
       width: 605px
       float: left
@@ -873,13 +875,14 @@ label
           margin-right: 20px
         .about-list-item-description
           float: left
-          color: #fff
           .primary
             display: block
             margin-top: 20px
             font-size: 20px
+            color: #fff
           .non-primary
             font-size: 16px
+            color: #fff
   button
     width: 320px
     height: 60px
@@ -898,8 +901,40 @@ label
     float: left
     width: 487px;
     height: 100%
-    background: url('../img/personal-item.png') no-repeat
+    // background: url('../img/personal-item.png') no-repeat
     margin-right: 10px
+    #slideshow, #slidesContainer
+      margin: 0 auto
+      width: 100%
+      height: 100%
+      overflow: auto /* разрешаем прокрутку */
+      position: relative
+    #slideshow #slidesContainer .slide
+      margin: 0 auto
+      width: 100%
+      height: 100%
+    /**
+     * Slideshow controls style rules.
+     */
+    .control
+      display: block
+      width: 39px
+      height: 263px
+      text-indent: -10000px
+      position: absolute
+      cursor: pointer
+    #leftControl
+      z-index: 5
+      top: 50%
+      left: 0
+      background: transparent url('../img/leftrightarrow.png') no-repeat 0 0
+    #rightControl
+      z-index: 5
+      top: 50%
+      right: 0
+      background: transparent url('../img/bluerightarrow.png') no-repeat 0 0
+
+
   .consulting-body
     float: left
     width: 660px;
@@ -932,6 +967,8 @@ label
           display: inline-block
           cursor: pointer
           position: relative
+        .checkbox
+          width: 0px
         .checkbox:not(checked)
           position: absolute
           opacity: 0
@@ -988,16 +1025,21 @@ label
 .footer
   height: 525px;
   .footer-img
+    position: relative
     overflow: hidden;
     float: left
-    max-width: 660px
+    width: 33%
+    height: 100%
     img
       // width: 100%
       height: 100%
+      position: absolute
+      left: -25%
+
   .footer-contact
     background-color: $color-blue
     float: left
-    width: 500px
+    width: 33%
     height: 100%
     z-index: 2
     .header
@@ -1024,8 +1066,11 @@ label
         float: left
   .footer-map
     float: left
-    background-color: #000
+    background: url('../img/map-wide.jpeg') no-repeat
+    background-position: center top
+    background-size: cover
     height: 100%
+    width: calc(100% - 33% - 33%)
 
 .subfooter
   height: 111px
@@ -1049,6 +1094,23 @@ label
     float: left
     text-align: right
     font-size: 18px
+
+.right-panel
+  width: 75px
+  position: fixed
+  z-index: 3
+  top: 70px
+  right: -6px
+  .calc-panel, .compare-panel, .consult-panel, .about-panel
+    background-color: $color-blue
+    border: 3px solid $color-blue
+    border-radius: 6px
+    margin-bottom: 10px
+    height: 52px
+    padding-right: 5px
+    i
+      margin: 10px auto
+      
 
 
 
