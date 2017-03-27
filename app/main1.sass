@@ -10,15 +10,6 @@ $color-nonactivegrey: #bcbcbc
 //     display: table
 //     clear: both
 
-.row-flex
-  display: flex
-  flex-flow: row wrap
-
-.pad0
-  padding: 0
-
-
-
 body p, span
   font-family: 'PT Sans', sans-serif
   // color: #444444
@@ -81,8 +72,9 @@ label
 
 .header-logo
   margin-top: 25px
+  background: url("../img/logo.png") no-repeat
   height: 40px
-  max-width: 384px
+  width: 384px
   float: left
 
 .header-right-block
@@ -114,12 +106,19 @@ label
   min-height: 628px
 
 .slider-backrgound-right-block
-  // height: 100%
+  min-height: 628px
+  z-index: -1
+  height: 100%
+  width: 50%
+  float: right
   background: url(../img/video.png) no-repeat
   background-size: cover
 
 .slider-backrgound-left-block
+  min-height: 628px
   height: 100%
+  width: 50%
+  float: left
   background: url(../img/slider-left.png) no-repeat
   background-size: cover
 
@@ -153,6 +152,7 @@ label
   margin-bottom: 38px
   font-size: 39px
   font-family: 'PT Sans', sans-serif
+
   color: #fff
   font-weight: bold
 
@@ -208,33 +208,33 @@ label
 .slider-right-block-header
   display: block
   margin: auto
-  width: 100%
   margin-top: 190px
   margin-bottom: 38px
   font-size: 44px
+  width: 360px
   font-family: 'PT Sans', sans-serif
   color: #fff
   font-weight: bold
-  text-align: center
+
+.play-slider
+  margin: auto
 
 .slider-right-block i
   margin: auto
 
 .features
   min-height: 586px
+  width: 100%
   background: url(../img/advantages.png) no-repeat
   background-size: cover
 
 .features-list
   margin-top: 83px
   padding: 0
-  text-align: center
   li
     display: inline-block
-    max-width: 370px
+    width: 370px
     margin-bottom: 60px
-    margin-right: 40px
-    text-align: left
     span
       margin-top: 30px
       float: left
@@ -250,8 +250,7 @@ label
 
 .features-buttons
   margin: auto
-  max-width: 680px
-  // padding-left: 25%
+  width: 680px
 
 .features-buttons-select-apartment
   float: left
@@ -281,13 +280,14 @@ label
   font-weight: bold
 
 .new-apartment-backrgound
-  min-height: 718px
+  height: 718px
+  width: 100%
 
 .new-apartment-backrgound-left-block
   float: left
   height: 100%
   width: 40%
-  // background: url(../img/new-apartment-slider.png) no-repeat
+  background: url(../img/new-apartment-slider.png) no-repeat
 
 .new-apartment-backrgound-right-block
   float: right
@@ -300,45 +300,18 @@ label
   height: 718px
   margin-top: -718px
 
-#slideshow1, #slidesContainer1
-  margin: 0 auto
-  max-width: 650px
-  height: 100% !important
-  overflow: auto /* разрешаем прокрутку */
-  position: relative
-#slideshow1 #slidesContainer1 .slide1
-  margin: 0 auto
-  max-width: 650px
-  height: 100% !important
-/**
- * Slideshow controls style rules.
- */
-.control1
-  display: block
-  width: 39px
-  height: 263px
-  text-indent: -10000px
-  position: absolute
-  cursor: pointer
-#leftControl1
-  z-index: 5
-  top: 50%
-  right: 384px
-  background: transparent url('../img/leftarrow.png') no-repeat 0 0
-#rightControl1
-  z-index: 5
-  top: 50%
-  right: 0
-  background: transparent url('../img/raightarrow.png') no-repeat 0 0
-
 .new-apartment-left-block
   position: absolute
   width: 384px
   float: left
 
 .new-apartment-right-block
+  position: absolute
+  float: right
+  margin-left: 420px
   padding-left: 40px
   padding-top: 66px
+  width: 742px
   padding-right: 50px
 
 .new-apartment-right-block-header
@@ -362,9 +335,9 @@ label
   margin-top: 50px
 
 .discounts
-  min-height: 605px
+  height: 605px
+  width: 100%
   background: url(../img/discounts.png) no-repeat
-  background-size: cover
 
 .discounts-header
   font-size: 46px
@@ -373,7 +346,7 @@ label
   font-weight: bold
   display: block
   margin: auto
-  max-width: 390px
+  width: 390px
   margin-top: 70px
   margin-bottom: 100px
 
@@ -390,12 +363,11 @@ label
   margin-bottom: 55px
   li
     display: inline-block
-    max-width: 570px
+    width: 570px
     float: left
-    margin-right: 40px
 
 .discounts-list-description
-  max-width: 370px
+  width: 370px
   float: left
 
 .discounts-list-description-date
@@ -431,6 +403,7 @@ label
   font-weight: bold
 
 .discounts-button
+  float: left
   display: block !important
   background: #fff
   border: 2px solid #fff
@@ -441,16 +414,18 @@ label
   font-family: 'PT Sans', sans-serif
   color: #0aaed3
   font-weight: bold
+  margin-left: 423px
 
 .banks
-  min-height: 900px
+  width: 100%
+  height: 900px
   background-color: #fff
 
 .banks-header
   display: block
   margin: auto
   color: #0aaed3
-  max-width: 672px
+  width: 672px
   font-size: 46px
   font-weight: bold
   margin-top: 80px
@@ -467,10 +442,11 @@ label
   font-family: 'PT Sans', sans-serif
   color: #fff
   font-weight: bold
+  margin-left: 423px
 
 .banks-list
+  margin-right: -105px
   margin-bottom: 60px
-  // min-width: 380px
 
 .banks-list-item
   display: inline-block
@@ -488,16 +464,14 @@ label
   float: right
   margin-right: -62px
   margin-top: -88px
-  text-align: center
 
 .banks-list-percent-text
   display: block
-  margin-left: 12px
-  margin-top: 10px
+  margin-left: 13px
+  margin-top: 13px
   width: 30px
   text-align: center
   color: #fff
-  line-height: 18px
 
 .select-apartment
   width: 100%
@@ -967,28 +941,6 @@ label
       right: 0
       background: transparent url('../img/bluerightarrow.png') no-repeat 0 0
 
-    .slide-description
-      margin-top: -115px
-      width: 440px
-      margin-left: 10px
-      background: $color-blue
-      opacity: 0.8
-      z-index: 5
-      position: relative
-      padding-top: 20px
-      padding-left: 20px
-      padding-bottom: 15px
-      .slide-description-title
-        color: #fff
-        font-size: 20px
-        display: block
-        font-weight: bold
-      .slide-description-text
-        color: #fff
-        font-size: 18px
-        display: block
-
-
 
   .consulting-body
     float: left
@@ -1165,3 +1117,8 @@ label
     padding-right: 5px
     i
       margin: 10px auto
+      
+
+
+
+

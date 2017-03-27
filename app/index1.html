@@ -14,10 +14,9 @@
 		<link rel="icon" href="" type="image/x-icon">
 		<!-- bower CSS -->
 		<!-- CSS -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<link rel="stylesheet" href="css/libs.min.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
@@ -25,27 +24,49 @@
 	<p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
 	<![endif]-->
 	<div class="container-fluid">
-		
-		<div class="row row-flex">
-			<div class="col-md-6 col-md-offset-3">
-				<div class="header-logo img-responsive">
-					<img class="img-responsive" src="img/logo.png" alt="">
+
+		<!-- <div class="header">
+			<div class="sub-width clearfix">
+				<div class="header-logo"></div>
+				<div class="header-right-block clearfix">
+					<div class="header-number clearfix">
+						<i class="sprite sprite-telephone"></i>
+						<span>+7 (423) 202-50-09</span>
+					</div>
+					<div class="header-menu clearfix">
+						<i class="sprite sprite-menu"></i>
+						<span>МЕНЮ</span>
+					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-md-offset-7 header-number clearfix">
-				<i class="sprite sprite-telephone"></i>
-				<span>+7 (423) 202-50-09</span>
-			</div>
-			<div class="col-md-2 header-menu">
-				<i class="sprite sprite-menu"></i>
+		</div> -->
+
+		<div class="row">
+			<div class="col-sm-2"></div>
+			<div class="col-sm-8">
+				<div class="header-logo img-responsive"></div>
+				<div class="header-right-block clearfix">
+					<div class="header-number clearfix">
+						<i class="sprite sprite-telephone"></i>
+						<span>+7 (423) 202-50-09</span>
+					</div>
+					<div class="header-menu clearfix">
+						<i class="sprite sprite-menu"></i>
 						<span>МЕНЮ</span>
+					</div>
+				</div>
 			</div>
+			<div class="col-sm-2"></div>
 		</div>
 
-		<div class="row row-flex">
-			<div class="col-md-12 col-sm-12 slider-backrgound-left-block">
-				<div class="row slider-background">
-					<div class="col-md-18 col-md-offset-6">
+
+
+
+		<div class="row slider-background">
+			<div class="col-sm-6 slider-backrgound-left-block">
+				<div class="row">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-9">
 						<span class="slider-left-block-header">
 							Продажа квартир повышенной комфортности во Владивостоке от 1 800 000 рублей
 						</span>
@@ -75,20 +96,62 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 col-sm-12 slider-backrgound-right-block">
-				<div class="row slider-background">
-					<div class="col-md-18">
+			<div class="clearfix visible-xs"></div>
+			<div class="col-sm-6 slider-backrgound-right-block">
+				<div class="row">
+					<div class="col-sm-9">
 						<span class="slider-right-block-header">
 							Посмотрите видео
 						</span>
-						<i class="sprite sprite-play center-block"></i>
+						<i class="sprite sprite-play play-slider"></i>
 					</div>
-				</div>
+					<div class="col-sm-3"></div>
+				</div>	
 			</div>
 		</div>
 
-		<div class="row row-flex features">
-			<div class="col-md-18 col-md-offset-3">
+		<!-- <div class="slider clearfix">
+			<div class="sub-width clearfix">
+				<div class="slider-left-block">
+					<span class="slider-left-block-header">
+						Продажа квартир повышенной комфортности во Владивостоке от 1 800 000 рублей
+					</span>
+					<ul class="slider-left-block-list">
+						<li class="clearfix">
+							<i class="sprite sprite-elkvar slider-left-block-list-i"></i>
+							<span>1-2-3 комнатные квартиры</span>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-elplosh slider-left-block-list-i"></i>
+							<span>Окончание строительства - 2019г.</span>
+						</li>
+						<li class="clearfix">
+							<i class="sprite sprite-elend slider-left-block-list-i"></i>
+							<span>от 27м2 до 72м2</span>
+						</li>
+						
+						<li class="clearfix">
+							<i class="sprite sprite-elparkov slider-left-block-list-i"></i>
+							<span>Автостоянка на 125 машиномест</span>
+						</li>
+					</ul>
+					<div class="slider-left-block-buttons clearfix">
+						<button class="slider-left-block-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
+						<button class="slider-left-block-task-question">ЗАДАТЬ ВОПРОС</button>
+					</div>
+				</div>
+				<div class="slider-right-block">
+					<span class="slider-right-block-header">
+						Посмотрите видео
+					</span>
+					<i class="sprite sprite-play"></i>
+				</div>
+			</div>
+		</div> -->
+
+		<div class="row features">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
 				<ul class="features-list">
 					<li>
 						<i class="sprite sprite-belprostor"></i>
@@ -115,52 +178,85 @@
 						<span>Собственное машиноместо у дома</span>
 					</li>
 				</ul>
-				<div class="features-buttons clearfix">
+				<!-- <div class="features-buttons">
 					<button class="features-buttons-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
 					<button class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
-				</div>
-			</div>
-		</div>
-
-		<div class="row new-apartment-backrgound">
-			<div class="col-md-10 new-apartment-backrgound-left-block pad0">
-				<!-- <div class="new-apartment-backrgound-left-block">
-					Slideshow HTML
-					<div id="slideshow1">
-						<div id="slidesContainer1">
-							<div class="slide1">
-								<img src="img/new-apartment-slider.png">
-							</div>
-							<div class="slide1">
-								<img src="img/new-apartment-slider1.png">
-							</div>
-						</div>
-					</div>
-					Slideshow HTML
 				</div> -->
 			</div>
-			<div class="col-md-14 new-apartment-right-block">
-				<span class="new-apartment-right-block-header">
-					НОВАЯ КВАРТИРА В НОВОМ ДОМЕ
-				</span>
-				<div class="new-apartment-right-block-text">
-					<p>Дом №33 по ул. Ватутина – это четвертый по счету дом жилого комплекса «Фрегат». Монолитно-каркасный односекционный 25-этажный дом. Фасад облицован керамическим кирпичом красного цвета, часть ограждений лоджий - штукатурка с окраской белым цветом, оконные и дверные проемы - профиль ПВХ белого цвета. Балконы и лоджии остеклены. Здание оборудовано современными импортными лифтами. </p>
-					<p>Различные площади квартир в данном доме дают возможность сделать выбор в соответствии с пожеланиями и финансовыми возможностями:</p>
-					<p class="p-min">Квартиры студии - 27,81 кв.м.
-						<p class="p-min">1-комн. кв.-40,46-48,65 кв.м;</p> 
-						<p class="p-min">3-комн. кв.- 73,05 кв.м.</p> 
-					</p>
-					<p>Панорамный вид на город из окон дома, удобные планировки студий, 1-3-х комнатных квартир делают этот дом выгодным предложением для жителей города. </p>
-				</div>
-				<div class="new-apartment-right-block-buttons">
+			<div class="col-md-2"></div>
+		</div>
+
+		<!-- <div class="features">
+			<div class="sub-width clearfix">
+				<ul class="features-list">
+					<li>
+						<i class="sprite sprite-belprostor"></i>
+						<span>Простор <p>Высота этажа 3м</p></span>
+					</li>
+					<li>
+						<i class="sprite sprite-belkrasikomf"></i>
+						<span>Красота и комфорт...</span>
+					</li>
+					<li>
+						<i class="sprite sprite-belgramplan"></i>
+						<span>Грамотная планировка...</span>
+					</li>
+					<li>
+						<i class="sprite sprite-bellift"></i>
+						<span>4 лифта...</span>
+					</li>
+					<li>
+						<i class="sprite sprite-belvsesvoe"></i>
+						<span>Все свое. В каждой квартире лоджия</span>
+					</li>
+					<li>
+						<i class="sprite sprite-belpark"></i>
+						<span>Собственное машиноместо у дома</span>
+					</li>
+				</ul>
+				<div class="features-buttons">
 					<button class="features-buttons-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
 					<button class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
 				</div>
 			</div>
 		</div>
 
-		<div class="row discounts">
-			<div class="col-md-18 col-md-offset-3">
+		<div class="new-apartment-backrgound clearfix">
+			<div class="new-apartment-backrgound-left-block">
+			</div>
+			<div class="new-apartment-backrgound-right-block">	
+			</div>
+		</div>
+
+		<div class="new-apartment clearfix">
+			<div class="sub-width clearfix">
+				<div class="new-apartment-left-block">
+					
+				</div>
+				<div class="new-apartment-right-block">
+					<span class="new-apartment-right-block-header">
+						НОВАЯ КВАРТИРА В НОВОМ ДОМЕ
+					</span>
+					<div class="new-apartment-right-block-text">
+						<p>Дом №33 по ул. Ватутина – это четвертый по счету дом жилого комплекса «Фрегат». Монолитно-каркасный односекционный 25-этажный дом. Фасад облицован керамическим кирпичом красного цвета, часть ограждений лоджий - штукатурка с окраской белым цветом, оконные и дверные проемы - профиль ПВХ белого цвета. Балконы и лоджии остеклены. Здание оборудовано современными импортными лифтами. </p>
+						<p>Различные площади квартир в данном доме дают возможность сделать выбор в соответствии с пожеланиями и финансовыми возможностями:</p>
+						<p class="p-min">Квартиры студии - 27,81 кв.м.
+	                       <p class="p-min">1-комн. кв.-40,46-48,65 кв.м;</p> 
+	                       <p class="p-min">3-комн. кв.- 73,05 кв.м.</p> 
+	                       </p>
+						<p>Панорамный вид на город из окон дома, удобные планировки студий, 1--3-х комнатных квартир делают этот дом выгодным предложением для жителей города. </p>
+					</div>
+					<div class="new-apartment-right-block-buttons">
+						<button class="features-buttons-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
+						<button class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="discounts">
+			<div class="sub-width clearfix">
 				<span class="discounts-header">
 					СКИДКИ И АКЦИИ
 				</span>
@@ -185,50 +281,50 @@
 					</li>
 				</ul>
 
-				<button class="discounts-button center-block">ПОСМОТРЕТЬ ВСЕ АКЦИИ</button>
+				<button class="discounts-button">ПОСМОТРЕТЬ ВСЕ АКЦИИ</button>
 			</div>
 		</div>
 
-		<div class="row banks">
-			<div class="col-md-18 col-md-offset-3">
+
+		<div class="banks">
+			<div class="sub-width clearfix">
 				<span class="banks-header">
 					ИПОТЕЧНАЯ АККРЕДИТАЦИЯ КРЕПНЕЙШИХ БАНКОВ РОССИИ
 				</span>
 				<ul class="banks-list">
 					<li class="banks-list-item">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/sber.png" alt="">
+						<img src="img/banks/sber.png" alt="">
 					</li>
 					<li class="banks-list-item">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/vtb.png" alt="">
+						<img src="img/banks/vtb.png" alt="">
 					</li>
 					<li class="banks-list-item">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/corprazv.png" alt="">
+						<img src="img/banks/corprazv.png" alt="">
 					</li>
 					<li class="banks-list-item">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/gazprom.png" alt="">
+						<img src="img/banks/gazprom.png" alt="">
 					</li>
 					<li class="banks-list-item">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/svyazbank.png" alt="">
+						<img src="img/banks/svyazbank.png" alt="">
 					</li>
 					<li class="banks-list-item">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/primsocbank.png" alt="">
+						<img src="img/banks/primsocbank.png" alt="">
 					</li>
 					<li class="banks-list-item">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/rosselhozbank.png" alt="">
+						<img src="img/banks/rosselhozbank.png" alt="">
 					</li>
 				</ul>
-				<button class="bank-button center-block">РАССЧИТАТЬ ИПОТЕКУ</button>
+				<button class="bank-button">РАССЧИТАТЬ ИПОТЕКУ</button>
 			</div>
 		</div>
 
-		<!-- 
 		<div class="select-apartment">
 			<div class="sub-width clearfix">
 				<span class="select-apartment-header">
@@ -612,34 +708,18 @@
 		<div class="consulting">
 			<div class="sub-width clearfix">
 				<div class="consulting-personal">
-					Slideshow HTML
+					
 					<div id="slideshow">
 					  <div id="slidesContainer">
 					    <div class="slide">
 					      <img src="img/personal-item.png">
-					      <div class="slide-description">
-					      	<span class="slide-description-title">
-					      		Александра Петровна
-					      	</span>
-					      	<span class="slide-description-text">
-					      		менеджер отдела продаж
-					      	</span>
-					      </div>
 					    </div>
 					    <div class="slide">
 					      <img src="img/personal-item.png">
-					      <div class="slide-description">
-					      	<span class="slide-description-title">
-					      		Анастасия Васильевна
-					      	</span>
-					      	<span class="slide-description-text">
-					      		менеджер отдела продаж
-					      	</span>
-					      </div>
 					    </div>
 					  </div>
 					</div>
-					Slideshow HTML
+					
 				</div>
 				<div class="consulting-body">
 					<span class="header">
@@ -713,7 +793,7 @@
 					<a href="">Разработка сайта dizlab.com</a>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<div class="right-panel">
 			<div class="calc-panel">
@@ -728,7 +808,7 @@
 			<div class="about-panel">
 				<i class="sprite sprite-side-logo"></i>
 			</div>
-		</div> -->
+		</div>
 
 
 	</div>
@@ -741,148 +821,108 @@
 	<!-- <script src="js/nouislider.js"></script>
 	<script src="js/wNumb.js"></script> -->
 	<script>
-		// var floorRange = document.getElementById('floorRange');
-		// var areaRange = document.getElementById('areaRange');
-		// var priceRange = document.getElementById('priceRange');
-		// noUiSlider.create(floorRange, {
-		// 	start: [1, 25],
-		// 	connect: true,
-		// 	step: 1,
-		// 	format: wNumb({
-		// 		decimals: 0
-		// 	}),
-		// 	range: {
-		// 		'min': 1,
-		// 		'max': 25
-		// 	}
-		// });
-		// noUiSlider.create(areaRange, {
-		// 	start: [27, 72],
-		// 	connect: true,
-		// 	step: 1,
-		// 	format: wNumb({
-		// 		decimals: 0
-		// 	}),
-		// 	range: {
-		// 		'min': 27,
-		// 		'max': 72
-		// 	}
-		// });
-		// noUiSlider.create(priceRange, {
-		// 	start: [1700000, 4000000],
-		// 	connect: true,
-		// 	step: 50000,
-		// 	format: wNumb({
-		// 		decimals: 0
-		// 	}),
-		// 	range: {
-		// 		'min': 1700000,
-		// 		'max': 4000000
-		// 	}
-		// });
-		// floorRange.noUiSlider.on('slide', function(){
-		// 	$('#floor-from').val(floorRange.noUiSlider.get()[0])
-		// 	$('#floor-to').val(floorRange.noUiSlider.get()[1])
-		// });
-		// areaRange.noUiSlider.on('slide', function(){
-		// 	$('#area-from').val(areaRange.noUiSlider.get()[0])
-		// 	$('#area-to').val(areaRange.noUiSlider.get()[1])
-		// });
-		// priceRange.noUiSlider.on('slide', function(){
-		// 	$('#price-from').val(priceRange.noUiSlider.get()[0])
-		// 	$('#price-to').val(priceRange.noUiSlider.get()[1])
-		// });
+		var floorRange = document.getElementById('floorRange');
+		var areaRange = document.getElementById('areaRange');
+		var priceRange = document.getElementById('priceRange');
+
+		noUiSlider.create(floorRange, {
+			start: [1, 25],
+			connect: true,
+			step: 1,
+			format: wNumb({
+				decimals: 0
+			}),
+			range: {
+				'min': 1,
+				'max': 25
+			}
+		});
+		noUiSlider.create(areaRange, {
+			start: [27, 72],
+			connect: true,
+			step: 1,
+			format: wNumb({
+				decimals: 0
+			}),
+			range: {
+				'min': 27,
+				'max': 72
+			}
+		});
+		noUiSlider.create(priceRange, {
+			start: [1700000, 4000000],
+			connect: true,
+			step: 50000,
+			format: wNumb({
+				decimals: 0
+			}),
+			range: {
+				'min': 1700000,
+				'max': 4000000
+			}
+		});
+
+		floorRange.noUiSlider.on('slide', function(){
+			$('#floor-from').val(floorRange.noUiSlider.get()[0])
+			$('#floor-to').val(floorRange.noUiSlider.get()[1])
+		});
+		areaRange.noUiSlider.on('slide', function(){
+			$('#area-from').val(areaRange.noUiSlider.get()[0])
+			$('#area-to').val(areaRange.noUiSlider.get()[1])
+		});
+		priceRange.noUiSlider.on('slide', function(){
+			$('#price-from').val(priceRange.noUiSlider.get()[0])
+			$('#price-to').val(priceRange.noUiSlider.get()[1])
+		});
+
+
 		$(document).ready(function(){
-		  var currentPosition = 0;
-		  var slideWidth = 560;
-		  var slides = $('.slide');
-		  var numberOfSlides = slides.length;
-		  // Убираем прокрутку
-		  $('#slidesContainer').css('overflow', 'hidden');
-		  // Вставляем все .slides в блок #slideInner
-		  slides
-		  .wrapAll('<div id="slideInner"></div>')
-		  // Float left to display horizontally, readjust .slides width
-		  .css({
-		    'float' : 'left',
-		    'width' : slideWidth
-		  });
-		  // Устанавливаем ширину #slideInner, равную ширине всех слайдов
-		  $('#slideInner').css('width', slideWidth * numberOfSlides);
-		  // Вставляем элементы контроля в DOM
-		  $('#slideshow')
-		    .prepend('<span class="control" id="leftControl">Move left</span>')
-		    .append('<span class="control" id="rightControl">Move right</span>');
-		  // Прячем правую стрелку при загрузке скрипта
-		  manageControls(currentPosition);
-		  // Отлавливаем клик на класс .controls
-		  $('.control')
-		    .bind('click', function(){
-		    // Определение новой позиции
-		      currentPosition = ($(this).attr('id')=='rightControl')
-		    ? currentPosition+1 : currentPosition-1;
-		      // Прячет / показывает элементы контроля
-		      manageControls(currentPosition);
-		      // Move slideInner using margin-left
-		      $('#slideInner').animate({
-		        'marginLeft' : slideWidth*(-currentPosition)
-		      });
-		    });
-		  // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
-		  function manageControls(position){
-		    // Спрятать левую стрелку, если это левый слайд
-		    if(position==0){ $('#leftControl').hide() }
-		    else{ $('#leftControl').show() }
-		    // Спрятать правую стрелку, если это последний слайд
-		    if(position==numberOfSlides-1){ $('#rightControl').hide() }
-		    else{ $('#rightControl').show() }
-		    }
+  var currentPosition = 0;
+  var slideWidth = 560;
+  var slides = $('.slide');
+  var numberOfSlides = slides.length;
+  // Убираем прокрутку
+  $('#slidesContainer').css('overflow', 'hidden');
+  // Вставляем все .slides в блок #slideInner
+  slides
+  .wrapAll('<div id="slideInner"></div>')
+  // Float left to display horizontally, readjust .slides width
+  .css({
+    'float' : 'left',
+    'width' : slideWidth
+  });
+  // Устанавливаем ширину #slideInner, равную ширине всех слайдов
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+  // Вставляем элементы контроля в DOM
+  $('#slideshow')
+    .prepend('<span class="control" id="leftControl">Move left</span>')
+    .append('<span class="control" id="rightControl">Move right</span>');
+  // Прячем правую стрелку при загрузке скрипта
+  manageControls(currentPosition);
+  // Отлавливаем клик на класс .controls
+  $('.control')
+    .bind('click', function(){
+    // Определение новой позиции
+      currentPosition = ($(this).attr('id')=='rightControl')
+    ? currentPosition+1 : currentPosition-1;
+      // Прячет / показывает элементы контроля
+      manageControls(currentPosition);
+      // Move slideInner using margin-left
+      $('#slideInner').animate({
+        'marginLeft' : slideWidth*(-currentPosition)
+      });
+    });
+  // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
+  function manageControls(position){
+    // Спрятать левую стрелку, если это левый слайд
+    if(position==0){ $('#leftControl').hide() }
+    else{ $('#leftControl').show() }
+    // Спрятать правую стрелку, если это последний слайд
+    if(position==numberOfSlides-1){ $('#rightControl').hide() }
+    else{ $('#rightControl').show() }
+    }
+  });
 
-
-
-			var currentPosition1 = 0;
-			  var slideWidth1 = 700;
-			  var slides1 = $('.slide1');
-			  var numberOfSlides1 = slides1.length;
-			  // Убираем прокрутку
-			  $('#slidesContainer1').css('overflow', 'hidden');
-			  // Вставляем все .slides в блок #slideInner
-			  slides1.wrapAll('<div id="slideInner1"></div>')
-			  // Float left to display horizontally, readjust .slides width
-			  .css({
-			    'float' : 'left',
-			    'width' : slideWidth1
-			  });
-			  // Устанавливаем ширину #slideInner, равную ширине всех слайдов
-			  $('#slideInner1').css('width', slideWidth1 * numberOfSlides1);
-			  // Вставляем элементы контроля в DOM
-			  $('#slideshow1')
-			    .prepend('<span class="control1" id="leftControl1">Move left</span>')
-			    .append('<span class="control1" id="rightControl1">Move right</span>');
-			  // Прячем правую стрелку при загрузке скрипта
-			  manageControls1(currentPosition1);
-			  // Отлавливаем клик на класс .controls
-			  $('.control1').bind('click', function(){
-			    // Определение новой позиции
-			      currentPosition1 = ($(this).attr('id')=='rightControl1')
-			    ? currentPosition1+1 : currentPosition1-1;
-			      // Прячет / показывает элементы контроля
-			      manageControls1(currentPosition1);
-			      // Move slideInner using margin-left
-			      $('#slideInner1').animate({
-			        'marginLeft' : slideWidth1*(-currentPosition1)
-			      });
-			    });
-			  // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
-			  function manageControls1(position1){
-			    // Спрятать левую стрелку, если это левый слайд
-			    if(position1==0){ $('#leftControl1').hide() }
-			    else{ $('#leftControl1').show() }
-			    // Спрятать правую стрелку, если это последний слайд
-			    if(position1==numberOfSlides1-1){ $('#rightControl1').hide() }
-			    else{ $('#rightControl1').show() }
-			    }
-  		});
 	</script>
 	</body>
 </html>

@@ -1,11 +1,16 @@
-.clearfix:before {
-  content: " ";
-  display: table; }
+.row-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
 
-.clearfix:after {
-  content: " ";
-  display: table;
-  clear: both; }
+.pad0 {
+  padding: 0; }
 
 body p, span {
   font-family: 'PT Sans', sans-serif;
@@ -74,9 +79,8 @@ label {
 
 .header-logo {
   margin-top: 25px;
-  background: url("../img/logo.png") no-repeat;
   height: 40px;
-  width: 384px;
+  max-width: 384px;
   float: left; }
 
 .header-right-block {
@@ -105,20 +109,16 @@ label {
   margin-right: 6px; }
 
 .slider-background {
-  height: 628px; }
+  min-height: 628px; }
 
 .slider-backrgound-right-block {
-  z-index: -1;
-  height: 100%;
-  width: 50%;
-  float: right;
-  background: url(../img/video.png) no-repeat; }
+  background: url(../img/video.png) no-repeat;
+  background-size: cover; }
 
 .slider-backrgound-left-block {
   height: 100%;
-  width: 50%;
-  float: left;
-  background: url(../img/slider-left.png) no-repeat; }
+  background: url(../img/slider-left.png) no-repeat;
+  background-size: cover; }
 
 .slider {
   height: 628px;
@@ -207,30 +207,33 @@ label {
 .slider-right-block-header {
   display: block;
   margin: auto;
+  width: 100%;
   margin-top: 190px;
   margin-bottom: 38px;
   font-size: 44px;
-  width: 360px;
   font-family: 'PT Sans', sans-serif;
   color: #fff;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: center; }
 
 .slider-right-block i {
   margin: auto; }
 
 .features {
-  height: 586px;
-  width: 100%;
-  background: url(../img/advantages.png) no-repeat; }
+  min-height: 586px;
+  background: url(../img/advantages.png) no-repeat;
+  background-size: cover; }
 
 .features-list {
   margin-top: 83px;
-  padding: 0px 40px;
-  padding-right: 0px; }
+  padding: 0;
+  text-align: center; }
   .features-list li {
     display: inline-block;
-    width: 370px;
-    margin-bottom: 60px; }
+    max-width: 370px;
+    margin-bottom: 60px;
+    margin-right: 40px;
+    text-align: left; }
     .features-list li span {
       margin-top: 30px;
       float: left;
@@ -246,7 +249,7 @@ label {
 
 .features-buttons {
   margin: auto;
-  width: 680px; }
+  max-width: 680px; }
 
 .features-buttons-select-apartment {
   float: left;
@@ -278,14 +281,12 @@ label {
   font-weight: bold; }
 
 .new-apartment-backrgound {
-  height: 718px;
-  width: 100%; }
+  min-height: 718px; }
 
 .new-apartment-backrgound-left-block {
   float: left;
   height: 100%;
-  width: 40%;
-  background: url(../img/new-apartment-slider.png) no-repeat; }
+  width: 40%; }
 
 .new-apartment-backrgound-right-block {
   float: right;
@@ -298,18 +299,49 @@ label {
   height: 718px;
   margin-top: -718px; }
 
+#slideshow1, #slidesContainer1 {
+  margin: 0 auto;
+  max-width: 650px;
+  height: 100% !important;
+  overflow: auto;
+  position: relative; }
+
+#slideshow1 #slidesContainer1 .slide1 {
+  margin: 0 auto;
+  max-width: 650px;
+  height: 100% !important; }
+
+/**
+ * Slideshow controls style rules.
+ */
+.control1 {
+  display: block;
+  width: 39px;
+  height: 263px;
+  text-indent: -10000px;
+  position: absolute;
+  cursor: pointer; }
+
+#leftControl1 {
+  z-index: 5;
+  top: 50%;
+  right: 384px;
+  background: transparent url("../img/leftarrow.png") no-repeat 0 0; }
+
+#rightControl1 {
+  z-index: 5;
+  top: 50%;
+  right: 0;
+  background: transparent url("../img/raightarrow.png") no-repeat 0 0; }
+
 .new-apartment-left-block {
   position: absolute;
   width: 384px;
   float: left; }
 
 .new-apartment-right-block {
-  position: absolute;
-  float: right;
-  margin-left: 420px;
   padding-left: 40px;
   padding-top: 66px;
-  width: 742px;
   padding-right: 50px; }
 
 .new-apartment-right-block-header {
@@ -333,9 +365,9 @@ label {
   margin-top: 50px; }
 
 .discounts {
-  height: 605px;
-  width: 100%;
-  background: url(../img/discounts.png) no-repeat; }
+  min-height: 605px;
+  background: url(../img/discounts.png) no-repeat;
+  background-size: cover; }
 
 .discounts-header {
   font-size: 46px;
@@ -344,7 +376,7 @@ label {
   font-weight: bold;
   display: block;
   margin: auto;
-  width: 390px;
+  max-width: 390px;
   margin-top: 70px;
   margin-bottom: 100px; }
 
@@ -361,11 +393,12 @@ label {
   margin-bottom: 55px; }
   .discounts-list li {
     display: inline-block;
-    width: 570px;
-    float: left; }
+    max-width: 570px;
+    float: left;
+    margin-right: 40px; }
 
 .discounts-list-description {
-  width: 370px;
+  max-width: 370px;
   float: left; }
 
 .discounts-list-description-date {
@@ -402,7 +435,6 @@ label {
   font-weight: bold; }
 
 .discounts-button {
-  float: left;
   display: block !important;
   background: #fff;
   border: 2px solid #fff;
@@ -413,19 +445,17 @@ label {
   font-size: 16px;
   font-family: 'PT Sans', sans-serif;
   color: #0aaed3;
-  font-weight: bold;
-  margin-left: 423px; }
+  font-weight: bold; }
 
 .banks {
-  width: 100%;
-  height: 900px;
+  min-height: 900px;
   background-color: #fff; }
 
 .banks-header {
   display: block;
   margin: auto;
   color: #0aaed3;
-  width: 672px;
+  max-width: 672px;
   font-size: 46px;
   font-weight: bold;
   margin-top: 80px;
@@ -442,11 +472,9 @@ label {
   font-size: 16px;
   font-family: 'PT Sans', sans-serif;
   color: #fff;
-  font-weight: bold;
-  margin-left: 423px; }
+  font-weight: bold; }
 
 .banks-list {
-  margin-right: -105px;
   margin-bottom: 60px; }
 
 .banks-list-item {
@@ -465,15 +493,17 @@ label {
   font-size: 14px;
   float: right;
   margin-right: -62px;
-  margin-top: -88px; }
+  margin-top: -88px;
+  text-align: center; }
 
 .banks-list-percent-text {
   display: block;
-  margin-left: 13px;
-  margin-top: 13px;
+  margin-left: 12px;
+  margin-top: 10px;
   width: 30px;
   text-align: center;
-  color: #fff; }
+  color: #fff;
+  line-height: 18px; }
 
 .select-apartment {
   width: 100%;
@@ -945,6 +975,26 @@ label {
       top: 50%;
       right: 0;
       background: transparent url("../img/bluerightarrow.png") no-repeat 0 0; }
+    .consulting .consulting-personal .slide-description {
+      margin-top: -115px;
+      width: 440px;
+      margin-left: 10px;
+      background: #0aaed3;
+      opacity: 0.8;
+      z-index: 5;
+      position: relative;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 15px; }
+      .consulting .consulting-personal .slide-description .slide-description-title {
+        color: #fff;
+        font-size: 20px;
+        display: block;
+        font-weight: bold; }
+      .consulting .consulting-personal .slide-description .slide-description-text {
+        color: #fff;
+        font-size: 18px;
+        display: block; }
   .consulting .consulting-body {
     float: left;
     width: 660px; }
