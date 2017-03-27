@@ -69,10 +69,8 @@ label
   font-size: 18px
   color: #444444
 
-.header
-  width: 100%
-  height: 88px
-  top: 0px
+.top-header
+  min-height: 80px
 
 .sub-width
   width: 1163px
@@ -83,22 +81,16 @@ label
   margin-top: 25px
   height: 40px
   max-width: 384px
-  float: left
-
-.header-right-block
-  margin-top: 31px
-  width: 454px
-  float: right
 
 .header-number
-  float: left
+  margin-top: 30px
   i, span
     float: left
 
 .header-menu
+  margin-top: 30px
   i, span
     float: left
-  float: right
 
 .header-number span, .header-menu span
   font: 26px 'PT Sans' #444444
@@ -122,30 +114,6 @@ label
   height: 100%
   background: url(../img/slider-left.png) no-repeat
   background-size: cover
-
-.slider
-  height: 628px
-  margin-top: -628px
-  position: relative
-
-.slider-right-block
-  position: absolute
-  z-index: 2
-  height: 100%
-  width: 584px
-  max-width: 584px
-  float: right
-  margin-left: 584px
-
-.slider-left-block
-  position: absolute
-  z-index: 2
-  height: 100%
-  width: 584px
-  max-width: 584px
-  float: left
-  margin-bottom: 25px
-  display: block
 
 .slider-left-block-header
   display: block
@@ -191,6 +159,7 @@ label
   font-family: 'PT Sans', sans-serif
   color: #20a9c7
   font-weight: bold
+  margin-bottom: 10px
 
 .slider-left-block-task-question
   float: left
@@ -204,6 +173,7 @@ label
   font-family: 'PT Sans', sans-serif
   color: #fff
   font-weight: bold
+  margin-bottom: 10px
 
 .slider-right-block-header
   display: block
@@ -216,9 +186,6 @@ label
   color: #fff
   font-weight: bold
   text-align: center
-
-.slider-right-block i
-  margin: auto
 
 .features
   min-height: 586px
@@ -241,7 +208,7 @@ label
       font-size: 20px
       font-family: 'PT Sans', sans-serif
       color: #676767
-      width: 175px
+      width: 170px
       p
         margin-top: 4px
     i
@@ -266,6 +233,7 @@ label
   font-family: 'PT Sans', sans-serif
   color: #fff
   font-weight: bold
+  margin-bottom: 10px
 
 .features-buttons-task-question
   float: left
@@ -279,6 +247,7 @@ label
   font-family: 'PT Sans', sans-serif
   color: #0aaed3
   font-weight: bold
+  margin-bottom: 10px
 
 .new-apartment-backrgound
   min-height: 718px
@@ -388,10 +357,12 @@ label
 .discounts-list
   padding: 0
   margin-bottom: 55px
+  text-align: center
   li
+    margin-bottom: 10px
+    text-align: left
     display: inline-block
     max-width: 570px
-    float: left
     margin-right: 40px
 
 .discounts-list-description
@@ -441,6 +412,7 @@ label
   font-family: 'PT Sans', sans-serif
   color: #0aaed3
   font-weight: bold
+  margin-bottom: 10px
 
 .banks
   min-height: 900px
@@ -467,8 +439,10 @@ label
   font-family: 'PT Sans', sans-serif
   color: #fff
   font-weight: bold
+  margin-bottom: 10px
 
 .banks-list
+  padding-left: 7%
   margin-bottom: 60px
   // min-width: 380px
 
@@ -500,7 +474,6 @@ label
   line-height: 18px
 
 .select-apartment
-  width: 100%
   background-color: #fafafa
 
 .select-apartment-header
@@ -520,6 +493,8 @@ label
   font-weight: bold
   height: 45px
   border-radius: 5px
+  float: left
+  margin-bottom: 10px
 
 .select-apartment-buttons-param
   background-color: $color-blue
@@ -532,7 +507,7 @@ label
 
 .select-apartment-buttons
   margin: auto
-  width: 490px
+  max-width: 490px
   margin-bottom: 70px
 
 .select-apartment
@@ -564,25 +539,25 @@ label
     padding-bottom: 36px
     margin-bottom: 30px
     .floor
-      width: 25%
+      // width: 25%
     .area
-      width: 25%
+      // width: 25%
     .price
-      width: 50%
+      // width: 50%
     .floor, .area
       input::-webkit-input-placeholder
         text-align: center
       input
         text-align: center
-        width: 50px
+        max-width: 50px
       .range
-        width: 210px
+        max-width: 210px
     .price
       input
         padding-left: 15px
-        width: 213px
+        max-width: 213px
       .range
-        width: 500px
+        max-width: 500px
 
     .floor, .area, .price
       float: left
@@ -609,12 +584,16 @@ label
       .range
         margin-left: 20px
       .range-vals
+        max-width: 250px
         margin-top: 4px
         font-size: 18px
         .left-val
           float: left
         .right-val
           float: right
+    .price
+      .range-vals
+        max-width: 550px
     .select-apartment-filter-bot
       margin-top: 20px
       .filter-checkboxes
@@ -635,11 +614,12 @@ label
 .apartment-list
   padding: 0
   list-style: none
+
   .apartment-list-item
     padding: 0
     list-style: none
     .main-desc
-      margin-left: -25px
+      // margin-left: -25px
       width: 180px
       .title
         width: 180px
@@ -686,14 +666,15 @@ label
   span
     float: left
     font-size: 20px
+    margin-bottom: 10px
 
 
 .autoparking
-  width: 100%
   box-sizing: content-box
-  height: 719px
+  min-height: 719px
   background: url('../img/autoparking.png') no-repeat
   background-position: center top
+  background-size: cover
   .autoparking-header
     color: #fff
     font-size: 46px
@@ -702,13 +683,12 @@ label
     margin: auto
     padding-top: 215px
     margin-bottom: 64px
-    width: 628px
     text-align: center
   .description
     display: block
     font-size: 36px
     text-align: center
-    width: 732px
+    max-width: 732px
     margin: auto
     color: #fff
     margin-bottom: 64px
@@ -723,60 +703,53 @@ label
     border-radius: 5px
     margin: auto
     display: block
+    margin-bottom: 10px
+
 .hod-and-news
-  height: 660px
-  width: 100%
-  position: relative
+  min-height: 660px
   .stroy-proc
+    padding-top: 70px
+    min-height: 660px
     height: 100%
-    width: 50%
-    float: left
     background: url('../img/stroy-proc.png') no-repeat
     background-position: center top;
-  .news
-    height: 100%
-    width: 50%
-    float: right
-    background-color: #f8f8f8
+    background-size: cover
 
-.hod-and-news-body
-  position: absolute
-  margin-top: -660px
-  width: 100%
-  .stroy-proc-body
-    width: 50%
-    float: left
-  .news-body
-    box-sizing: border-box
-    width: 50%
-    float: right
+  .news
+    padding-top: 70px
+    min-height: 660px
+    height: 100%
+    background-color: #f8f8f8
     padding-left: 40px
-    .else
-      i
-        float: left
-        margin-right: 10px
-      span
-        float: left
-        display: block
-        font-size: 20px
-        color: #444444
-  .sub-width
-    margin-top: 82px
-  .header
+
+.else
+  i
+    float: left
+    margin-right: 10px
+  span
+    float: left
     display: block
-    font-weight: bold
-    color: $color-blue
-    font-size: 46px
-  button
-    width: 150px
-    height: 30px
-    background-color: transparent
-    color: $color-blue
-    font-size: 14px
-    font-weight: bold
-    border: 2px solid $color-blue
-    border-radius: 5px
-    display: block
+    font-size: 20px
+    color: #444444
+    margin-bottom: 10px
+.sub-width
+  margin-top: 82px
+.header
+  display: block
+  font-weight: bold
+  color: $color-blue
+  font-size: 46px
+button
+  width: 150px
+  height: 30px
+  background-color: transparent
+  color: $color-blue
+  font-size: 14px
+  font-weight: bold
+  border: 2px solid $color-blue
+  border-radius: 5px
+  display: block
+  margin-bottom: 10px
 
 .stroy-proc-body-dates
   padding-left: 12px
@@ -828,8 +801,7 @@ label
       margin-bottom: 20px
 
 .dom-rasp
-  height: 340px
-  width: 100%
+  min-height: 340px
   background-color: #FFF
   .header
     font-size: 46px
@@ -838,19 +810,23 @@ label
     display: block
     font-weight: bold
     margin-top: 70px
+    margin-bottom: 45px
   .description
     text-align: center
     display: block
     font-size: 20px
+    max-width: 1160px
 .map
-  height: 676px
-  width: 100%
-  background: url('../img/map-wide.jpeg') no-repeat
+  max-height: 676px
+  // background: url('../img/map-wide.jpeg') no-repeat
   background-position: center top
   background-size: cover
+  overflow: hidden
+  img
+    width: 100%
 
 .complete-objects
-  height: 710px
+  min-height: 710px
   .header
     font-size: 46px
     text-align: center
@@ -858,10 +834,16 @@ label
     display: block
     font-weight: bold
     margin-top: 70px
+    margin-bottom: 55px
   .complete-objects-list
     margin-bottom: 55px
+    text-align: center
+    padding: 0
+    // margin-right: -75px
     li
-      width: 370px
+      width: 350px
+      margin-bottom: 10px
+      // margin-right: 75px
       display: inline-block
       span
         display: block
@@ -874,11 +856,12 @@ label
         margin-bottom: 53px
   .buttons
     margin: auto
-    width: 680px
+    max-width: 680px
 
 .about
   background: url('../img/about.png') no-repeat
-  height: 633px
+  min-height: 633px
+  background-size: cover
   .header
     font-size: 46px
     text-align: center
@@ -886,19 +869,18 @@ label
     display: block
     font-weight: bold
     margin-top: 70px
+    margin-bottom: 35px
   .about-body
     margin-bottom: 50px
     .description
-      margin-right: 50px
-      float: left
       display: block
-      width: 460px
+      max-width: 480px
       p
         font-size: 20px
         color: #fff
     .about-list
-      width: 605px
-      float: left
+      max-width: 605px
+      padding: 0
       li
         width: 300px
         display: inline-block
@@ -927,12 +909,12 @@ label
     border-radius: 5px
     margin: auto
     display: block
+    margin-bottom: 10px
 
 .consulting
-  height: 614px
+  min-height: 606px
   .consulting-personal
-    float: left
-    width: 487px;
+    max-width: 487px;
     height: 100%
     // background: url('../img/personal-item.png') no-repeat
     margin-right: 10px
@@ -969,7 +951,7 @@ label
 
     .slide-description
       margin-top: -115px
-      width: 440px
+      max-width: 440px
       margin-left: 10px
       background: $color-blue
       opacity: 0.8
@@ -991,8 +973,7 @@ label
 
 
   .consulting-body
-    float: left
-    width: 660px;
+    max-width: 660px;
     .header
       font-size: 46px
       color: $color-blue
@@ -1050,7 +1031,7 @@ label
           left: 0
         label
           margin-top: 15px
-          width: 220px
+          width: 100%
           font-size: 18px
           color: #444444
 
@@ -1078,25 +1059,21 @@ label
 
 
 .footer
-  height: 525px;
+  min-height: 525px;
   .footer-img
-    position: relative
-    overflow: hidden;
-    float: left
-    width: 33%
+    min-height: 525px;
+    padding: 0
     height: 100%
     img
-      // width: 100%
-      height: 100%
-      position: absolute
-      left: -25%
+      min-height: 525px;
+      width: 100%
 
   .footer-contact
-    background-color: $color-blue
-    float: left
-    width: 33%
+    min-height: 525px;
+    padding: 0
+    background: $color-blue
+    background-size: cover
     height: 100%
-    z-index: 2
     .header
       font-size: 46px
       color: #fff
@@ -1104,6 +1081,7 @@ label
       font-weight: bold
       margin-top: 65px
       margin-left: 55px
+      max-width: 80%
     .footer-contact-list
       margin-left: 55px
       list-style: none
@@ -1120,33 +1098,26 @@ label
       .footer-contact-list-body
         float: left
   .footer-map
-    float: left
+    min-height: 525px;
+    padding: 0
     background: url('../img/map-wide.jpeg') no-repeat
     background-position: center top
     background-size: cover
     height: 100%
-    width: calc(100% - 33% - 33%)
 
 .subfooter
   height: 111px
   .left
-    width: 33%
     margin-top: 50px
-    float: left
-    text-align: left
     font-size: 18px
     span
       font-size: 18px
   .center
-    width: 33%
     margin-top: 50px
-    float: left
     text-align: center
     font-size: 18px
   .right
-    width: 33%
     margin-top: 50px
-    float: left
     text-align: right
     font-size: 18px
 
