@@ -13,13 +13,18 @@
 		<!-- favicon.ico -->
 		<link rel="shortcut icon" href="" type="image/x-icon">
 		<link rel="icon" href="" type="image/x-icon">
-		<!-- bower CSS -->
-		<!-- CSS -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+		<!-- build:css css/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+		<!-- endbower -->
+		<link rel="stylesheet" href="css/vendor/bootstrap.css">
+		<link rel="stylesheet" href="css/vendor/nouislider.css">
+		<!-- endbuild -->
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="css/libs.min.css">
-		<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+		<!-- build:css css/main.css -->
+		<link rel="stylesheet" href="css/sprite.css">
 		<link rel="stylesheet" href="css/main.css">
+		<!-- endbuild -->
 	</head>
 	<body>
 	<!--[if lt IE 7]>
@@ -35,28 +40,30 @@
 	<div class="container-fluid">
 		
 		<!-- Header -->
-		<div class="top-header row row-flex">
+		<div class="top-header row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="header-logo img-responsive">
 					<img class="img-responsive" src="img/logo.png" alt="">
 				</div>
 			</div>
-			<div class="col-md-4 col-md-offset-7 header-number clearfix">
-				<i class="sprite sprite-telephone"></i>
-				<span>+7 (423) 202-50-09</span>
+			<div class="col-md-6 col-md-offset-5">
+				<div class="header-number clearfix">
+					<i class="sprite sprite-telephone"></i>
+					<span>+7 (423) 202-50-09</span>
+				</div>
 			</div>
-			<div class="col-md-2 header-menu">
+			<div class="col-md-3 header-menu">
 				<i class="sprite sprite-menu"></i>
 						<span>МЕНЮ</span>
 			</div>
 		</div>
 		<!--  -->
 
-		<!-- Шарка -->
+		<!-- Шапка -->
 		<div class="row row-flex">
 			<div class="col-md-12 col-sm-12 col-xs-24 slider-backrgound-left-block">
 				<div class="row slider-background">
-					<div class="col-md-18 col-md-offset-6">
+					<div class="col-lg-18 col-lg-offset-6 col-md-22 col-md-offset-2 col-sm-22 col-sm-offset-2">
 						<span class="slider-left-block-header">
 							Продажа квартир повышенной комфортности во Владивостоке от 1 800 000 рублей
 						</span>
@@ -350,10 +357,10 @@
 						<li class="clearfix">
 							<ul class="apartment-list-item clearfix">
 								<div class="row">
-									<div class="col-md-2 col-md-offset-1">
+									<div class="col-md-2">
 										<li><i class="sprite sprite-dom"></i></li>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-5">
 										<li class="main-desc">
 											<span class="title">1 комнатная квартира</span>
 											<div class="subtitle clearfix">
@@ -388,10 +395,10 @@
 						<li class="clearfix">
 							<ul class="apartment-list-item clearfix">
 								<div class="row">
-									<div class="col-md-2 col-md-offset-1">
+									<div class="col-md-2">
 										<li><i class="sprite sprite-dom"></i></li>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-5">
 										<li class="main-desc">
 											<span class="title">1 комнатная квартира</span>
 											<div class="subtitle clearfix">
@@ -426,48 +433,10 @@
 						<li class="clearfix">
 							<ul class="apartment-list-item clearfix">
 								<div class="row">
-									<div class="col-md-2 col-md-offset-1">
+									<div class="col-md-2">
 										<li><i class="sprite sprite-dom"></i></li>
 									</div>
-									<div class="col-md-4">
-										<li class="main-desc">
-											<span class="title">1 комнатная квартира</span>
-											<div class="subtitle clearfix">
-												<i class="sprite sprite-etagi"></i>
-												<span class="floor">5 этажей</span>
-												<i class="sprite sprite-ploshad"></i>
-												<span class="area">27 кв.м</span>
-											</div>
-										</li>
-									</div>
-									<div class="col-md-3 ">
-										<li>
-											<i class="sprite sprite-sravnenie"></i>
-											<span>Добавить к сравнению</span>
-										</li>
-									</div>
-									<div class="col-md-3">
-										<li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
-									</div>
-									<div class="col-md-3">
-										<li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
-									</div>
-									<div class="col-md-3">
-										<li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
-									</div>
-									<div class="col-md-4">
-										<li><span class="pricee">1 700 000 руб</span></li>
-									</div>
-								</div>
-							</ul>
-						</li>
-						<li class="clearfix">
-							<ul class="apartment-list-item clearfix">
-								<div class="row">
-									<div class="col-md-2 col-md-offset-1">
-										<li><i class="sprite sprite-dom"></i></li>
-									</div>
-									<div class="col-md-4">
+									<div class="col-md-5">
 										<li class="main-desc">
 											<span class="title">1 комнатная квартира</span>
 											<div class="subtitle clearfix">
@@ -502,10 +471,10 @@
 						<li class="clearfix">
 							<ul class="apartment-list-item clearfix">
 								<div class="row">
-									<div class="col-md-2 col-md-offset-1">
+									<div class="col-md-2">
 										<li><i class="sprite sprite-dom"></i></li>
 									</div>
-									<div class="col-md-4">
+									<div class="col-md-5">
 										<li class="main-desc">
 											<span class="title">1 комнатная квартира</span>
 											<div class="subtitle clearfix">
@@ -540,10 +509,48 @@
 						<li class="clearfix">
 							<ul class="apartment-list-item clearfix">
 								<div class="row">
-									<div class="col-md-2 col-md-offset-1">
+									<div class="col-md-2">
 										<li><i class="sprite sprite-dom"></i></li>
 									</div>
+									<div class="col-md-5">
+										<li class="main-desc">
+											<span class="title">1 комнатная квартира</span>
+											<div class="subtitle clearfix">
+												<i class="sprite sprite-etagi"></i>
+												<span class="floor">5 этажей</span>
+												<i class="sprite sprite-ploshad"></i>
+												<span class="area">27 кв.м</span>
+											</div>
+										</li>
+									</div>
+									<div class="col-md-3">
+										<li>
+											<i class="sprite sprite-sravnenie"></i>
+											<span>Добавить к сравнению</span>
+										</li>
+									</div>
+									<div class="col-md-3">
+										<li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
+									</div>
+									<div class="col-md-3">
+										<li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
+									</div>
+									<div class="col-md-3">
+										<li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
+									</div>
 									<div class="col-md-4">
+										<li><span class="pricee">1 700 000 руб</span></li>
+									</div>
+								</div>
+							</ul>
+						</li>
+						<li class="clearfix">
+							<ul class="apartment-list-item clearfix">
+								<div class="row">
+									<div class="col-md-2">
+										<li><i class="sprite sprite-dom"></i></li>
+									</div>
+									<div class="col-md-5">
 										<li class="main-desc">
 											<span class="title">1 комнатная квартира</span>
 											<div class="subtitle clearfix">
@@ -905,153 +912,17 @@
 
 
 	</div>
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
+	<script src="js/vendor/wNumb.js"></script>
+	<script src="js/vendor/nouislider.js"></script>
+	<!-- endbuild -->
 
-	<!-- libraries -->
-	<script src="js/libs.min.js"></script>
-	<!-- JS -->
-	<script>
-		var floorRange = document.getElementById('floorRange');
-		var areaRange = document.getElementById('areaRange');
-		var priceRange = document.getElementById('priceRange');
-		noUiSlider.create(floorRange, {
-			start: [1, 25],
-			connect: true,
-			step: 1,
-			format: wNumb({
-				decimals: 0
-			}),
-			range: {
-				'min': 1,
-				'max': 25
-			}
-		});
-		noUiSlider.create(areaRange, {
-			start: [27, 72],
-			connect: true,
-			step: 1,
-			format: wNumb({
-				decimals: 0
-			}),
-			range: {
-				'min': 27,
-				'max': 72
-			}
-		});
-		noUiSlider.create(priceRange, {
-			start: [1700000, 4000000],
-			connect: true,
-			step: 50000,
-			format: wNumb({
-				decimals: 0
-			}),
-			range: {
-				'min': 1700000,
-				'max': 4000000
-			}
-		});
-		floorRange.noUiSlider.on('slide', function(){
-			$('#floor-from').val(floorRange.noUiSlider.get()[0])
-			$('#floor-to').val(floorRange.noUiSlider.get()[1])
-		});
-		areaRange.noUiSlider.on('slide', function(){
-			$('#area-from').val(areaRange.noUiSlider.get()[0])
-			$('#area-to').val(areaRange.noUiSlider.get()[1])
-		});
-		priceRange.noUiSlider.on('slide', function(){
-			$('#price-from').val(priceRange.noUiSlider.get()[0])
-			$('#price-to').val(priceRange.noUiSlider.get()[1])
-		});
-		$(document).ready(function(){
-		  var currentPosition = 0;
-		  var slideWidth = 560;
-		  var slides = $('.slide');
-		  var numberOfSlides = slides.length;
-		  // Убираем прокрутку
-		  $('#slidesContainer').css('overflow', 'hidden');
-		  // Вставляем все .slides в блок #slideInner
-		  slides
-		  .wrapAll('<div id="slideInner"></div>')
-		  // Float left to display horizontally, readjust .slides width
-		  .css({
-		    'float' : 'left',
-		    'width' : slideWidth
-		  });
-		  // Устанавливаем ширину #slideInner, равную ширине всех слайдов
-		  $('#slideInner').css('width', slideWidth * numberOfSlides);
-		  // Вставляем элементы контроля в DOM
-		  $('#slideshow')
-		    .prepend('<span class="control" id="leftControl">Move left</span>')
-		    .append('<span class="control" id="rightControl">Move right</span>');
-		  // Прячем правую стрелку при загрузке скрипта
-		  manageControls(currentPosition);
-		  // Отлавливаем клик на класс .controls
-		  $('.control')
-		    .bind('click', function(){
-		    // Определение новой позиции
-		      currentPosition = ($(this).attr('id')=='rightControl')
-		    ? currentPosition+1 : currentPosition-1;
-		      // Прячет / показывает элементы контроля
-		      manageControls(currentPosition);
-		      // Move slideInner using margin-left
-		      $('#slideInner').animate({
-		        'marginLeft' : slideWidth*(-currentPosition)
-		      });
-		    });
-		  // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
-		  function manageControls(position){
-		    // Спрятать левую стрелку, если это левый слайд
-		    if(position==0){ $('#leftControl').hide() }
-		    else{ $('#leftControl').show() }
-		    // Спрятать правую стрелку, если это последний слайд
-		    if(position==numberOfSlides-1){ $('#rightControl').hide() }
-		    else{ $('#rightControl').show() }
-		    }
+	<!-- build:js scripts/main.js -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
 
-
-
-			var currentPosition1 = 0;
-			  var slideWidth1 = 700;
-			  var slides1 = $('.slide1');
-			  var numberOfSlides1 = slides1.length;
-			  // Убираем прокрутку
-			  $('#slidesContainer1').css('overflow', 'hidden');
-			  // Вставляем все .slides в блок #slideInner
-			  slides1.wrapAll('<div id="slideInner1"></div>')
-			  // Float left to display horizontally, readjust .slides width
-			  .css({
-			    'float' : 'left',
-			    'width' : slideWidth1
-			  });
-			  // Устанавливаем ширину #slideInner, равную ширине всех слайдов
-			  $('#slideInner1').css('width', slideWidth1 * numberOfSlides1);
-			  // Вставляем элементы контроля в DOM
-			  $('#slideshow1')
-			    .prepend('<span class="control1" id="leftControl1">Move left</span>')
-			    .append('<span class="control1" id="rightControl1">Move right</span>');
-			  // Прячем правую стрелку при загрузке скрипта
-			  manageControls1(currentPosition1);
-			  // Отлавливаем клик на класс .controls
-			  $('.control1').bind('click', function(){
-			    // Определение новой позиции
-			      currentPosition1 = ($(this).attr('id')=='rightControl1')
-			    ? currentPosition1+1 : currentPosition1-1;
-			      // Прячет / показывает элементы контроля
-			      manageControls1(currentPosition1);
-			      // Move slideInner using margin-left
-			      $('#slideInner1').animate({
-			        'marginLeft' : slideWidth1*(-currentPosition1)
-			      });
-			    });
-			  // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
-			  function manageControls1(position1){
-			    // Спрятать левую стрелку, если это левый слайд
-			    if(position1==0){ $('#leftControl1').hide() }
-			    else{ $('#leftControl1').show() }
-			    // Спрятать правую стрелку, если это последний слайд
-			    if(position1==numberOfSlides1-1){ $('#rightControl1').hide() }
-			    else{ $('#rightControl1').show() }
-			    }
-  		});
-	</script>
 	</body>
 </html>
