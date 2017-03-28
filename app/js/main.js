@@ -95,7 +95,7 @@ var floorRange = document.getElementById('floorRange');
 		    else{ $('#rightControl').show() }
 		    }
 			var currentPosition1 = 0;
-			  var slideWidth1 = 700;
+			  var slideWidth1 = 650;
 			  var slides1 = $('.slide1');
 			  var numberOfSlides1 = slides1.length;
 			  // Убираем прокрутку
