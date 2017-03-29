@@ -12,6 +12,10 @@
 .pad0 {
   padding: 0; }
 
+@media all and (max-width: 768px) {
+  .mobile-header {
+    font-size: 30px !important; } }
+
 body p, span {
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
@@ -102,6 +106,18 @@ label {
 .header-number i, .header-menu i {
   margin-right: 6px; }
 
+@media all and (max-width: 990px) {
+  .header-logo {
+    margin-right: 10px;
+    float: left !important;
+    margin-bottom: 2px; }
+  .header-number {
+    float: left !important;
+    margin-bottom: 2px; }
+  .header-menu {
+    float: left !important;
+    margin-bottom: 2px; } }
+
 .slider-background {
   min-height: 628px; }
 
@@ -122,6 +138,9 @@ label {
   font-family: 'PT Sans', sans-serif;
   color: #fff;
   font-weight: bold; }
+
+.shapka-left-body {
+  max-width: 630px; }
 
 .slider-left-block-list {
   padding: 0px; }
@@ -178,7 +197,8 @@ label {
 
 @media all and (max-width: 768px) {
   .slider-left-block-task-question {
-    width: 200px; }
+    width: 200px;
+    margin-bottom: 75px; }
   .slider-left-block-select-apartment {
     width: 200px; } }
 
@@ -198,6 +218,9 @@ label {
   min-height: 586px;
   background: url(../img/advantages.png) no-repeat;
   background-size: cover; }
+
+.resp-width {
+  max-width: 1250px; }
 
 .features-list {
   margin-top: 83px;
@@ -224,7 +247,8 @@ label {
 
 .features-buttons {
   margin: auto;
-  max-width: 680px; }
+  max-width: 680px;
+  margin-bottom: 75px; }
 
 .features-buttons-select-apartment {
   float: left;
@@ -267,9 +291,7 @@ label {
   min-height: 718px; }
 
 .new-apartment-backrgound-left-block {
-  float: left;
-  height: 100%;
-  width: 40%; }
+  height: 100%; }
 
 .new-apartment-backrgound-right-block {
   float: right;
@@ -308,7 +330,7 @@ label {
 #leftControl1 {
   z-index: 5;
   top: 50%;
-  right: 384px;
+  left: 10px;
   background: transparent url("../img/leftarrow.png") no-repeat 0 0; }
 
 #rightControl1 {
@@ -345,7 +367,8 @@ label {
   margin: 5px 0 !important; }
 
 .new-apartment-right-block-buttons {
-  margin-top: 50px; }
+  margin-top: 50px;
+  margin-bottom: 75px; }
 
 .discounts {
   min-height: 640px;
@@ -431,7 +454,7 @@ label {
   font-family: 'PT Sans', sans-serif;
   color: #0aaed3;
   font-weight: bold;
-  margin-bottom: 10px; }
+  margin-bottom: 75px; }
 
 @media all and (max-width: 768px) {
   .discounts-button {
@@ -463,12 +486,13 @@ label {
   font-family: 'PT Sans', sans-serif;
   color: #fff;
   font-weight: bold;
-  margin-bottom: 10px; }
+  margin-bottom: 75px; }
 
 @media all and (max-width: 768px) {
   .bank-button {
     width: 250px;
-    margin: auto; } }
+    margin: auto;
+    margin-bottom: 75px; } }
 
 .banks-list {
   padding-left: 3%;
@@ -691,7 +715,7 @@ label {
   .show-else span {
     float: left;
     font-size: 20px;
-    margin-bottom: 40px; }
+    margin-bottom: 80px; }
 
 .autoparking {
   -webkit-box-sizing: content-box;
@@ -729,7 +753,7 @@ label {
             border-radius: 5px;
     margin: auto;
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 75px; }
 
 @media all and (max-width: 768px) {
   .autoparking button {
@@ -739,14 +763,14 @@ label {
   min-height: 720px; }
   .hod-and-news .stroy-proc {
     padding-top: 70px;
-    min-height: 720px;
+    min-height: 759px;
     height: 100%;
     background: url("../img/stroy-proc.png") no-repeat;
     background-position: center top;
     background-size: cover; }
   .hod-and-news .news {
     padding-top: 70px;
-    min-height: 720px;
+    min-height: 760px;
     height: 100%;
     background-color: #f8f8f8;
     padding-left: 40px; }
@@ -760,7 +784,7 @@ label {
   display: block;
   font-size: 20px;
   color: #444444;
-  margin-bottom: 10px; }
+  margin-bottom: 75px; }
 
 .sub-width {
   margin-top: 82px; }
@@ -783,6 +807,9 @@ button {
           border-radius: 5px;
   display: block;
   margin-bottom: 10px; }
+
+.stroy-proc-body button {
+  margin-bottom: 75px; }
 
 .stroy-proc-body-dates {
   padding-left: 12px;
@@ -808,6 +835,9 @@ button {
         margin-right: 10px;
         background-color: #6f6f6f;
         margin-bottom: 0px; }
+
+.stroy-proc-left-body {
+  max-width: 550px; }
 
 .news-body-list {
   padding: 0;
@@ -848,7 +878,8 @@ button {
     text-align: center;
     display: block;
     font-size: 20px;
-    max-width: 1160px; }
+    max-width: 1160px;
+    margin-bottom: 90px; }
 
 .map {
   max-height: 676px;
@@ -869,12 +900,15 @@ button {
     margin-top: 70px;
     margin-bottom: 55px; }
   .complete-objects .complete-objects-list {
-    margin-bottom: 55px;
+    margin-bottom: 35px;
     text-align: center;
     padding: 0; }
+    .complete-objects .complete-objects-list li:last-child {
+      margin-right: 0; }
     .complete-objects .complete-objects-list li {
-      width: 350px;
-      margin-bottom: 10px;
+      max-width: 350px;
+      margin-bottom: 30px;
+      margin-right: 65px;
       display: inline-block; }
       .complete-objects .complete-objects-list li span {
         display: block;
@@ -887,11 +921,16 @@ button {
         margin-bottom: 53px; }
   .complete-objects .buttons {
     margin: auto;
-    max-width: 680px; }
+    max-width: 680px;
+    margin-bottom: 80px; }
 
 @media all and (max-width: 768px) {
   .complete-objects .buttons {
     max-width: 200px; } }
+
+@media all and (max-width: 700px) {
+  .complete-objects .complete-objects-list li {
+    margin-right: 0 !important; } }
 
 .about {
   background: url("../img/about.png") no-repeat;
@@ -914,7 +953,7 @@ button {
         font-size: 20px;
         color: #fff; }
     .about .about-body .about-list {
-      max-width: 605px;
+      max-width: 800px;
       padding: 0; }
       .about .about-body .about-list li {
         width: 290px;
@@ -945,7 +984,7 @@ button {
             border-radius: 5px;
     margin: auto;
     display: block;
-    margin-bottom: 10px; }
+    margin-bottom: 75px; }
 
 @media all and (max-width: 768px) {
   .about button {
@@ -1092,6 +1131,13 @@ button {
         width: 100%;
         height: 55px; }
 
+@media all and (max-width: 768px) {
+  .consulting-body form .checkbox:not(checked) + label {
+    padding: 0 0 0 30px !important; }
+  .consulting-body form label {
+    font-size: 15px !important;
+    margin-bottom: 70px; } }
+
 .footer {
   min-height: 525px; }
   .footer .footer-img {
@@ -1119,6 +1165,8 @@ button {
       margin-left: 55px;
       list-style: none;
       padding: 0; }
+      .footer .footer-contact .footer-contact-list li {
+        margin-bottom: 20px; }
       .footer .footer-contact .footer-contact-list p {
         font-size: 24px;
         line-height: 39px;
@@ -1138,6 +1186,14 @@ button {
     background-size: cover;
     height: 100%; }
 
+@media all and (max-width: 768px) {
+  .footer-contact {
+    width: 100%; }
+    .footer-contact .footer-contact-list {
+      margin-left: 20px !important; }
+      .footer-contact .footer-contact-list p {
+        font-size: 18px !important; } }
+
 .subfooter {
   height: 111px; }
   .subfooter .left {
@@ -1153,6 +1209,10 @@ button {
     margin-top: 50px;
     text-align: right;
     font-size: 18px; }
+
+@media all and (max-width: 400px) {
+  .subfooter .left, .subfooter .center, .subfooter .right {
+    text-align: left !important; } }
 
 .right-panel {
   width: 75px;
