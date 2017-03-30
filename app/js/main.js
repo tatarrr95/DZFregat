@@ -137,3 +137,22 @@ var floorRange = document.getElementById('floorRange');
 			    else{ $('#rightControl1').show() }
 			    }
   		});
+
+		var waypoint = new Waypoint({
+			element: document.getElementById('banks'),
+			handler: function() {
+				$('#proverka').addClass('zoomInUp');
+			}
+		});
+
+		$(document).on('click', function() {
+			$('#proverka').click(
+				function() {
+      				$(this).addClass('zoomInUp'); // Добавляем класс bounce
+  				},
+  				function() {
+      				$(this).removeClass('zoomInUp'); // Убираем класс
+  				}
+  			)});
+		
+	new WOW().init();

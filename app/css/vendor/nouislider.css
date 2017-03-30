@@ -111,7 +111,7 @@
 }*/
 
 .noUi-handle {
-  background-image: url(../img/spritesheet.png);
+  background-image: url(/img/spritesheet.png);
   background-repeat: no-repeat;
   display: block;
   width: 13px;

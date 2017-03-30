@@ -1,5 +1,5 @@
 .sprite {
-    background-image: url(../img/spritesheet.png);
+    background-image: url(/img/spritesheet.png);
     background-repeat: no-repeat;
     display: block;
 }
@@ -49,209 +49,239 @@
 .sprite-blueellips {
     width: 61px;
     height: 61px;
-    background-position: -398px -136px;
+    background-position: -430px -5px;
+}
+
+.sprite-bluerightarrow {
+    width: 24px;
+    height: 44px;
+    background-position: -430px -76px;
 }
 
 .sprite-broni {
     width: 12px;
     height: 23px;
-    background-position: -430px -5px;
+    background-position: -5px -76px;
 }
 
 .sprite-calcipoteka {
     width: 17px;
     height: 23px;
-    background-position: -452px -5px;
+    background-position: -464px -76px;
+}
+
+.sprite-close {
+    width: 24px;
+    height: 24px;
+    background-position: -464px -109px;
 }
 
 .sprite-dom {
     width: 71px;
     height: 71px;
-    background-position: -398px -207px;
+    background-position: -398px -143px;
 }
 
 .sprite-elend {
     width: 82px;
     height: 82px;
-    background-position: -5px -288px;
+    background-position: -398px -224px;
 }
 
 .sprite-elkvar {
     width: 82px;
     height: 82px;
-    background-position: -97px -288px;
+    background-position: -5px -316px;
 }
 
 .sprite-elparkov {
     width: 82px;
     height: 82px;
-    background-position: -189px -288px;
+    background-position: -97px -316px;
 }
 
 .sprite-elplosh {
     width: 82px;
     height: 82px;
-    background-position: -281px -288px;
+    background-position: -189px -316px;
 }
 
 .sprite-etagi {
     width: 15px;
     height: 16px;
-    background-position: -5px -38px;
+    background-position: -5px -109px;
 }
 
 .sprite-footer-mail {
     width: 23px;
     height: 17px;
-    background-position: -430px -38px;
+    background-position: -281px -316px;
 }
 
 .sprite-footer-telephone {
     width: 18px;
     height: 30px;
-    background-position: -463px -38px;
+    background-position: -314px -316px;
 }
 
 .sprite-geo {
     width: 17px;
     height: 21px;
-    background-position: -5px -78px;
+    background-position: -342px -316px;
 }
 
 .sprite-leftarrow {
     width: 24px;
     height: 44px;
-    background-position: -430px -78px;
+    background-position: -369px -316px;
+}
+
+.sprite-leftrightarrow {
+    width: 24px;
+    height: 44px;
+    background-position: -403px -316px;
 }
 
 .sprite-li {
     width: 12px;
     height: 12px;
-    background-position: -464px -78px;
+    background-position: -479px -143px;
 }
 
 .sprite-menu {
     width: 24px;
     height: 18px;
-    background-position: -373px -288px;
+    background-position: -437px -316px;
+}
+
+.sprite-menu-geo {
+    width: 17px;
+    height: 21px;
+    background-position: -471px -316px;
+}
+
+.sprite-menu-number {
+    width: 18px;
+    height: 30px;
+    background-position: -281px -347px;
 }
 
 .sprite-notactivecheckbox {
     width: 22px;
     height: 22px;
-    background-position: -464px -100px;
+    background-position: -437px -347px;
 }
 
 .sprite-ozast-geo {
     width: 79px;
     height: 79px;
-    background-position: -407px -288px;
+    background-position: -309px -379px;
 }
 
 .sprite-ozast-happy {
     width: 79px;
     height: 79px;
-    background-position: -373px -377px;
+    background-position: -398px -379px;
 }
 
 .sprite-ozast-invest {
     width: 79px;
     height: 79px;
-    background-position: -491px -5px;
+    background-position: -501px -5px;
 }
 
 .sprite-ozast-kvart {
     width: 79px;
     height: 79px;
-    background-position: -496px -94px;
+    background-position: -501px -94px;
 }
 
 .sprite-ozast-let {
     width: 79px;
     height: 79px;
-    background-position: -479px -183px;
+    background-position: -490px -183px;
 }
 
 .sprite-ozast-postr {
     width: 79px;
     height: 79px;
-    background-position: -496px -272px;
+    background-position: -498px -272px;
 }
 
 .sprite-pdf {
     width: 19px;
     height: 23px;
-    background-position: -496px -361px;
+    background-position: -5px -272px;
 }
 
 .sprite-play {
     width: 134px;
     height: 134px;
-    background-position: -5px -394px;
+    background-position: -590px -5px;
 }
 
 .sprite-ploshad {
     width: 19px;
     height: 14px;
-    background-position: -525px -361px;
+    background-position: -590px -149px;
 }
 
 .sprite-raightarrow {
     width: 24px;
     height: 44px;
-    background-position: -149px -385px;
+    background-position: -619px -149px;
 }
 
 .sprite-refresh {
     width: 20px;
     height: 21px;
-    background-position: -554px -361px;
+    background-position: -653px -149px;
 }
 
 .sprite-regulator {
     width: 13px;
     height: 12px;
-    background-position: -183px -392px;
+    background-position: -683px -149px;
 }
 
 .sprite-side-calculate {
     width: 22px;
     height: 32px;
-    background-position: -206px -385px;
+    background-position: -683px -171px;
 }
 
 .sprite-side-comment {
     width: 28px;
     height: 24px;
-    background-position: -238px -392px;
+    background-position: -579px -213px;
 }
 
 .sprite-side-logo {
     width: 35px;
     height: 39px;
-    background-position: -276px -392px;
+    background-position: -617px -213px;
 }
 
 .sprite-side-vote {
     width: 22px;
     height: 25px;
-    background-position: -321px -385px;
+    background-position: -662px -213px;
 }
 
 .sprite-sortby {
     width: 8px;
     height: 14px;
-    background-position: -353px -392px;
+    background-position: -715px -149px;
 }
 
 .sprite-sravnenie {
     width: 20px;
     height: 23px;
-    background-position: -462px -392px;
+    background-position: -694px -213px;
 }
 
 .sprite-telephone {
     width: 24px;
     height: 25px;
-    background-position: -525px -392px;
+    background-position: -694px -246px;
 }

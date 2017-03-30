@@ -16,6 +16,8 @@
 		<!-- build:css css/vendor.css -->
 		<!-- bower:css -->
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+		<link rel="stylesheet" href="bower/remodal/dist/remodal.css" />
+		<link rel="stylesheet" href="bower/remodal/dist/remodal-default-theme.css" />
 		<!-- endbower -->
 		<link rel="stylesheet" href="css/vendor/bootstrap.css">
 		<link rel="stylesheet" href="css/vendor/nouislider.css">
@@ -24,6 +26,7 @@
 		<!-- build:css css/main.css -->
 		<link rel="stylesheet" href="css/sprite.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/animista.css">
 		<!-- endbuild -->
 	</head>
 	<body>
@@ -53,15 +56,17 @@
 				</div>
 			</div>
 			<div class="col-md-3 header-menu">
-				<i class="sprite sprite-menu"></i>
-						<span>МЕНЮ</span>
+				<a class="a-pointer" data-remodal-target="menu">
+					<i id="elem-menu" class="sprite sprite-menu"></i>
+					<span>МЕНЮ</span>
+				</a>
 			</div>
 		</div>
 		<!--  -->
 
 		<!-- Шапка -->
 		<div class="row row-flex">
-			<div class="col-md-12 col-sm-12 col-xs-24 slider-backrgound-left-block">
+			<div class="col-md-12 col-sm-12 col-xs-24 slider-backrgound-left-block wow bounceInLeft">
 				<div class="row slider-background">
 					<div class="col-md-22 col-md-offset-2 pull-right shapka-left-body">
 						<span class="slider-left-block-header mobile-header">
@@ -88,12 +93,12 @@
 						</ul>
 						<div class="slider-left-block-buttons clearfix">
 							<button onclick="location.href='#select-apartment'" class="slider-left-block-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
-							<button class="slider-left-block-task-question">ЗАДАТЬ ВОПРОС</button>
+							<button onclick="location.href='#consult'" class="slider-left-block-task-question">ЗАДАТЬ ВОПРОС</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 col-sm-12 col-xs-24 slider-backrgound-right-block">
+			<div class="col-md-12 col-sm-12 col-xs-24 slider-backrgound-right-block wow bounceInRight">
 				<div class="row slider-background">
 					<div class="col-md-18">
 						<span class="slider-right-block-header">
@@ -111,34 +116,34 @@
 		<div class="row row-flex features">
 			<div class="col-md-22 col-md-offset-1 resp-width center-block">
 				<ul class="features-list">
-					<li>
+					<li class=" rollIn wow">
 						<i class="sprite sprite-belprostor"></i>
 						<span>Простор <p>Высота этажа 3м</p></span>
 					</li>
-					<li>
+					<li class="rollIn wow">
 						<i class="sprite sprite-belkrasikomf"></i>
 						<span>Красота и комфорт...</span>
 					</li>
-					<li>
+					<li class="rollIn wow">
 						<i class="sprite sprite-belgramplan"></i>
 						<span>Грамотная планировка...</span>
 					</li>
-					<li>
+					<li class="rollIn wow">
 						<i class="sprite sprite-bellift"></i>
 						<span>4 лифта...</span>
 					</li>
-					<li>
+					<li class="rollIn wow">
 						<i class="sprite sprite-belvsesvoe"></i>
 						<span>Все свое. В каждой квартире лоджия</span>
 					</li>
-					<li>
+					<li class="rollIn wow">
 						<i class="sprite sprite-belpark"></i>
 						<span>Собственное машиноместо у дома</span>
 					</li>
 				</ul>
 				<div class="features-buttons clearfix">
 					<button onclick="location.href='#select-apartment'" class="features-buttons-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
-					<button class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
+					<button onclick="location.href='#consult'" class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
 				</div>
 			</div>
 		</div>
@@ -147,7 +152,7 @@
 
 		<!-- Описание квартиры и слайдер -->
 		<div class="row new-apartment-backrgound">
-			<div class="col-md-10 col-xs-24 new-apartment-backrgound-left-block pad0">
+			<div class="col-md-10 col-xs-24 new-apartment-backrgound-left-block pad0 wow bounceInLeft">
 				<div class="">
 					<!-- Slideshow HTML -->
 					<div id="slideshow1">
@@ -166,7 +171,7 @@
 					<!-- Slideshow HTML -->
 				</div>
 			</div>
-			<div class="col-md-14 col-xs-24 new-apartment-right-block">
+			<div class="col-md-14 col-xs-24 new-apartment-right-block wow bounceInRight">
 				<span class="new-apartment-right-block-header mobile-header">
 					НОВАЯ КВАРТИРА В НОВОМ ДОМЕ
 				</span>
@@ -181,7 +186,7 @@
 				</div>
 				<div class="new-apartment-right-block-buttons clearfix">
 					<button onclick="location.href='#select-apartment'" class="features-buttons-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
-					<button class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
+					<button onclick="location.href='#consult'" class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
 				</div>
 			</div>
 		</div>
@@ -222,37 +227,37 @@
 
 
 		<!-- Банки -->
-		<div class="row banks">
+		<div id="banks" class="row banks">
 			<div class="col-md-22 col-md-offset-1">
 				<span class="banks-header mobile-header">
 					ИПОТЕЧНАЯ АККРЕДИТАЦИЯ КРЕПНЕЙШИХ БАНКОВ РОССИИ
 				</span>
 				<ul class="banks-list resp-width center-block">
-					<li class="banks-list-item">
+					<li id="proverka" class="banks-list-item zoomInDown wow">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
-						<img class="img-responsive" src="img/banks/sber.png" alt="">
+						<img class="img-responsive animated" src="img/banks/sber.png" alt="">
 					</li>
-					<li class="banks-list-item">
+					<li class="banks-list-item zoomInDown wow">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
 						<img class="img-responsive" src="img/banks/vtb.png" alt="">
 					</li>
-					<li class="banks-list-item">
+					<li class="banks-list-item zoomInDown wow">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
 						<img class="img-responsive" src="img/banks/corprazv.png" alt="">
 					</li>
-					<li class="banks-list-item">
+					<li class="banks-list-item zoomInDown wow">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
 						<img class="img-responsive" src="img/banks/gazprom.png" alt="">
 					</li>
-					<li class="banks-list-item">
+					<li class="banks-list-item zoomInDown wow">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
 						<img class="img-responsive" src="img/banks/svyazbank.png" alt="">
 					</li>
-					<li class="banks-list-item">
+					<li class="banks-list-item zoomInDown wow">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
 						<img class="img-responsive" src="img/banks/primsocbank.png" alt="">
 					</li>
-					<li class="banks-list-item">
+					<li class="banks-list-item zoomInDown wow">
 						<div class="banks-list-percent"><span class="banks-list-percent-text">От 11.5%</span></div>
 						<img class="img-responsive" src="img/banks/rosselhozbank.png" alt="">
 					</li>
@@ -706,7 +711,7 @@
 				</ul>
 				<div class="buttons clearfix">
 					<button onclick="location.href='#select-apartment'" class="features-buttons-select-apartment">ВЫБЕРЕТЕ КВАРТИРУ</button>
-					<button class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
+					<button onclick="location.href='#consult'" class="features-buttons-task-question">ЗАДАТЬ ВОПРОС</button>
 				</div>
 			</div>
 		</div>
@@ -779,7 +784,7 @@
 
 
 		<!-- Консультация + слайдер -->
-		<div class="row consulting">
+		<div id="consult" class="row consulting">
 			<div class="col-md-22 col-md-offset-1 center-block">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-4">
@@ -788,7 +793,7 @@
 							<div id="slideshow">
 								<div id="slidesContainer">
 									<div class="slide">
-										<img src="img/meneger2.png">
+										<img class="img-responsive" src="img/meneger2.png">
 										<div class="slide-description">
 											<span class="slide-description-title">
 												Ирина Степанюк
@@ -799,7 +804,7 @@
 										</div>
 									</div>
 									<div class="slide">
-										<img src="img/meneger1.png">
+										<img class="img-responsive" src="img/meneger1.png">
 										<div class="slide-description">
 											<span class="slide-description-title">
 												Оксана Хорошун
@@ -897,6 +902,8 @@
 			</div>
 		</div>
 
+
+		<!-- Правая панель -->
 		<div class="right-panel">
 			<div class="calc-panel">
 				<i class="sprite sprite-side-calculate"></i>
@@ -913,14 +920,50 @@
 		</div>
 		<!--  -->
 
+		<!-- модальные окна -->
+		<!-- меню -->
+		<div class="remodal menu-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false">
+
+			<button data-remodal-action="close" class="modal-close"></button>
+			<div class="menu-logo">
+				<img class="img-responsive" src="img/logo.png" alt="">
+			</div>
+			<div class="menu-links">
+				<a href="" class="menu-link">Выбрать квартиру</a>
+				<a href="" class="menu-link">О застройщике</a>
+				<a href="" class="menu-link">Ипотечный калькулятор</a>
+				<a href="" class="menu-link">Документация</a>
+				<a href="" class="menu-link">Партнеры</a>
+				<a href="" class="menu-link">Тендеры</a>
+				<a href="" class="menu-link">Контакты</a>
+			</div>
+			<div class="menu-footer">
+				<div class="menu-footer-line clearfix">
+					<i class="sprite sprite-menu-geo"></i>
+					<span>
+						Офис продаж: ул.Ватутина, 4В, секция 5, офис 9
+					</span>
+				</div>
+				<div class="menu-footer-line clearfix">
+					<i class="sprite sprite-menu-number"></i>
+					<span>
+						8(423)202-50-09
+					</span>
+				</div>
+			</div>			
+		</div>
+
 
 	</div>
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
 	<script src="bower/jquery/dist/jquery.js"></script>
+	<script src="bower/remodal/dist/remodal.js"></script>
 	<!-- endbower -->
 	<script src="js/vendor/wNumb.js"></script>
 	<script src="js/vendor/nouislider.js"></script>
+	<script src="bower/waypoints/lib/jquery.waypoints.js"></script>
+	<script src="bower/wow/dist/wow.js"></script>
 	<!-- endbuild -->
 
 	<!-- build:js scripts/main.js -->

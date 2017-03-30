@@ -499,6 +499,10 @@ label
   margin-top: 150px
   height: 80px
 
+@media all and (max-width: 768px)
+  .banks-list-item
+    width: 177px
+
 .banks-list-percent
   width: 62px
   height: 62px
@@ -997,6 +1001,8 @@ button
     button
       width: 250px
 
+
+
 .consulting
   min-height: 640px
   .consulting-personal
@@ -1055,8 +1061,6 @@ button
         color: #fff
         font-size: 18px
         display: block
-
-
 
   .consulting-body
     max-width: 660px;
@@ -1245,3 +1249,103 @@ button
     padding-right: 5px
     i
       margin: 10px auto
+
+.a-pointer
+  cursor: pointer
+
+.menu-modal
+  background-color: #FFF
+  .menu-logo
+    margin-bottom: 55px
+  .menu-links
+    margin-bottom: 60px
+    .menu-link
+      text-align: left
+      display: block
+      font-size: 20px
+      margin-bottom: 15px
+      color: #444444
+      &:hover
+        color: $color-blue
+  .menu-footer
+    .menu-footer-line
+      margin-bottom: 15px
+      i
+        float: left
+        margin-right: 10px
+        display: block
+      span
+        float: left
+        font-size: 20px
+        color: #444444
+        display: block
+        max-width: 85%
+        text-align: left
+
+
+.modal-close 
+  position: absolute
+  top: 5px
+  right: 5px
+
+  display: block
+  overflow: visible
+
+  width: 24px
+  height: 24px
+  margin: 0
+  padding: 0
+
+  cursor: pointer
+  -webkit-transition: color 0.2s
+  transition: color 0.2s
+  border: 0
+  outline: 0
+  background: url('/img/close.png') no-repeat
+
+.page-discounts-header
+  background: url('../img/discounts-header.png') no-repeat
+  background-size: cover
+.page-header
+  min-height: 381px
+  padding-top: 138px
+  margin-bottom: 60px
+
+@media all and (max-width: 768px)
+  .page-header
+    padding-left: 15px
+
+.page-header-date
+  color: #fff
+  font-size: 32px
+  line-height: 32px
+  display: block
+  margin-bottom: 25px
+.page-header-title
+  color: #fff
+  font-size: 48px
+  display: block
+  font-weight: bold
+  line-height: 48px
+
+@media all and (max-width: 768px)
+  .page-header-date
+    font-size: 28px
+  .page-header-title
+    font-size: 36px
+
+// img
+//   display: block
+//   max-width: 100%
+//   max-height: 100%
+
+.slide-in-bck-center
+  -webkit-animation: slide-in-bck-center 0.7s ease-in reverse both;
+  -moz-animation: slide-in-bck-center 0.7s ease-in reverse both;
+  animation: slide-in-bck-center 0.7s ease-in reverse both;
+.shadow-drop-2-center
+  -webkit-animation: shadow-drop-2-center 0.4s linear both;
+  -moz-animation: shadow-drop-2-center 0.4s linear both;
+  animation: shadow-drop-2-center 0.4s linear both;
+
+
