@@ -1303,6 +1303,8 @@ button
   outline: 0
   background: url('/img/close.png') no-repeat
 
+
+// Акции - страница
 .page-discounts-header
   background: url('../img/discounts-header.png') no-repeat
   background-size: cover
@@ -1334,18 +1336,138 @@ button
   .page-header-title
     font-size: 36px
 
-// img
-//   display: block
-//   max-width: 100%
-//   max-height: 100%
+//Акции и скидки
 
-.slide-in-bck-center
-  -webkit-animation: slide-in-bck-center 0.7s ease-in reverse both;
-  -moz-animation: slide-in-bck-center 0.7s ease-in reverse both;
-  animation: slide-in-bck-center 0.7s ease-in reverse both;
-.shadow-drop-2-center
-  -webkit-animation: shadow-drop-2-center 0.4s linear both;
-  -moz-animation: shadow-drop-2-center 0.4s linear both;
-  animation: shadow-drop-2-center 0.4s linear both;
+.page-discounts-list-header
+  background: url('../img/discounts-white-header.png') no-repeat
+  background-size: cover
+  min-height: 627px
+  .page-header-title
+    color: #000
+    margin-bottom: 25px
+.page-header-description
+  color: #000
+  font-size: 32px
+  line-height: 32px
+  display: block
+  margin-bottom: 25px
+  margin-bottom: 38px
+
+.read-more
+  float: left
+  display: block
+  background: #0aaed3
+  border: 2px solid #0aaed3
+  border-radius: 3px
+  width: 250px
+  height: 57px
+  margin-right: 20px
+  font-size: 16px
+  font-family: 'PT Sans', sans-serif
+  color: #fff
+  font-weight: bold
+  margin-bottom: 10px
+
+.discounts-page-content
+  .discounts-list-image
+    border: 1px solid $color-blue
+    border-radius: 50%
+  .discounts-list-description
+    padding-top: 55px
+    .discounts-list-description-title
+      color: $color-blue
+      font-size: 18px
+      margin-bottom: 15px
+      line-height: 18px
+    .discounts-list-description-text
+      color: #000
+      font-size: 22px
+      line-height: 22px
+  .discounts-list li
+    margin-bottom: 45px
+    margin-right: 112px
+
+@media all and (max-width: 580px)
+  .discounts-page-content
+    .discounts-list-image
+      margin-left: auto
+      margin-right: auto
+      float: none
+    .discounts-list li
+      margin-bottom: 45px
+      margin-right: 0px
+      margin-left: auto
+      margin-right: auto
+
+// Документация
+.page-documentation-header
+  background: url('../img/documentation-header.png') no-repeat
+  background-size: cover
+  padding-top: 170px
+  .page-header-title
+    color: #fff
+    margin-bottom: 25px
+    text-align: center
+    font-size: 46px
+
+.documentation-content
+  .text p
+    font-size: 20px
+  .text
+    margin-bottom: 150px
+  .documents-title
+    text-align: center
+    span
+      color: $color-blue
+      font-size: 46px
+      font-weight: bold
+  .documents
+    margin-bottom: 160px
+  .documents-list
+    margin-top: 83px
+    padding: 0
+    text-align: center
+    li
+      display: inline-block
+      max-width: 370px
+      margin-bottom: 80px
+      margin-right: 40px
+      text-align: left
+      span
+        margin-top: 30px
+        float: left
+        font-size: 20px
+        font-family: 'PT Sans', sans-serif
+        color: #000
+        width: 170px
+        p
+          margin-top: 4px
+      img
+        float: left
+        margin-right: 23px
+  button
+    display: block
+    background: #0aaed3
+    border: 2px solid #0aaed3
+    border-radius: 3px
+    width: 300px
+    height: 57px
+    font-size: 16px
+    font-family: 'PT Sans', sans-serif
+    color: #fff
+    font-weight: bold
+    margin-bottom: 10px
+    margin: auto
+
+@media all and (max-width: 580px)
+  .documentation-content
+    .documents-list
+      li
+        margin-right: 0
+  .page-header-title
+    font-size: 34px !important
+  .documents-title
+    span
+      font-size: 34px !important
 
 
