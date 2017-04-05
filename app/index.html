@@ -28,6 +28,7 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/animista.css">
 		<!-- endbuild -->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	</head>
 	<body>
 	<!--[if lt IE 7]>
@@ -104,7 +105,7 @@
 						<span class="slider-right-block-header">
 							Посмотрите видео
 						</span>
-						<i class="sprite sprite-play center-block"></i>
+						<i data-remodal-target="video" class="sprite sprite-play center-block play-video"></i>
 					</div>
 				</div>
 			</div>
@@ -685,8 +686,8 @@
 
 
 		<!-- Карта -->
-		<div class="row map">
-			<img class="img-responsive" src="img/map-wide.jpeg">
+		<div class="row map" id="YMapsID" style="height:600px">
+			<!-- <img class="img-responsive" src="img/map-wide.jpeg"> -->
 		</div>
 		<!--  -->
 
@@ -837,7 +838,7 @@
 								</div>
 								<div class="form-right">
 									<textarea name=""></textarea>
-									<button class="features-buttons-select-apartment">ПОЛУЧИТЬ КОНСУЛЬТАУЦИЮ</button>
+									<button class="features-buttons-select-apartment">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
 								</div>
 							</form>
 						</div>
@@ -881,7 +882,7 @@
 				</ul>
 			</div>
 			<div data-wow-delay="0.9s" class="col-md-8 col-sm-24 footer-map wow fadeInUp">
-
+				
 			</div>
 		</footer>
 		<!--  -->
@@ -922,7 +923,7 @@
 
 		<!-- модальные окна -->
 		<!-- меню -->
-		<div class="remodal menu-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false">
+		<div class="remodal menu-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false, modifier: 'proverka' ">
 
 			<button data-remodal-action="close" class="modal-close"></button>
 			<div class="menu-logo">
@@ -953,6 +954,14 @@
 			</div>			
 		</div>
 
+		<div class="remodal" data-remodal-id="video" data-remodal-options="hashTracking: false">
+
+			<button data-remodal-action="close" class="modal-close"></button>
+			ячсмячсмячсмясчм
+			
+			</div>			
+		</div>
+
 
 	</div>
 	<!-- build:js scripts/vendor.js -->
@@ -962,7 +971,6 @@
 	<!-- endbower -->
 	<script src="js/vendor/wNumb.js"></script>
 	<script src="js/vendor/nouislider.js"></script>
-	<script src="bower/waypoints/lib/jquery.waypoints.js"></script>
 	<script src="bower/wow/dist/wow.js"></script>
 	<!-- endbuild -->
 
