@@ -1,5 +1,5 @@
 .sprite {
-    background-image: url(/img/spritesheet.png);
+    background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     display: block;
 }
@@ -31,257 +31,305 @@
 .sprite-belpark {
     width: 121px;
     height: 121px;
-    background-position: -5px -136px;
+    background-position: -430px -5px;
 }
 
 .sprite-belprostor {
     width: 121px;
     height: 121px;
-    background-position: -136px -136px;
+    background-position: -5px -136px;
 }
 
 .sprite-belvsesvoe {
     width: 121px;
     height: 121px;
-    background-position: -267px -136px;
+    background-position: -136px -136px;
 }
 
 .sprite-blueellips {
     width: 61px;
     height: 61px;
-    background-position: -430px -5px;
+    background-position: -267px -136px;
 }
 
 .sprite-bluerightarrow {
     width: 24px;
     height: 44px;
-    background-position: -430px -76px;
+    background-position: -338px -136px;
 }
 
 .sprite-broni {
     width: 12px;
     height: 23px;
-    background-position: -5px -76px;
+    background-position: -372px -136px;
 }
 
 .sprite-calcipoteka {
     width: 17px;
     height: 23px;
-    background-position: -464px -76px;
+    background-position: -394px -136px;
 }
 
 .sprite-close {
     width: 24px;
     height: 24px;
-    background-position: -464px -109px;
+    background-position: -421px -136px;
 }
 
 .sprite-dom {
     width: 71px;
     height: 71px;
-    background-position: -398px -143px;
+    background-position: -455px -136px;
 }
 
 .sprite-elend {
     width: 82px;
     height: 82px;
-    background-position: -398px -224px;
+    background-position: -267px -217px;
 }
 
 .sprite-elkvar {
     width: 82px;
     height: 82px;
-    background-position: -5px -316px;
+    background-position: -359px -217px;
 }
 
 .sprite-elparkov {
     width: 82px;
     height: 82px;
-    background-position: -97px -316px;
+    background-position: -451px -217px;
 }
 
 .sprite-elplosh {
     width: 82px;
     height: 82px;
-    background-position: -189px -316px;
+    background-position: -5px -309px;
 }
 
 .sprite-etagi {
     width: 15px;
     height: 16px;
-    background-position: -5px -109px;
+    background-position: -536px -136px;
 }
 
 .sprite-footer-mail {
     width: 23px;
     height: 17px;
-    background-position: -281px -316px;
+    background-position: -536px -162px;
 }
 
 .sprite-footer-telephone {
     width: 18px;
     height: 30px;
-    background-position: -314px -316px;
+    background-position: -97px -309px;
 }
 
 .sprite-geo {
     width: 17px;
     height: 21px;
-    background-position: -342px -316px;
+    background-position: -543px -189px;
 }
 
 .sprite-leftarrow {
     width: 24px;
     height: 44px;
-    background-position: -369px -316px;
+    background-position: -125px -309px;
 }
 
 .sprite-leftrightarrow {
     width: 24px;
     height: 44px;
-    background-position: -403px -316px;
+    background-position: -159px -309px;
 }
 
 .sprite-li {
     width: 12px;
     height: 12px;
-    background-position: -479px -143px;
+    background-position: -372px -189px;
+}
+
+.sprite-list-style-img {
+    width: 18px;
+    height: 18px;
+    background-position: -394px -189px;
 }
 
 .sprite-menu {
     width: 24px;
     height: 18px;
-    background-position: -437px -316px;
+    background-position: -193px -309px;
 }
 
 .sprite-menu-geo {
     width: 17px;
     height: 21px;
-    background-position: -471px -316px;
+    background-position: -543px -220px;
 }
 
 .sprite-menu-number {
     width: 18px;
     height: 30px;
-    background-position: -281px -347px;
+    background-position: -227px -309px;
 }
 
 .sprite-notactivecheckbox {
     width: 22px;
     height: 22px;
-    background-position: -437px -347px;
+    background-position: -255px -309px;
 }
 
 .sprite-ozast-geo {
     width: 79px;
     height: 79px;
-    background-position: -309px -379px;
+    background-position: -287px -309px;
+}
+
+.sprite-ozast-geo-blue {
+    width: 79px;
+    height: 79px;
+    background-position: -376px -309px;
 }
 
 .sprite-ozast-happy {
     width: 79px;
     height: 79px;
-    background-position: -398px -379px;
+    background-position: -465px -309px;
+}
+
+.sprite-ozast-happy-blue {
+    width: 79px;
+    height: 79px;
+    background-position: -97px -398px;
 }
 
 .sprite-ozast-invest {
     width: 79px;
     height: 79px;
-    background-position: -501px -5px;
+    background-position: -186px -398px;
+}
+
+.sprite-ozast-invest-blue {
+    width: 79px;
+    height: 79px;
+    background-position: -275px -398px;
 }
 
 .sprite-ozast-kvart {
     width: 79px;
     height: 79px;
-    background-position: -501px -94px;
+    background-position: -364px -398px;
+}
+
+.sprite-ozast-kvart-blue {
+    width: 79px;
+    height: 79px;
+    background-position: -453px -398px;
 }
 
 .sprite-ozast-let {
     width: 79px;
     height: 79px;
-    background-position: -490px -183px;
+    background-position: -561px -5px;
+}
+
+.sprite-ozast-let-blue {
+    width: 79px;
+    height: 79px;
+    background-position: -569px -94px;
 }
 
 .sprite-ozast-postr {
     width: 79px;
     height: 79px;
-    background-position: -498px -272px;
+    background-position: -570px -183px;
+}
+
+.sprite-ozast-postr-blue {
+    width: 79px;
+    height: 79px;
+    background-position: -554px -272px;
+}
+
+.sprite-page-compare-icon {
+    width: 141px;
+    height: 140px;
+    background-position: -5px -487px;
 }
 
 .sprite-pdf {
     width: 19px;
     height: 23px;
-    background-position: -5px -272px;
+    background-position: -5px -94px;
 }
 
 .sprite-play {
     width: 134px;
     height: 134px;
-    background-position: -590px -5px;
+    background-position: -156px -487px;
 }
 
 .sprite-ploshad {
     width: 19px;
     height: 14px;
-    background-position: -590px -149px;
+    background-position: -422px -183px;
 }
 
 .sprite-raightarrow {
     width: 24px;
     height: 44px;
-    background-position: -619px -149px;
+    background-position: -554px -361px;
 }
 
 .sprite-refresh {
     width: 20px;
     height: 21px;
-    background-position: -653px -149px;
+    background-position: -5px -272px;
 }
 
 .sprite-regulator {
     width: 13px;
     height: 12px;
-    background-position: -683px -149px;
+    background-position: -35px -272px;
 }
 
 .sprite-side-calculate {
     width: 22px;
     height: 32px;
-    background-position: -683px -171px;
+    background-position: -588px -361px;
 }
 
 .sprite-side-comment {
     width: 28px;
     height: 24px;
-    background-position: -579px -213px;
+    background-position: -58px -272px;
 }
 
 .sprite-side-logo {
     width: 35px;
     height: 39px;
-    background-position: -617px -213px;
+    background-position: -5px -403px;
 }
 
 .sprite-side-vote {
     width: 22px;
     height: 25px;
-    background-position: -662px -213px;
+    background-position: -96px -272px;
 }
 
 .sprite-sortby {
     width: 8px;
     height: 14px;
-    background-position: -715px -149px;
+    background-position: -128px -272px;
 }
 
 .sprite-sravnenie {
     width: 20px;
     height: 23px;
-    background-position: -694px -213px;
+    background-position: -146px -272px;
 }
 
 .sprite-telephone {
     width: 24px;
     height: 25px;
-    background-position: -694px -246px;
+    background-position: -176px -272px;
 }

@@ -261,12 +261,12 @@ ymaps.ready(function () {
     map.controls.remove('zoomControl');
 
     placemark = new ymaps.Placemark(
-        [43.103481, 131.953921],
-        {iconContent: "улица Ватутина, 4В", iconContentSize:[300,100]},
+        [43.102661, 131.955967],
+        {iconContent: "", iconContentSize:[300,100]},
         {preset: 'islands#blueCircleIcon'}
     );
 
-    var coords = [43.102895, 131.961703],
+    var coords = [43.102661, 131.955967],
         placemark1 = new ymaps.GeoObjectCollection({}, {
             iconLayout: 'default#image',
             iconImageClipRect: [[0,0], [35, 39]],
@@ -382,3 +382,40 @@ ymaps.ready(function () {
     // mapFooter.behaviors.disable('scrollZoom');
     // mapFooter.controls.remove('zoomControl');
 });
+
+function videoShow(){
+	$('#modal-video').show();
+	console.log("dfgsd");
+}
+
+$(document).mouseup(function (e) {
+    var container = $("#modal-video-body");
+    if (container.has(e.target).length === 0){
+        $('#modal-video').hide();
+    }
+});
+
+function selectByParams(){
+	$('#select-apartment-by-params').css('display', 'block');
+	$('#select-apartment-by-genplan').css('display', 'none');
+	$('#select-apartment-by-params-button').css({
+		'background-color': '#0aaed3',
+		'color': '#fff'
+	});
+	$('#select-apartment-by-genplan-button').css({
+		'background-color': '#fafafa',
+		'color': '#0aaed3'
+	});
+};
+function selectByGenplan(){
+	$('#select-apartment-by-params').css('display', 'none');
+	$('#select-apartment-by-genplan').css('display', 'block');
+	$('#select-apartment-by-params-button').css({
+		'background-color': '#fafafa',
+		'color': '#0aaed3'
+	});
+	$('#select-apartment-by-genplan-button').css({
+		'background-color': '#0aaed3',
+		'color': '#fff'
+	});
+}

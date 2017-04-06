@@ -105,7 +105,8 @@
 						<span class="slider-right-block-header">
 							Посмотрите видео
 						</span>
-						<i data-remodal-target="video" class="sprite sprite-play center-block play-video"></i>
+						<!-- <i onclick="videoShow()" class="sprite sprite-play center-block play-video"></i> -->
+						<i data-remodal-target="modal-video" class="sprite sprite-play center-block play-video"></i>
 					</div>
 				</div>
 			</div>
@@ -207,7 +208,7 @@
 							<span class="discounts-list-description-date">03 февраля 2017</span>
 							<span class="discounts-list-description-title">Умножаем материнский капитал</span>
 							<span class="discounts-list-description-text">Узнайте, как можно получить отличную скидку на приобритение квартиры с использованием материнского капитала!</span>
-							<button class="discounts-list-description-button">Подробнее</button>
+							<a href="discounts-item.html"><button class="discounts-list-description-button">Подробнее</button></a>
 						</div>
 					</li>
 					<li class="clearfix wow fadeInRight">
@@ -216,12 +217,12 @@
 							<span class="discounts-list-description-date">03 февраля 2017</span>
 							<span class="discounts-list-description-title">Умножаем материнский капитал</span>
 							<span class="discounts-list-description-text">Узнайте, как можно получить отличную скидку на приобритение квартиры с использованием материнского капитала!</span>
-							<button class="discounts-list-description-button">Подробнее</button>
+							<a href="discounts-item.html"><button class="discounts-list-description-button">Подробнее</button></a>
 						</div>
 					</li>
 				</ul>
 
-				<button class="discounts-button center-block wow fadeInUp">ПОСМОТРЕТЬ ВСЕ АКЦИИ</button>
+				<a href="discounts.html"><button class="discounts-button center-block wow fadeInUp">ПОСМОТРЕТЬ ВСЕ АКЦИИ</button></a>
 			</div>
 		</div>
 		<!--  -->
@@ -263,7 +264,7 @@
 						<img class="img-responsive" src="img/banks/rosselhozbank.png" alt="">
 					</li>
 				</ul>
-				<button class="bank-button center-block wow fadeInUpBig">РАССЧИТАТЬ ИПОТЕКУ</button>
+				<a href="calc.html"><button class="bank-button center-block wow fadeInUpBig">РАССЧИТАТЬ ИПОТЕКУ</button></a>
 			</div>
 		</div>
 		<!--  -->
@@ -276,14 +277,14 @@
 					ВЫБЕРЕТЕ КВАРТИРУ
 				</span>
 				<div class="select-apartment-buttons clearfix wow fadeInDown">
-					<button class="select-apartment-buttons-param">
+					<button id="select-apartment-by-params-button" class="select-apartment-buttons-param" onclick="selectByParams()">
 						По параметрам
 					</button>
-					<button class="select-apartment-buttons-genplan">
+					<button id="select-apartment-by-genplan-button" class="select-apartment-buttons-genplan" onclick="selectByGenplan()">
 						На генплане
 					</button>
 				</div>
-				<div class="select-apartment-body resp-width center-block">
+				<div id="select-apartment-by-params" class="select-apartment-body resp-width center-block">
 					<div class="select-apartment-filter wow fadeInDown">
 						<div class="row select-apartment-filter-regulators clearfix">
 							<div class="floor col-md-6">
@@ -600,6 +601,9 @@
 
 				</div>
 			</div>
+			<div id="select-apartment-by-genplan" class="select-apartment-body" style="display: none;">
+					<img src="img/render3.jpg" alt="" class="img-responsive">
+				</div>
 		</div>
 		<!--  -->
 
@@ -609,7 +613,7 @@
 			<div class="col-md-18 col-md-offset-3">
 				<span data-wow-delay="0.5s" class="autoparking-header mobile-header wow bounceInDown">ПОДЗЕМНАЯ АВТОПАРКОВКА</span>
 				<span data-wow-delay="0.5s" class="description wow bounceInDown">Парковочные места на закрытой охраняемой автопарковке прямо под вашим домом</span>
-				<button data-wow-delay="0.5s" class="wow bounceInDown">ПОДРОБНЕЕ</button>
+				<a href="about.html"><button data-wow-delay="0.5s" class="wow bounceInDown">ПОДРОБНЕЕ</button></a>
 			</div>
 		</div>
 		<!--  -->
@@ -640,7 +644,7 @@
 								<span class="description">Приступили к организации армокаркаса 15-го этажа</span>
 							</li>
 						</ul>
-						<button>Подробнее</button>
+						<a href="process.html"><button>Подробнее</button></a>
 					</div>
 				</div>
 			</div>
@@ -653,18 +657,18 @@
 								<span class="news-list-item-date">03 февраля 2017</span>
 								<span class="news-list-item-title">Умножаем Материнский Капитал!</span>
 								<span class="new-list-item-description">Узнайте, как можно получить отличную скидку на приобретение квартиры с использованием материнского капитала!</span>
-								<button>Подробнее</button>
+								<a href="discounts-item.html"><button>Подробнее</button></a>
 							</li>
 							<li>
 								<span class="news-list-item-date">03 февраля 2017</span>
 								<span class="news-list-item-title">Умножаем Материнский Капитал!</span>
 								<span class="new-list-item-description">Узнайте, как можно получить отличную скидку на приобретение квартиры с использованием материнского капитала!</span>
-								<button>Подробнее</button>
+								<a href="discounts-item.html"><button>Подробнее</button></a>
 							</li>
 						</ul>
 						<div class="else clerafix">
 							<i class="sprite sprite-refresh"></i>
-							<span>Показать еще</span>
+							<a href="news.html"><span>Показать еще</span></a>
 						</div>
 					</div>
 				</div>
@@ -688,6 +692,48 @@
 		<!-- Карта -->
 		<div class="row map" id="YMapsID" style="height:600px">
 			<!-- <img class="img-responsive" src="img/map-wide.jpeg"> -->
+		</div>
+		<div class="row map-history">
+			<div class="resp-width center-block center-content">
+				<ul class="map-history-list clearfix center-block">
+					<li>
+					<img src="img/map/marker_horse.png" alt="">
+						<span>Детский садик</span>
+					</li>
+					<li>
+						<img src="img/map/marker_book.png" alt="">
+						<span>Школа</span>
+					</li>
+					<li>
+						<img src="img/map/marker_shop.png" alt="">
+						<span>Магазин</span>
+					</li>
+					<li>
+						<img src="img/map/marker_hospital.png" alt="">
+						<span>Больница</span>
+					</li>
+					<li>
+						<img src="img/map/marker_apteka.png" alt="">
+						<span>Аптека</span>
+					</li>
+					<li>
+						<img src="img/map/marker_gas.png" alt="">
+						<span>АЗС</span>
+					</li>
+					<li>
+						<img src="img/map/marker_atm.png" alt="">
+						<span>Банкомат</span>
+					</li>
+					<li>
+						<img src="img/map/marker_baby.png" alt="">
+						<span>Детская поликлиника</span>
+					</li>
+					<li>
+						<img src="img/map/marker_gym.png" alt="">
+						<span>Спортзал</span>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<!--  -->
 
@@ -778,7 +824,7 @@
 						</ul>
 					</div>
 				</div>
-				<button class="wow fadeIn">ПОДРОБНЕЕ</button>
+				<a href="about.html"><button class="wow fadeIn">ПОДРОБНЕЕ</button></a>
 			</div>
 		</div>
 		<!--  -->
@@ -797,7 +843,7 @@
 										<img class="img-responsive" src="img/meneger2.png">
 										<div class="slide-description">
 											<span class="slide-description-title">
-												Ирина Степанюк
+												Оксана Хорошун
 											</span>
 											<span class="slide-description-text">
 												Менеджер отдела продаж
@@ -808,7 +854,7 @@
 										<img class="img-responsive" src="img/meneger1.png">
 										<div class="slide-description">
 											<span class="slide-description-title">
-												Оксана Хорошун
+												Ирина Степанюк
 											</span>
 											<span class="slide-description-text">
 												Руководитель отдела продаж
@@ -905,25 +951,27 @@
 
 
 		<!-- Правая панель -->
-		<div class="right-panel">
-			<div class="calc-panel">
+			<div class="calc-panel clearfix" onclick="location.href='calc.html'">
 				<i class="sprite sprite-side-calculate"></i>
+				<span>Калькулятор</span>
 			</div>
-			<div class="compare-panel">
+			<div class="compare-panel clearfix" onclick="location.href='compare.html'">
 				<i class="sprite sprite-side-vote"></i>
+				<span>Сравнить</span>
 			</div>
-			<div class="consult-panel">
+			<div class="consult-panel clearfix" onclick="location.href='#consult'">
 				<i class="sprite sprite-side-comment"></i>
+				<span>Консультация</span>
 			</div>
-			<div class="about-panel">
+			<a href="http://fregat2.ru/" target="_blank"><div class="about-panel clearfix">
 				<i class="sprite sprite-side-logo"></i>
-			</div>
-		</div>
+				<span>Фрегат 2</span>
+			</div></a>
 		<!--  -->
 
 		<!-- модальные окна -->
 		<!-- меню -->
-		<div class="remodal menu-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false, modifier: 'proverka' ">
+		<div class="remodal menu-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false, modifier: menu-modal-wrapper">
 
 			<button data-remodal-action="close" class="modal-close"></button>
 			<div class="menu-logo">
@@ -954,12 +1002,18 @@
 			</div>			
 		</div>
 
-		<div class="remodal" data-remodal-id="video" data-remodal-options="hashTracking: false">
+		<!-- <div id="modal-video" class="modal-video">
+			<div class="modal-video-body">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/RydaLR4nLBk" frameborder="0" allowfullscreen></iframe>	
+			</div>
+		</div> -->
 
-			<button data-remodal-action="close" class="modal-close"></button>
-			ячсмячсмячсмясчм
-			
-			</div>			
+		<div class="remodal modal-video" data-remodal-id="modal-video" data-remodal-options="hashTracking: false">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/RydaLR4nLBk" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+		<div class="remodal" data-remodal-id="render" data-remodal-options="hashTracking: false">
+			<img src="img/render1.png" alt="" class="img-responsive">
 		</div>
 
 
