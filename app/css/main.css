@@ -7,6 +7,10 @@
   margin-left: 0px !important;
   padding: 20px; }
 
+.modal-video {
+  padding: 0px;
+  width: 760px; }
+
 button {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -92,7 +96,12 @@ label {
   color: #444444; }
 
 .top-header {
-  min-height: 80px; }
+  min-height: 70px;
+  background-color: #FFF;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%; }
 
 .sub-width {
   width: 1163px;
@@ -100,19 +109,19 @@ label {
   height: 100%; }
 
 .header-logo {
-  margin-top: 25px;
+  margin-top: 20px;
   height: 40px;
   max-width: 384px; }
 
 .header-number {
   float: right;
-  margin-top: 30px;
+  margin-top: 25px;
   max-width: 300px; }
   .header-number i, .header-number span {
     float: left; }
 
 .header-menu {
-  margin-top: 30px; }
+  margin-top: 25px; }
   .header-menu i, .header-menu span {
     float: left; }
 
@@ -143,7 +152,16 @@ label {
     margin-bottom: 2px; } }
 
 .slider-background {
+  margin-top: 70px;
   min-height: 700px; }
+
+@media all and (max-width: 768px) {
+  .slider-background {
+    margin-top: 135px; } }
+
+@media all and (max-width: 400px) {
+  .slider-background {
+    margin-top: 208px; } }
 
 .slider-backrgound-right-block {
   background: url(../img/video.png) no-repeat;
@@ -1084,7 +1102,7 @@ button {
     .consulting .consulting-personal #leftControl {
       z-index: 5;
       top: 50%;
-      left: 0;
+      left: 10px;
       background: transparent url("../img/leftrightarrow.png") no-repeat 0 0; }
     .consulting .consulting-personal #rightControl {
       z-index: 5;
@@ -1279,10 +1297,6 @@ button {
   .subfooter .left, .subfooter .center, .subfooter .right {
     text-align: left !important; } }
 
-.right-panel {
-  min-width: 75px;
-  top: 70px; }
-
 .calc-panel, .compare-panel, .consult-panel, .about-panel {
   right: -120px;
   z-index: 3;
@@ -1310,19 +1324,19 @@ button {
     margin-left: 10px; }
 
 .calc-panel {
-  top: 70px;
+  top: 90px;
   width: 180px; }
 
 .compare-panel {
-  top: 132px;
+  top: 152px;
   width: 180px; }
 
 .consult-panel {
-  top: 192px;
+  top: 212px;
   width: 180px; }
 
 .about-panel {
-  top: 252px;
+  top: 272px;
   width: 180px; }
   .about-panel i {
     margin-left: 10px;
@@ -1341,7 +1355,7 @@ button {
   right: -3px; }
 
 @media all and (max-width: 768px) {
-  .right-panel {
+  .calc-panel, .compare-panel, .consult-panel, .about-panel {
     display: none; } }
 
 .a-pointer {
@@ -1391,6 +1405,10 @@ button {
   border: 0;
   outline: 0;
   background: url("/img/close.png") no-repeat; }
+
+.modal-close-outer {
+  top: -25px;
+  right: -25px; }
 
 .page-discounts-header {
   background: url("../img/discounts-header.png") no-repeat;

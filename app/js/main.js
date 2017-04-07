@@ -419,3 +419,17 @@ function selectByGenplan(){
 		'color': '#fff'
 	});
 }
+
+
+var player;
+function onYouTubePlayerAPIReady() {
+	player = new YT.Player('player');
+}
+
+
+$(document).on('closed', '.modal-video', function (e) {
+
+  // Reason: 'confirmation', 'cancellation'
+  console.log('Modal is closed' + (e.reason ? ', reason: ' + e.reason : ''));
+  player.stopVideo();
+});

@@ -42,7 +42,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<div class="container-fluid">
-		
+
 		<!-- Header -->
 		<div class="top-header row">
 			<div class="col-md-7 col-md-offset-1">
@@ -1009,7 +1009,8 @@
 		</div> -->
 
 		<div class="remodal modal-video" data-remodal-id="modal-video" data-remodal-options="hashTracking: false">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/RydaLR4nLBk" frameborder="0" allowfullscreen></iframe>
+			<button data-remodal-action="close" class="modal-close modal-close-outer"></button>
+			<div style="width:700px; height: 378px"><iframe id="player" width="700" height="380" src="https://www.youtube.com/embed/RydaLR4nLBk?enablejsapi=1" frameborder="0" allowfullscreen></iframe></div>
 		</div>
 
 		<div class="remodal" data-remodal-id="render" data-remodal-options="hashTracking: false">
@@ -1018,6 +1019,7 @@
 
 
 	</div>
+	<script type="text/javascript" src="http://www.youtube.com/player_api"></script>
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
 	<script src="bower/jquery/dist/jquery.js"></script>
