@@ -159,14 +159,14 @@ new WOW().init(
 );
 
 
-var calcPrice = document.getElementById('calcPrice');
-var calcFirstVznos = document.getElementById('calcFirstVznos');
-var calcFirstVznosProcent = document.getElementById('calcFirstVznosProcent');
-var calcSrok = document.getElementById('calcSrok');
-var calcProcent = document.getElementById('calcProcent');
+var totalPrice = document.getElementById('totalPrice');
+var firstPayment = document.getElementById('firstPayment');
+var firstPercent = document.getElementById('firstPercent');
+var longTime = document.getElementById('longTime');
+var yearPercent = document.getElementById('yearPercent');
 
-if(calcPrice != null){
-	noUiSlider.create(calcPrice, {
+if(totalPrice != null){
+	noUiSlider.create(totalPrice, {
 		start: [500000, 500000],
 		connect: true,
 		step: 100000,
@@ -178,7 +178,7 @@ if(calcPrice != null){
 			'max': 12000000
 		}
 	});
-	noUiSlider.create(calcFirstVznos, {
+	noUiSlider.create(firstPayment, {
 		start: [0, 0],
 		connect: true,
 		step: 100,
@@ -190,7 +190,7 @@ if(calcPrice != null){
 			'max': 7200000
 		}
 	});
-	noUiSlider.create(calcFirstVznosProcent, {
+	noUiSlider.create(firstPercent, {
 		start: [0, 0],
 		connect: true,
 		step: 1,
@@ -202,7 +202,7 @@ if(calcPrice != null){
 			'max': 90
 		}
 	});
-	noUiSlider.create(calcSrok, {
+	noUiSlider.create(longTime, {
 		start: [1, 1],
 		connect: true,
 		step: 1,
@@ -214,7 +214,7 @@ if(calcPrice != null){
 			'max': 30
 		}
 	});
-	noUiSlider.create(calcProcent, {
+	noUiSlider.create(yearPercent, {
 		start: [10.8, 10.8],
 		connect: true,
 		step: 0.1,
@@ -227,20 +227,20 @@ if(calcPrice != null){
 		}
 	});
 
-	calcPrice.noUiSlider.on('slide', function(){
-		$('#calcPriceInput').val(calcPrice.noUiSlider.get()[1])
+	totalPrice.noUiSlider.on('slide', function(){
+		$('#totalPriceValue').val(totalPrice.noUiSlider.get()[1])
 	});
-	calcFirstVznos.noUiSlider.on('slide', function(){
-		$('#calcFirstVznosInput').val(calcFirstVznos.noUiSlider.get()[1])
+	firstPayment.noUiSlider.on('slide', function(){
+		$('#firstPaymentValue').val(firstPayment.noUiSlider.get()[1])
 	});
-	calcFirstVznosProcent.noUiSlider.on('slide', function(){
-		$('#calcFirstVznosProcentInput').val(calcFirstVznosProcent.noUiSlider.get()[1])
+	firstPercent.noUiSlider.on('slide', function(){
+		$('#firstPercentValue').val(firstPercent.noUiSlider.get()[1])
 	});
-	calcSrok.noUiSlider.on('slide', function(){
-		$('#calcSrokInput').val(calcSrok.noUiSlider.get()[1])
+	longTime.noUiSlider.on('slide', function(){
+		$('#longTimeValue').val(longTime.noUiSlider.get()[1])
 	});
-	calcProcent.noUiSlider.on('slide', function(){
-		$('#calcProcentInput').val(calcProcent.noUiSlider.get()[1])
+	yearPercent.noUiSlider.on('slide', function(){
+		$('#yearPercentValue').val(yearPercent.noUiSlider.get()[1])
 	});
 }
 
