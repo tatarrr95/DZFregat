@@ -1727,7 +1727,8 @@ button {
   float: left; }
 
 .page-calc-content input {
-  float: right; }
+  float: right;
+  padding-left: 10px; }
 
 .page-calc-content .input-story {
   padding-top: 4px;

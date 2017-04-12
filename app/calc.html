@@ -73,114 +73,210 @@
             <div class="row page-content page-calc-content">
                   <div class="resp-width center-block">
                         <div class="features-buttons clearfix">
-                                                <button class="features-buttons-select-apartment">По сумме кредита</button>
-                                                      <button class="features-buttons-task-question">По ежемесячному платежу</button>
-                                                </div>
-                        <div class="calc-form">
+                              <button onclick="calcTotalBody()" id="calc-total-body-button" class="features-buttons-select-apartment">По сумме кредита</button>
+                              <button onclick="calcAnnBody()" id="calc-ann-body-button" class="features-buttons-task-question">По ежемесячному платежу</button>
+                        </div>
+                        <div class="calc-form" id="calc-total-body">
                               <!-- <form> -->
-                                    <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Стоимость квартиры</span>
-                                                <span class="input-story">Руб.</span>
-                                                <input id="totalPriceValue" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span id="minTotalPrice" class="regulator-from">500 000</span>
-                                                      <div class="calc-range" id="totalPrice"></div>
-                                                      <span id="maxTotalPrice" class="regulator-to">12 000 000</span>
-                                                </div>
-                                          </div>
-                                    </div>
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Стоимость квартиры</span>
+                                          <span class="input-story">Руб.</span>
+                                          <input id="totalPriceValue" type="text" value="500000">
 
-                                     <div class="calc-line clearfix row">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Первоначальный взнос</span>
-                                                <span class="input-story">Руб.</span>
-                                                <input id="firstPaymentValue" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span class="regulator-from">0</span>
-                                                      <div class="calc-range" id="firstPayment"></div>
-                                                      <span class="regulator-to">7 200 000</span>
-                                                </div>
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="minTotalPrice" class="regulator-from">500 000</span>
+                                                <div class="calc-range" id="totalPrice"></div>
+                                                <span id="maxTotalPrice" class="regulator-to">12 000 000</span>
                                           </div>
                                     </div>
+                              </div>
 
-                                     <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name"></span>
-                                                <span class="input-story">%</span>
-                                                <input id="firstPercentValue" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span id="minFirstPercent" class="regulator-from">0</span>
-                                                      <div class="calc-range" id="firstPercent"></div>
-                                                      <span id="maxFirstPercent" class="regulator-to">90</span>
-                                                </div>
-                                          </div>
-                                    </div>
+                              <div class="calc-line clearfix row">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Первоначальный взнос</span>
+                                          <span class="input-story">Руб.</span>
+                                          <input id="firstPaymentValue" type="text" value="0">
 
-                                     <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Срок кредита</span>
-                                                <span class="input-story">Лет</span>
-                                                <input id="longTimeValue" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span id="minLongTime" class="regulator-from">1</span>
-                                                      <div class="calc-range" id="longTime"></div>
-                                                      <span id="maxLongTime" class="regulator-to">30</span>
-                                                </div>
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span class="regulator-from">0</span>
+                                                <div class="calc-range" id="firstPayment"></div>
+                                                <span id="maxFirstPayment" class="regulator-to">7 200 000</span>
                                           </div>
                                     </div>
+                              </div>
 
-                                     <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Процентная ставка, годовых</span>
-                                                <span class="input-story">%</span>
-                                                <input id="yearPercentValue" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span id="minYearPercent" class="regulator-from">10.8</span>
-                                                      <div class="calc-range" id="yearPercent"></div>
-                                                      <span id="maxYearPercent" class="regulator-to">25</span>
-                                                </div>
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name"></span>
+                                          <span class="input-story">%</span>
+                                          <input id="firstPercentValue" type="text" value="0">
+
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="minFirstPercent" class="regulator-from">0</span>
+                                                <div class="calc-range" id="firstPercent"></div>
+                                                <span id="maxFirstPercent" class="regulator-to">90</span>
                                           </div>
                                     </div>
-                                    <div class="calc-line clearfix row">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <div class="features-buttons clearfix">
-                                                <button onclick="calculateIncome(parseInt(document.getElementById('totalPriceValue').value), parseInt(document.getElementById('firstPaymentValue').value), parseInt(document.getElementById('longTimeValue').value), parseInt(document.getElementById('yearPercentValue').value));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
-                                                      <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
-                                                </div>
-                                                
+                              </div>
+
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Срок кредита</span>
+                                          <span class="input-story">Лет</span>
+                                          <input id="longTimeValue" type="text" value="1">
+
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="minLongTime" class="regulator-from">1</span>
+                                                <div class="calc-range" id="longTime"></div>
+                                                <span id="maxLongTime" class="regulator-to">30</span>
                                           </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                           <div class="info"> 
-                                                 <div class="info-inner">
-                                                       <span>Ежемесячный платеж:</span>
-                                                       <span id="monthIncome" class="summ">-</span>
-                                                 </div>
-                                                 <span>
-                                                       *данный рассчет приведен для общей информации я не является публичной офертой
-                                                 </span>
-                                           </div>
-                                     </div>
-                               </div>
-                         <!-- </form> -->
-                        </div> 
-                  </div>
-            </div>
+                                    </div>
+                              </div>
+
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Процентная ставка, годовых</span>
+                                          <span class="input-story">%</span>
+                                          <input id="yearPercentValue" type="text" value="10.8">
+
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="minYearPercent" class="regulator-from">10.8</span>
+                                                <div class="calc-range" id="yearPercent"></div>
+                                                <span id="maxYearPercent" class="regulator-to">25</span>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="calc-line clearfix row">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <div class="features-buttons clearfix">
+                                                <button onclick="calculateIncome(parseInt(document.getElementById('totalPriceValue').value.replace(' ', '')), parseInt(document.getElementById('firstPaymentValue').value.replace(' ', '')), parseInt(document.getElementById('longTimeValue').value.replace(' ', '')), parseInt(document.getElementById('yearPercentValue').value.replace(' ', '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
+                                                <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
+                                          </div>
+
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                         <div class="info"> 
+                                               <div class="info-inner">
+                                                     <span>Ежемесячный платеж:</span>
+                                                     <span id="monthIncome" class="summ">-</span>
+                                                     <span class="summ">РУБ</span>
+                                               </div>
+                                               <span>
+                                                     *данный рассчет приведен для общей информации я не является публичной офертой
+                                               </span>
+                                         </div>
+                                   </div>
+                             </div>
+                             <!-- </form> -->
+                       </div>
+
+
+
+
+                       <div class="calc-form" id="calc-ann-body" style="display: none">
+                              <!-- <form> -->
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Ежемесячный доход</span>
+                                          <span class="input-story">Руб.</span>
+                                          <input id="sum_annPaymentValue" type="text" value="0">
+                                          
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="min_sum_annPayment" class="regulator-from">0</span>
+                                                <div class="calc-range" id="sum_annPayment"></div>
+                                                <span id="max_sum_annPayment" class="regulator-to">500 000</span>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Первоначальный взнос</span>
+                                          <span class="input-story">Руб.</span>
+                                          <input id="sum_firstPaymentValue" type="text" value="0">
+                                          
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="min_sum_firstPayment" class="regulator-from">0</span>
+                                                <div class="calc-range" id="sum_firstPayment"></div>
+                                                <span id="max_sum_firstPayment" class="regulator-to">7 200 000</span>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Срок кредита</span>
+                                          <span class="input-story">Лет</span>
+                                          <input id="sum_longTimeValue" type="text" value="1">
+                                          
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="min_sum_longTime" class="regulator-from">1</span>
+                                                <div class="calc-range" id="sum_longTime"></div>
+                                                <span id="max_sum_longTime" class="regulator-to">30</span>
+                                          </div>
+                                    </div>
+                              </div>
+
+                              <div class="calc-line clearfix row border-bot">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <span class="calc-input-name">Процентная ставка, годовых</span>
+                                          <span class="input-story">%</span>
+                                          <input id="sum_yearPercentValue" type="text" value="10.8">
+                                          
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                          <div class="regulator clearfix">
+                                                <span id="min_sum_yearPercent" class="regulator-from">10.8</span>
+                                                <div class="calc-range" id="sum_yearPercent"></div>
+                                                <span id="max_sum_yearPercent" class="regulator-to">25</span>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="calc-line clearfix row">
+                                    <div class="calc-line-left clearfix col-md-12">
+                                          <div class="features-buttons clearfix">
+                                                <button onclick="calculateTotalPrice(parseInt(document.getElementById('sum_annPaymentValue').value.replace(' ', '')), parseInt(document.getElementById('sum_firstPaymentValue').value.replace(' ', '')), parseInt(document.getElementById('sum_longTimeValue').value.replace(' ', '')), parseInt(document.getElementById('sum_yearPercentValue').value.replace(' ', '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
+                                                <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
+                                          </div>
+                                          
+                                    </div>
+                                    <div class="calc-line-right clearfix col-md-12">
+                                         <div class="info"> 
+                                               <div class="info-inner">
+                                                     <span>Ежемесячный платеж:</span>
+                                                     <span id="flatPrice" class="summ">-</span>
+                                                     <span class="summ">РУБ</span>
+                                               </div>
+                                               <span>
+                                                     *данный рассчет приведен для общей информации я не является публичной офертой
+                                               </span>
+                                         </div>
+                                   </div>
+                             </div>
+                             <!-- </form> -->
+                       </div> 
+
+
+
+                 </div>
+           </div>
 
       	<!-- Копирайты -->
       	<div class="row subfooter">
@@ -245,47 +341,8 @@
 
       <!-- build:js scripts/main.js -->
       <script src="js/main.js"></script>
+      <script src="js/calculator.js"></script>
       <!-- <script src="js/vendor/ipoteka.js"></script> -->
-
-      <script type="text/javascript">
-
-            totalPrice1 = document.getElementById('totalPriceValue').value
-            firstPayment1 = document.getElementById('firstPaymentValue').value
-            longTime1 = document.getElementById('longTimeValue').value
-            yearPercent1 = document.getElementById('yearPercentValue').value
-
-            function calculateIncome(totalPrice1, firstPayment1, longTime1, yearPercent1) {
-    pay = [];
-    pay.totalSum = totalPrice1 - firstPayment1;
-    pay.periodPercent = (yearPercent1 / 12) / 100;
-    pay.periodCount = longTime1 * 12;
-    pay.koef = (pay.periodPercent * (Math.pow(1 + pay.periodPercent, pay.periodCount))) / (Math.pow(1 + pay.periodPercent, pay.periodCount) - 1);
-    var result = pay.totalSum * pay.koef;
-    //result = ((result / 100) * 55) + result;
-    result = result.toFixed();
-    $("#monthIncome").html(result.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
-    console.log(result);
-}
-
-
-function calculateTotalPrice(annPayment, firstPayment, longTime, yearPercent) {
-    annPayment = parseInt(annPayment);
-    firstPayment = parseInt(firstPayment);
-    longTime = parseInt(longTime);
-    yearPercent = parseFloat(yearPercent);
-    var yearPayment = annPayment * 12;
-    var yearPercentMinus = ((annPayment * 12) / 100) * yearPercent;
-    var yearProfit = yearPayment - yearPercentMinus;
-    var months = longTime * 12;
-    var month_perc = (yearPercent / 1200);
-    //var result = (1000000 + Math.round(annPayment * ((Math.pow(1 + month_perc, months) - 1) / (Math.pow(1 + month_perc, months) * month_perc)) + firstPayment)) * 0.55;
-
-    var result = (annPayment * 0.55 * (Math.pow(1 + month_perc, months) - 1)/(Math.pow(1 + month_perc, months) * month_perc)) + firstPayment;
-
-    result = result.toFixed().toString();
-    $("#flatPrice").html(result.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
-}
-      </script>
       <!-- endbuild -->
 
   </body>

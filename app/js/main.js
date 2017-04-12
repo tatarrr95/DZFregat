@@ -158,92 +158,6 @@ new WOW().init(
 }
 );
 
-
-var totalPrice = document.getElementById('totalPrice');
-var firstPayment = document.getElementById('firstPayment');
-var firstPercent = document.getElementById('firstPercent');
-var longTime = document.getElementById('longTime');
-var yearPercent = document.getElementById('yearPercent');
-
-if(totalPrice != null){
-	noUiSlider.create(totalPrice, {
-		start: [500000, 500000],
-		connect: true,
-		step: 100000,
-		format: wNumb({
-			decimals: 0
-		}),
-		range: {
-			'min': 500000,
-			'max': 12000000
-		}
-	});
-	noUiSlider.create(firstPayment, {
-		start: [0, 0],
-		connect: true,
-		step: 100,
-		format: wNumb({
-			decimals: 0
-		}),
-		range: {
-			'min': 0,
-			'max': 7200000
-		}
-	});
-	noUiSlider.create(firstPercent, {
-		start: [0, 0],
-		connect: true,
-		step: 1,
-		format: wNumb({
-			decimals: 0
-		}),
-		range: {
-			'min': 0,
-			'max': 90
-		}
-	});
-	noUiSlider.create(longTime, {
-		start: [1, 1],
-		connect: true,
-		step: 1,
-		format: wNumb({
-			decimals: 0
-		}),
-		range: {
-			'min': 1,
-			'max': 30
-		}
-	});
-	noUiSlider.create(yearPercent, {
-		start: [10.8, 10.8],
-		connect: true,
-		step: 0.1,
-		format: wNumb({
-			decimals: 1
-		}),
-		range: {
-			'min': 10.8,
-			'max': 25
-		}
-	});
-
-	totalPrice.noUiSlider.on('slide', function(){
-		$('#totalPriceValue').val(totalPrice.noUiSlider.get()[1])
-	});
-	firstPayment.noUiSlider.on('slide', function(){
-		$('#firstPaymentValue').val(firstPayment.noUiSlider.get()[1])
-	});
-	firstPercent.noUiSlider.on('slide', function(){
-		$('#firstPercentValue').val(firstPercent.noUiSlider.get()[1])
-	});
-	longTime.noUiSlider.on('slide', function(){
-		$('#longTimeValue').val(longTime.noUiSlider.get()[1])
-	});
-	yearPercent.noUiSlider.on('slide', function(){
-		$('#yearPercentValue').val(yearPercent.noUiSlider.get()[1])
-	});
-}
-
 // Создает обработчик события window.onLoad
 ymaps.ready(function () {
     // Создает экземпляр карты и привязывает его к созданному контейнеру
@@ -415,6 +329,31 @@ function selectByGenplan(){
 		'color': '#0aaed3'
 	});
 	$('#select-apartment-by-genplan-button').css({
+		'background-color': '#0aaed3',
+		'color': '#fff'
+	});
+}
+
+function calcTotalBody(){
+	$('#calc-total-body').css('display', 'block');
+	$('#calc-ann-body').css('display', 'none');
+	$('#calc-total-body-button').css({
+		'background-color': '#0aaed3',
+		'color': '#fff'
+	});
+	$('#calc-ann-body-button').css({
+		'background-color': '#fafafa',
+		'color': '#0aaed3'
+	});
+};
+function calcAnnBody(){
+	$('#calc-total-body').css('display', 'none');
+	$('#calc-ann-body').css('display', 'block');
+	$('#calc-total-body-button').css({
+		'background-color': '#fafafa',
+		'color': '#0aaed3'
+	});
+	$('#calc-ann-body-button').css({
 		'background-color': '#0aaed3',
 		'color': '#fff'
 	});
