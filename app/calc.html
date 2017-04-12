@@ -160,7 +160,7 @@
                               <div class="calc-line clearfix row">
                                     <div class="calc-line-left clearfix col-md-12">
                                           <div class="features-buttons clearfix">
-                                                <button onclick="calculateIncome(parseInt(document.getElementById('totalPriceValue').value.replace(' ', '')), parseInt(document.getElementById('firstPaymentValue').value.replace(' ', '')), parseInt(document.getElementById('longTimeValue').value.replace(' ', '')), parseInt(document.getElementById('yearPercentValue').value.replace(' ', '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
+                                                <button onclick="calculateIncome(parseInt(document.getElementById('totalPriceValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('firstPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('longTimeValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('yearPercentValue').value.replace(/\s/gi, '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
                                                 <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
                                           </div>
 
@@ -252,7 +252,7 @@
                               <div class="calc-line clearfix row">
                                     <div class="calc-line-left clearfix col-md-12">
                                           <div class="features-buttons clearfix">
-                                                <button onclick="calculateTotalPrice(parseInt(document.getElementById('sum_annPaymentValue').value.replace(' ', '')), parseInt(document.getElementById('sum_firstPaymentValue').value.replace(' ', '')), parseInt(document.getElementById('sum_longTimeValue').value.replace(' ', '')), parseInt(document.getElementById('sum_yearPercentValue').value.replace(' ', '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
+                                                <button onclick="calculateTotalPrice(parseInt(document.getElementById('sum_annPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_firstPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_longTimeValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_yearPercentValue').value.replace(/\s/gi, '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
                                                 <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
                                           </div>
                                           

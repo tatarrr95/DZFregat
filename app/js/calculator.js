@@ -124,6 +124,37 @@ if(sum_annPaymentSlider != null){
   });
 }
 
+function calculateIncome(totalPrice1, firstPayment1, longTime1, yearPercent1) {
+            pay = [];
+            pay.totalSum = totalPrice1 - firstPayment1;
+            pay.periodPercent = (yearPercent1 / 12) / 100;
+            pay.periodCount = longTime1 * 12;
+            pay.koef = (pay.periodPercent * (Math.pow(1 + pay.periodPercent, pay.periodCount))) / (Math.pow(1 + pay.periodPercent, pay.periodCount) - 1);
+            var result = pay.totalSum * pay.koef;
+            //result = ((result / 100) * 55) + result;
+            result = result.toFixed();
+            $("#monthIncome").html(result.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+            console.log(result);
+      }
+
+      // Расчет по ежемесячному платежу
+      function calculateTotalPrice(annPayment, firstPayment, longTime, yearPercent) {
+            annPayment = parseInt(annPayment);
+            firstPayment = parseInt(firstPayment);
+            longTime = parseInt(longTime);
+            yearPercent = parseFloat(yearPercent);
+            var yearPayment = annPayment * 12;
+            var yearPercentMinus = ((annPayment * 12) / 100) * yearPercent;
+            var yearProfit = yearPayment - yearPercentMinus;
+            var months = longTime * 12;
+            var month_perc = (yearPercent / 1200);
+            //var result = (1000000 + Math.round(annPayment * ((Math.pow(1 + month_perc, months) - 1) / (Math.pow(1 + month_perc, months) * month_perc)) + firstPayment)) * 0.55;
+
+            var result = (annPayment * 0.55 * (Math.pow(1 + month_perc, months) - 1)/(Math.pow(1 + month_perc, months) * month_perc)) + firstPayment;
+
+            result = result.toFixed().toString();
+            $("#flatPrice").html(result.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+      }
 
 $(document).ready(function () {
 
@@ -134,6 +165,7 @@ $(document).ready(function () {
       $('#totalPriceValue').val(totalPriceSlider.noUiSlider.get()[1]);
       roundValue('#totalPriceValue', stepPrice);
       relationshipTotalPrice();
+      firstPaymentToProcent();
       var val = $("#totalPriceValue").val();
       values[$(this).attr('id') + 'Value'] = val;
       $("#totalPriceValue").val(val.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
@@ -141,12 +173,40 @@ $(document).ready(function () {
       val = $("#firstPaymentValue").val();
       $("#firstPaymentValue").val(val.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
     });
+
     firstPaymentSlider.noUiSlider.on('slide', function(){
-      $('#firstPaymentValue').val(firstPaymentSlider.noUiSlider.get()[1])
+      firstPaymentToProcent();
+      var val = firstPaymentSlider.noUiSlider.get()[1]
+      $("#firstPaymentValue").val(val.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
     });
+
+    function firstPaymentToProcent(){
+      var firstPayment = parseInt(firstPaymentSlider.noUiSlider.get()[1]);
+      var maxFirstPayment = parseInt($('#maxFirstPayment').html().replace(/\s/gi, ''));
+      var procent = firstPayment / (maxFirstPayment/90);
+      firstPercentSlider.noUiSlider.set([0, procent]);
+      $('#firstPercentValue').val(firstPercentSlider.noUiSlider.get()[1])
+    }
+
+
+
+
     firstPercentSlider.noUiSlider.on('slide', function(){
       $('#firstPercentValue').val(firstPercentSlider.noUiSlider.get()[1])
+      ProcentToFirstPayment();
     });
+
+    function ProcentToFirstPayment(){
+      var procent = parseInt(firstPercentSlider.noUiSlider.get()[1]);
+      var maxFirstPayment = parseInt($('#maxFirstPayment').html().replace(/\s/gi, ''));
+      var firstPayment = maxFirstPayment / 90 * procent;
+      firstPaymentSlider.noUiSlider.set([0, firstPayment]);
+
+      var val = firstPaymentSlider.noUiSlider.get()[1]
+      $("#firstPaymentValue").val(val.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    }
+
+
     longTimeSlider.noUiSlider.on('slide', function(){
       $('#longTimeValue').val(longTimeSlider.noUiSlider.get()[1])
     });
@@ -155,10 +215,12 @@ $(document).ready(function () {
     });
 
         sum_annPaymentSlider.noUiSlider.on('slide', function(){
-      $('#sum_annPaymentValue').val(sum_annPaymentSlider.noUiSlider.get()[1])
+      var val = sum_annPaymentSlider.noUiSlider.get()[1];
+      $("#sum_annPaymentValue").val(val.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
     });
     sum_firstPaymentSlider.noUiSlider.on('slide', function(){
-      $('#sum_firstPaymentValue').val(sum_firstPaymentSlider.noUiSlider.get()[1])
+      var val = sum_firstPaymentSlider.noUiSlider.get()[1];
+      $("#sum_firstPaymentValue").val(val.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
     });
     sum_longTimeSlider.noUiSlider.on('slide', function(){
       $('#sum_longTimeValue').val(sum_longTimeSlider.noUiSlider.get()[1])
@@ -169,15 +231,13 @@ $(document).ready(function () {
 
 
 
-      $("#sum_firstPaymentValue").change(function () {
-            var value = $(this).val();
-            $("#firstPaymentValue").val(value);
-      }).change();
-
-      $("#firstPaymentValue").change(function () {
-            var value = $(this).val();
-            $("#sum_firstPaymentValue").val(value);
-      }).change();
+      $('#totalPriceValue', "#firstPaymentValue", '#firstPercentValue', '#longTimeValue', '#yearPercentValue').on('change', function(){
+        // totalPriceSlider.noUiSlider.set([0, parseInt($('#totalPriceValue').val())]);
+        // firstPaymentSlider.noUiSlider.set([0, parseInt($('#firstPaymentValue').val())]);
+        // longTimeSlider.noUiSlider.set([0, parseInt($('#longTimeValue').val())]);
+        // yearPercentSlider.noUiSlider.set([0, parseInt($('#yearPercentValue').val())]);
+        console.log(parseInt($('#totalPriceValue').val()));
+      })
 
       // Начальные значения по маске
       var val = $("#totalPriceValue").val();
@@ -227,7 +287,7 @@ $(document).ready(function () {
       }
 
 
-      // Обновление дапозона слайдера
+      // Обновление диапозона слайдера
       function updateSliderRange (slider, range) {
             slider.noUiSlider.updateOptions({
                   range: {
@@ -271,6 +331,7 @@ $(document).ready(function () {
           var firstPercent = $("#firstPercentValue").val();
           var firstPayment = (flatPrice / 100) * firstPercent;
           updateSliderRange(firstPaymentSlider, [0, maxFirstPayment]);
+
       }
 
       function relationshipFirstPayment() {
@@ -288,6 +349,7 @@ $(document).ready(function () {
 
           //Reinitialize firstPercent slider
           updateSliderRange(firstPercentSlider, [0, Number(targetMaxValue)]);
+
       }
 
       function roundValue(element, step, findStep) {
