@@ -26,7 +26,7 @@ if(totalPriceSlider != null){
     }),
     range: {
       'min': 0,
-      'max': 7200000
+      'max': 450000
     }
   });
   noUiSlider.create(firstPercentSlider, {
@@ -157,6 +157,76 @@ function calculateIncome(totalPrice1, firstPayment1, longTime1, yearPercent1) {
       }
 
 $(document).ready(function () {
+
+    // Перенос первоначального взноса при изменении в другой калькулятор
+    $("#sum_firstPaymentValue").change(function () {
+        var value = $(this).val();
+        $("#firstPaymentValue").val(value);
+    }).change();
+
+    $("#firstPaymentValue").change(function () {
+        var value = $(this).val();
+        $("#sum_firstPaymentValue").val(value);
+    }).change();
+    ///////////////////////////////////////////////////////////////////////
+
+
+    // При изменении значения элемента - изменение слайдера + приведение к удобному глазу формату
+    $("#totalPriceValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      totalPriceSlider.noUiSlider.set([0, value]);
+      $(this).val(value.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+      relationshipTotalPrice();
+      firstPaymentToProcent();      
+    });
+
+    $("#firstPaymentValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      firstPaymentSlider.noUiSlider.set([0, value]);
+      $(this).val(value.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+      firstPaymentToProcent();     
+    });
+
+    $("#firstPercentValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      firstPercentSlider.noUiSlider.set([0, value]);
+      $(this).val(value.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+      ProcentToFirstPayment();    
+    });
+
+    $("#longTimeValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      longTimeSlider.noUiSlider.set([0, value]);
+    });
+
+    $("#yearPercentValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      yearPercentSlider.noUiSlider.set([0, value]);
+    });
+
+    $("#sum_annPaymentValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      sum_annPaymentSlider.noUiSlider.set([0, value]);
+      $(this).val(value.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    });
+
+    $("#sum_firstPaymentValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      sum_firstPaymentSlider.noUiSlider.set([0, value]);
+      $(this).val(value.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    });
+
+    $("#sum_longTimeValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      sum_longTimeSlider.noUiSlider.set([0, value]);
+    });
+
+    $("#sum_yearPercentValue").on("change", function () {
+      var value = parseInt($(this).val().replace(/\s/gi, ''));
+      sum_yearPercentSlider.noUiSlider.set([0, value]);
+    });
+
+    /////////////////////////////////////////////////////////////
 
     stepPrice = 50000;
     values = [];
@@ -301,7 +371,7 @@ $(document).ready(function () {
       function relationshipTotalPrice() {
           //Set max first payment
           var val = $("#totalPriceValue").val();
-          val = parseInt(val.replace(' ', ''));
+          val = parseInt(val.replace(/\s/gi, ''));
 
           var maxFirstPayment = (val / 100) * 90;
           maxFirstPayment = maxFirstPayment.toString();

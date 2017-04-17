@@ -310,8 +310,8 @@ $(document).mouseup(function (e) {
 });
 
 function selectByParams(){
-	$('#select-apartment-by-params').css('display', 'block');
-	$('#select-apartment-by-genplan').css('display', 'none');
+	$('#select-apartment-by-params').removeClass('displaynone');
+	$('#select-apartment-by-genplan').addClass('scale0');
 	$('#select-apartment-by-params-button').css({
 		'background-color': '#0aaed3',
 		'color': '#fff'
@@ -322,8 +322,8 @@ function selectByParams(){
 	});
 };
 function selectByGenplan(){
-	$('#select-apartment-by-params').css('display', 'none');
-	$('#select-apartment-by-genplan').css('display', 'block');
+	$('#select-apartment-by-params').addClass('displaynone');
+	$('#select-apartment-by-genplan').removeClass('scale0');
 	$('#select-apartment-by-params-button').css({
 		'background-color': '#fafafa',
 		'color': '#0aaed3'
@@ -372,3 +372,50 @@ $(document).on('closed', '.modal-video', function (e) {
   console.log('Modal is closed' + (e.reason ? ', reason: ' + e.reason : ''));
   player.stopVideo();
 });
+
+
+
+
+ // $("map").imageMapResize();
+
+$(document).ready(function(){
+	$('#map-image').maphilight({
+		fillColor: '00cbff',
+		fillOpacity: 0.8
+		});
+});  
+
+
+
+
+	function move(e,b,r)	//для получения координат мышки
+	{
+		e = e || window.event
+		if (e.pageX == null && e.clientX != null ) 
+			{
+				var html = document.documentElement
+				var body = document.body
+				e.pageX = e.clientX + (html && html.scrollLeft || body && body.scrollLeft || 0) - (html.clientLeft || 0)
+				e.pageY = e.clientY + (html && html.scrollTop || body && body.scrollTop || 0) - (html.clientTop || 0)
+			}
+		//устанавливаем тултип на уровне мышки
+		$('.tool').css('left',e.pageX + 15 + r + 'px');
+		$('.tool').css('top',e.pageY + 15 - b + 'px');
+	}
+	function out()
+	{
+		document.body.removeChild(tooltips);
+	}   
+	$(document).ready(function(){
+		$('map area').hover(function(){
+		},function(){
+			$(".tool").remove();
+		});
+	});
+	function over(tip)	//функция при наведении
+	{  
+		//добавляем тултип
+		$('<div class="tool"></div>').appendTo('body').html(tip);
+		move(0,0,0);
+	}                
+	    

@@ -1,3 +1,11 @@
+.displaynone {
+  display: none; }
+
+.scale0 {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
+
 .menu-modal-wrapper {
   padding: 0px 0px;
   text-align: left; }
@@ -632,7 +640,7 @@ label {
     max-width: 200px; } }
 
 .select-apartment {
-  min-height: 1120px; }
+  min-height: 600px; }
   .select-apartment .sortby {
     margin-bottom: 45px; }
     .select-apartment .sortby span {
@@ -1809,3 +1817,19 @@ button {
 
 .compare-content {
   padding-top: 40px; }
+
+.tool {
+  position: absolute;
+  background: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: arial;
+  z-index: 1010;
+  box-shadow: 0px 0px 4px 0px #464646;
+  -webkit-box-shadow: 0px 0px 4px 0px #464646;
+  -moz-box-shadow: 0px 0px 4px 0px #464646;
+  line-height: 21px; }
+
+.mapq {
+  background-size: cover;
+  background-repeat: no-repeat !important; }
