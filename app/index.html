@@ -22,6 +22,8 @@
     <!-- endbower -->
     <link rel="stylesheet" href="css/vendor/bootstrap.css">
     <link rel="stylesheet" href="css/vendor/nouislider.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.css">
+    <link rel="stylesheet" href="css/vendor/owl.theme.default.css">
     <!-- endbuild -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <!-- build:css css/main.css -->
@@ -53,7 +55,7 @@
             <div class="col-md-6 col-md-offset-5">
                 <div class="header-number clearfix">
                     <i class="sprite sprite-telephone"></i>
-                    <span>+7 (423) 202-50-09</span>
+                    <a href="tel: +74232025009">+7 (423) 202-50-09</a>
                 </div>
             </div>
             <div class="col-md-3 header-menu">
@@ -149,22 +151,12 @@
         <!-- Описание квартиры и слайдер -->
         <div class="row new-apartment-backrgound">
             <div class="col-md-10 col-xs-24 new-apartment-backrgound-left-block pad0 wow bounceInLeft">
-                <div class="">
-                    <!-- Slideshow HTML -->
-                    <div id="slideshow1">
-                        <div id="slidesContainer1">
-                            <div class="slide1">
-                                <img src="img/slide1.png">
-                            </div>
-                            <div class="slide1">
-                                <img src="img/slide2.png">
-                            </div>
-                            <div class="slide1">
-                                <img src="img/slide3.png">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Slideshow HTML -->
+                <div>
+                    <div class="owl-carousel" id="apartment-carousel">
+					  <div> <img src="img/slide1.png"> </div>
+					  <div> <img src="img/slide2.png"> </div>
+					  <div> <img src="img/slide3.png"> </div>
+					</div>
                 </div>
             </div>
             <div class="col-md-14 col-xs-24 new-apartment-right-block wow bounceInRight">
@@ -594,7 +586,7 @@
                 </div>
             </div>
              <div id="select-apartment-by-genplan" class="select-apartment-body scale0">
-                <img src="img/render3.jpg" id="map-image" style="max-width: 100%; height: auto;" alt="" usemap="#map"/>
+                <img src="img/render3.jpg" id="map-image" style="max-width: 100%; width: 2000px; height: auto;" alt="" usemap="#map"/>
                 <map name="map">
                     <area onmouseover="over('1 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="406, 758, 682, 758, 682, 736, 406, 736" />
                     <area onmouseover="over('2 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="406, 731, 682, 731, 682, 709, 406, 709" />
@@ -848,36 +840,32 @@
         <div id="consult" class="row consulting">
             <div class="col-md-22 col-md-offset-1 center-block">
                 <div class="row">
-                    <div class="col-md-8 col-md-offset-4 wow bounceInLeft">
+                    <div class="col-md-8 col-md-offset-4 col-sm-12 wow bounceInLeft">
                         <div class="consulting-personal">
-                            <!-- Slideshow HTML -->
-                            <div id="slideshow">
-                                <div id="slidesContainer">
-                                    <div class="slide">
-                                        <img class="img-responsive" src="img/meneger2.png">
-                                        <div class="slide-description">
-                                            <span class="slide-description-title">
-												Оксана Хорошун
-											</span>
-                                            <span class="slide-description-text">
-												Менеджер отдела продаж
-											</span>
-                                        </div>
+                         	<div class="owl-carousel" id="personal-carousel">
+								<div> 
+									<img class="img-responsive" src="img/meneger2.png">
+                                    <div class="slide-description">
+                                        <span class="slide-description-title">
+											Оксана Хорошун
+										</span>
+                                        <span class="slide-description-text">
+											Менеджер отдела продаж
+										</span>
                                     </div>
-                                    <div class="slide">
-                                        <img class="img-responsive" src="img/meneger1.png">
-                                        <div class="slide-description">
-                                            <span class="slide-description-title">
-												Ирина Степанюк
-											</span>
-                                            <span class="slide-description-text">
-												Руководитель отдела продаж
-											</span>
-                                        </div>
+								</div>
+								<div>
+									<img class="img-responsive" src="img/meneger1.png">
+                                    <div class="slide-description">
+                                        <span class="slide-description-title">
+											Ирина Степанюк
+										</span>
+                                        <span class="slide-description-text">
+											Руководитель отдела продаж
+										</span>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Slideshow HTML -->
+								</div>
+							</div>
                         </div>
                     </div>
                     <div class="col-md-11 wow bounceInRight">
@@ -1023,6 +1011,8 @@
             <img src="img/render1.png" alt="" class="img-responsive">
         </div>
     </div>
+
+
     <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -1034,10 +1024,55 @@
     <script src="bower/wow/dist/wow.js"></script>
     <script src="js/vendor/maphighlight.js"></script>
     <script src="js/vendor/image-map-resizer.js"></script>
+    <script src="js/vendor/owl.carousel.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="js/main.js"></script>
     <!-- endbuild -->
+
+    <!-- HelloPreload -->
+	<style type="text/css">
+	#hellopreloader>p {
+	    display: none;
+	}
+
+	#hellopreloader_preload {
+	    display: block;
+	    position: fixed;
+	    z-index: 99999;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    min-width: 1000px;
+	    background: #52B3D9 url(img/grid.svg) center center no-repeat;
+	    background-size: 41px;
+	}
+	</style>
+	<div id="hellopreloader">
+		<div id="preloader-logo"></div>
+	    <div id="hellopreloader_preload"></div>
+	</div>
+	<script type="text/javascript">
+	var hellopreloader = document.getElementById("hellopreloader_preload");
+
+	function fadeOutnojquery(el) {
+	    el.style.opacity = 1;
+	    var interhellopreloader = setInterval(function() {
+	        el.style.opacity = el.style.opacity - 0.05;
+	        if (el.style.opacity <= 0.05) {
+	            clearInterval(interhellopreloader);
+	            hellopreloader.style.display = "none";
+	        }
+	    }, 16);
+	}
+	window.onload = function() {
+	    setTimeout(function() {
+	        fadeOutnojquery(hellopreloader);
+	    }, 1000);
+	};
+	</script>
+	<!-- HelloPreload -->
 </body>
 
 </html>

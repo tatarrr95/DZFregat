@@ -125,15 +125,15 @@ label {
   float: right;
   margin-top: 25px;
   max-width: 300px; }
-  .header-number i, .header-number span {
+  .header-number i, .header-number span, .header-number a {
     float: left; }
 
 .header-menu {
   margin-top: 25px; }
-  .header-menu i, .header-menu span {
+  .header-menu i, .header-menu span, .header-menu a {
     float: left; }
 
-.header-number span, .header-menu span {
+.header-number a, .header-menu span {
   font: 26px 'PT Sans' #444444;
   font-family: 'PT Sans', sans-serif;
   font-size: 26px;
@@ -355,6 +355,33 @@ label {
 
 .new-apartment-backrgound-left-block {
   height: 100%; }
+  .new-apartment-backrgound-left-block .owl-nav {
+    position: absolute;
+    top: 45%;
+    width: 100%; }
+    .new-apartment-backrgound-left-block .owl-nav .owl-prev {
+      display: block;
+      content: " ";
+      float: left;
+      background: url("../img/leftarrow.png") no-repeat;
+      width: 24px;
+      height: 44px;
+      text-indent: -9999px;
+      margin-left: 20px; }
+    .new-apartment-backrgound-left-block .owl-nav .owl-next {
+      display: block;
+      float: right;
+      background: url("../img/raightarrow.png") no-repeat;
+      width: 24px;
+      height: 44px;
+      text-indent: -9999px;
+      margin-right: 20px; }
+
+@media all and (min-width: 1000px) {
+  .new-apartment-backrgound-left-block {
+    height: 100%; }
+    .new-apartment-backrgound-left-block .owl-carousel .owl-item img {
+      height: 720px; } }
 
 .new-apartment-backrgound-right-block {
   float: right;
@@ -366,41 +393,6 @@ label {
   position: relative;
   height: 718px;
   margin-top: -718px; }
-
-#slideshow1, #slidesContainer1 {
-  margin: 0 0;
-  max-width: 650px;
-  height: 100% !important;
-  overflow: auto;
-  position: relative; }
-
-#slideshow1 #slidesContainer1 .slide1 {
-  margin: 0 auto;
-  max-width: 650px;
-  height: 100% !important; }
-
-/**
- * Slideshow controls style rules.
- */
-.control1 {
-  display: block;
-  width: 39px;
-  height: 263px;
-  text-indent: -10000px;
-  position: absolute;
-  cursor: pointer; }
-
-#leftControl1 {
-  z-index: 5;
-  top: 50%;
-  left: 10px;
-  background: transparent url("../img/leftarrow.png") no-repeat 0 0; }
-
-#rightControl1 {
-  z-index: 5;
-  top: 50%;
-  right: 0;
-  background: transparent url("../img/raightarrow.png") no-repeat 0 0; }
 
 .new-apartment-left-block {
   position: absolute;
@@ -657,7 +649,7 @@ label {
       background-repeat: no-repeat;
       width: 8px;
       height: 14px;
-      background-position: -353px -392px;
+      background-position: -128px -272px;
       float: right;
       margin-left: 4px;
       margin-top: 3px; }
@@ -1081,62 +1073,55 @@ button {
   .about button {
     width: 250px; } }
 
+@media all and (min-width: 1000px) {
+  .consulting {
+    height: 100%; }
+    .consulting .owl-carousel .owl-item img {
+      height: 630px; } }
+
 .consulting {
   min-height: 640px; }
-  .consulting .consulting-personal {
-    max-width: 487px;
-    height: 100%;
-    margin-right: 10px;
-    /**
-     * Slideshow controls style rules.
-     */ }
-    .consulting .consulting-personal #slideshow, .consulting .consulting-personal #slidesContainer {
-      margin: 0 auto;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      position: relative; }
-    .consulting .consulting-personal #slideshow #slidesContainer .slide {
-      margin: 0 auto;
-      width: 100%;
-      height: 100%; }
-    .consulting .consulting-personal .control {
+  .consulting .owl-nav {
+    position: absolute;
+    top: 45%;
+    width: 100%; }
+    .consulting .owl-nav .owl-prev {
       display: block;
-      width: 39px;
-      height: 263px;
-      text-indent: -10000px;
-      position: absolute;
-      cursor: pointer; }
-    .consulting .consulting-personal #leftControl {
-      z-index: 5;
-      top: 50%;
-      left: 10px;
-      background: transparent url("../img/leftrightarrow.png") no-repeat 0 0; }
-    .consulting .consulting-personal #rightControl {
-      z-index: 5;
-      top: 50%;
-      right: 0;
-      background: transparent url("../img/bluerightarrow.png") no-repeat 0 0; }
-    .consulting .consulting-personal .slide-description {
-      margin-top: -115px;
-      max-width: 440px;
-      margin-left: 10px;
-      background: #0aaed3;
-      opacity: 0.8;
-      z-index: 5;
-      position: relative;
-      padding-top: 20px;
-      padding-left: 20px;
-      padding-bottom: 15px; }
-      .consulting .consulting-personal .slide-description .slide-description-title {
-        color: #fff;
-        font-size: 20px;
-        display: block;
-        font-weight: bold; }
-      .consulting .consulting-personal .slide-description .slide-description-text {
-        color: #fff;
-        font-size: 18px;
-        display: block; }
+      content: " ";
+      float: left;
+      background: url("../img/blueleftarrow.png") no-repeat;
+      width: 24px;
+      height: 44px;
+      text-indent: -9999px;
+      margin-left: 20px; }
+    .consulting .owl-nav .owl-next {
+      display: block;
+      float: right;
+      background: url("../img/bluerightarrow.png") no-repeat;
+      width: 24px;
+      height: 44px;
+      text-indent: -9999px;
+      margin-right: 20px; }
+  .consulting .slide-description {
+    margin-top: -115px;
+    max-width: 440px;
+    margin-left: 10px;
+    background: #0aaed3;
+    opacity: 0.8;
+    z-index: 5;
+    position: relative;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 15px; }
+    .consulting .slide-description .slide-description-title {
+      color: #fff;
+      font-size: 20px;
+      display: block;
+      font-weight: bold; }
+    .consulting .slide-description .slide-description-text {
+      color: #fff;
+      font-size: 18px;
+      display: block; }
   .consulting .consulting-body {
     max-width: 660px; }
     .consulting .consulting-body .header {
