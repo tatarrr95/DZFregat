@@ -51,106 +51,8 @@ if (floorRange != null) {
         $('#price-to').val(priceRange.noUiSlider.get()[1])
     });
 }
-$(document).ready(function() {
-    var currentPosition = 0;
-    var slideWidth = 560;
-    var slides = $('.slide');
-    var numberOfSlides = slides.length;
-    // Убираем прокрутку
-    $('#slidesContainer').css('overflow', 'hidden');
-    // Вставляем все .slides в блок #slideInner
-    slides
-        .wrapAll('<div id="slideInner"></div>')
-        // Float left to display horizontally, readjust .slides width
-        .css({
-            'float': 'left',
-            'width': slideWidth
-        });
-    // Устанавливаем ширину #slideInner, равную ширине всех слайдов
-    $('#slideInner').css('width', slideWidth * numberOfSlides);
-    // Вставляем элементы контроля в DOM
-    $('#slideshow')
-        .prepend('<span class="control" id="leftControl">Move left</span>')
-        .append('<span class="control" id="rightControl">Move right</span>');
-    // Прячем правую стрелку при загрузке скрипта
-    manageControls(currentPosition);
-    // Отлавливаем клик на класс .controls
-    $('.control').bind('click', function() {
-        // Определение новой позиции
-        currentPosition = ($(this).attr('id') == 'rightControl') ? currentPosition + 1 : currentPosition - 1;
-        // Прячет / показывает элементы контроля
-        manageControls(currentPosition);
-        // Move slideInner using margin-left
-        $('#slideInner').animate({
-            'marginLeft': slideWidth * (-currentPosition)
-        });
-    });
-    // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
-    function manageControls(position) {
-        // Спрятать левую стрелку, если это левый слайд
-        if (position == 0) { $('#leftControl').hide() } else { $('#leftControl').show() }
-        // Спрятать правую стрелку, если это последний слайд
-        if (position == numberOfSlides - 1) { $('#rightControl').hide() } else { $('#rightControl').show() }
-    }
-    var currentPosition1 = 0;
-    var slideWidth1 = 650;
-    var slides1 = $('.slide1');
-    var numberOfSlides1 = slides1.length;
-    // Убираем прокрутку
-    $('#slidesContainer1').css('overflow', 'hidden');
-    // Вставляем все .slides в блок #slideInner
-    slides1.wrapAll('<div id="slideInner1"></div>')
-        // Float left to display horizontally, readjust .slides width
-        .css({
-            'float': 'left',
-            'width': slideWidth1
-        });
-    // Устанавливаем ширину #slideInner, равную ширине всех слайдов
-    $('#slideInner1').css('width', slideWidth1 * numberOfSlides1);
-    // Вставляем элементы контроля в DOM
-    $('#slideshow1')
-        .prepend('<span class="control1" id="leftControl1">Move left</span>')
-        .append('<span class="control1" id="rightControl1">Move right</span>');
-    // Прячем правую стрелку при загрузке скрипта
-    manageControls1(currentPosition1);
-    // Отлавливаем клик на класс .controls
-    $('.control1').bind('click', function() {
-        // Определение новой позиции
-        currentPosition1 = ($(this).attr('id') == 'rightControl1') ? currentPosition1 + 1 : currentPosition1 - 1;
-        // Прячет / показывает элементы контроля
-        manageControls1(currentPosition1);
-        // Move slideInner using margin-left
-        $('#slideInner1').animate({
-            'marginLeft': slideWidth1 * (-currentPosition1)
-        });
-    });
-    // manageControls: показывает или скрывает стрелки в зависимости от значения currentPosition
-    function manageControls1(position1) {
-        // Спрятать левую стрелку, если это левый слайд
-        if (position1 == 0) { $('#leftControl1').hide() } else {
-            $('#leftControl1').show()
-        }
-        // Спрятать правую стрелку, если это последний слайд
-        if (position1 == numberOfSlides1 - 1) {
-            $("#slideInner1").append($("#slideInner1").children().first().clone());
-            $("#slideInner1").children().first().remove();
-            position1 = position1 - 1;
-        } else { $('#rightControl1').show() }
-    }
-});
 
 
-
-$(document).on('click', function() {
-    $('#proverka').click(
-        function() {
-            $(this).addClass('zoomInUp'); // Добавляем класс bounce
-        },
-        function() {
-            $(this).removeClass('zoomInUp'); // Убираем класс
-        }
-    )
-});
 
 new WOW().init({
     mobile: false
@@ -384,7 +286,7 @@ $(document).mouseup(function(e) {
 
 function selectByParams() {
     $('#select-apartment-by-params').removeClass('displaynone');
-    $('#select-apartment-by-genplan').addClass('scale0');
+    $('#select-apartment-by-genplan').addClass('displaynone');
     $('#select-apartment-by-params-button').css({
         'background-color': '#0aaed3',
         'color': '#fff'
@@ -397,7 +299,7 @@ function selectByParams() {
 
 function selectByGenplan() {
     $('#select-apartment-by-params').addClass('displaynone');
-    $('#select-apartment-by-genplan').removeClass('scale0');
+    $('#select-apartment-by-genplan').removeClass('displaynone');
     $('#select-apartment-by-params-button').css({
         'background-color': '#fafafa',
         'color': '#0aaed3'
@@ -405,6 +307,10 @@ function selectByGenplan() {
     $('#select-apartment-by-genplan-button').css({
         'background-color': '#0aaed3',
         'color': '#fff'
+    });
+     $('#map-image').maphilight({
+        fillColor: '00cbff',
+        fillOpacity: 0.8
     });
 }
 
@@ -453,12 +359,20 @@ $(document).on('closed', '.modal-video', function(e) {
 
 // $("map").imageMapResize(); 
 
-$(document).ready(function() {
-    $('#map-image').maphilight({
-        fillColor: '00cbff',
-        fillOpacity: 0.8
-    });
-});
+// $(document).ready(function() {
+//     $('#map-image').maphilight({
+//         fillColor: '00cbff',
+//         fillOpacity: 0.8
+//     });
+// });
+
+// function alloha(){
+//     $("#select-apartment-by-genplan").prepend($("#map-proverka"));
+//     $('#step1').maphilight({
+//         fillColor: '00cbff',
+//         fillOpacity: 0.8
+//     });
+// }
 
 
 

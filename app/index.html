@@ -585,10 +585,10 @@
                     </div>
                 </div>
             </div>
-             <div id="select-apartment-by-genplan" class="select-apartment-body scale0">
-                <img src="img/render3.jpg" id="map-image" style="max-width: 100%; width: 2000px; height: auto;" alt="" usemap="#map"/>
+             <div id="select-apartment-by-genplan" class="select-apartment-body displaynone" style="overflow: hidden; width: 100%">
+                <img src="img/render3.jpg" id="map-image" style="height: 873px;" alt="" usemap="#map"/>
                 <map name="map">
-                    <area onmouseover="over('1 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="406, 758, 682, 758, 682, 736, 406, 736" />
+                    <area data-remodal-target="step1-modal" onmouseover="over('1 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="406, 758, 682, 758, 682, 736, 406, 736" />
                     <area onmouseover="over('2 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="406, 731, 682, 731, 682, 709, 406, 709" />
                     <area onmouseover="over('3 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="406, 704, 682, 704, 682, 682, 406, 682" />
                     <area onmouseover="over('4 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="405, 677, 681, 677, 681, 655, 405, 655" />
@@ -612,7 +612,7 @@
                     <area onmouseover="over('22 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="400, 195, 676, 195, 676, 173, 400, 173" />
                     <area onmouseover="over('23 Этаж, 13 квартир, от 2 153 000 руб.')" shape="poly" coords="400, 168, 676, 168, 676, 146, 400, 146" />
                     <area onmouseover="over('24 Этаж, 13 квартир, от 2 153 000 руб.')" data-remodal-target="modal-video" shape="poly" coords="400, 140, 676, 140, 676, 118, 400, 118" />
-                    <area onmouseover="over('25 Этаж, 13 квартир, от 2 153 000 руб.')" name="1 этаж" data-remodal-target="modal-video" shape="poly" coords="400, 113, 676, 113, 676, 91, 400, 91" class="{fillOpacity: '0.5'}" />
+                    <area onclick="alloha()" onmouseover="over('25 Этаж, 13 квартир, от 2 153 000 руб.')" name="1 этаж" shape="poly" coords="400, 113, 676, 113, 676, 91, 400, 91" class="{fillOpacity: '0.5'}" />
                 </map>
             </div>
         </div>
@@ -1010,6 +1010,22 @@
         <div class="remodal" data-remodal-id="render" data-remodal-options="hashTracking: false">
             <img src="img/render1.png" alt="" class="img-responsive">
         </div>
+        <!-- <div class="remodal" data-remodal-id="step1-modal"> -->
+           <div id="map-proverka" style="text-align: center"><div style="display: inline-block"> <img src="img/steps/step1.png" id="step1" alt="" usemap="#step1-map" />
+                      			<map name="step1-map">
+                      			    <area shape="poly" coords="239, 179, 239, 58, 199, 58, 199, 35, 125, 35, 125, 60, 70, 60, 70, 122, 46, 122, 46, 177" />
+                      			    <area shape="poly" coords="204, 279, 204, 178, 48, 178, 48, 282" />
+                      			    <area shape="poly" coords="205, 348, 205, 282, 46, 282, 46, 385, 137, 385, 137, 349" />
+                      			    <area shape="poly" coords="203, 407, 203, 350, 137, 350, 137, 385, 50, 385, 50, 442, 74, 442, 74, 541, 131, 541, 131, 408" />
+                      			    <area shape="poly" coords="205, 396, 236, 396, 236, 499, 242, 499, 242, 542, 134, 542, 134, 408, 206, 408" />
+                      			    <area shape="poly" coords="288, 341, 236, 341, 236, 522, 285, 522" />
+                      			    <area shape="poly" coords="340, 342, 288, 342, 288, 521, 332, 521, 332, 493, 343, 493" />
+                      			    <area shape="poly" coords="341, 395, 372, 395, 372, 409, 442, 409, 442, 543, 334, 543, 334, 493, 341, 493" />
+                      			    <area shape="poly" coords="372, 408, 372, 352, 440, 352, 440, 385, 532, 385, 532, 442, 503, 442, 503, 542, 442, 542, 442, 408" />
+                      			    <area shape="poly" coords="372, 351, 372, 283, 530, 283, 530, 383, 437, 383, 437, 350" />
+                      			    <area shape="poly" coords="371, 249, 370, 178, 406, 181, 406, 126, 499, 127, 499, 120, 531, 122, 531, 283, 369, 283" />
+                      			</map></div><div>
+        <!-- </div> -->
     </div>
 
 
@@ -1018,6 +1034,8 @@
     <!-- bower:js -->
     <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/remodal/dist/remodal.js"></script>
+    <script src="bower/wow/dist/wow.js"></script>
+    <script src="bower/waypoints/lib/noframework.waypoints.js"></script>
     <!-- endbower -->
     <script src="js/vendor/wNumb.js"></script>
     <script src="js/vendor/nouislider.js"></script>
