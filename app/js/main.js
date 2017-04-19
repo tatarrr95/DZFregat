@@ -366,17 +366,35 @@ $(document).on('closed', '.modal-video', function(e) {
 //     });
 // });
 
-// function alloha(){
-//     $("#select-apartment-by-genplan").prepend($("#map-proverka"));
-//     $('#step1').maphilight({
-//         fillColor: '00cbff',
-//         fillOpacity: 0.8
-//     });
-// }
+function alloha(){
+    $("#select-apartment-by-genplan").prepend($(".map-steps-wrapper"));
+    $(".map-steps-content").prepend($("#map-1step-plan"));
+    $('#step1').maphilight({
+        fillColor: '00cbff',
+        fillOpacity: 0.8
+    });
+    $('#map-main-plan').addClass('displaynone');
+}
+
+function selectStep(stepPlanId, stepPlanImageId, currentId){
+    $("#select-apartment-by-genplan").prepend($(".map-steps-wrapper").clone());
+    $(".map-steps-content").first().prepend($("#" + stepPlanId).clone());
+    $(".map-steps-wrapper").first().addClass('map-current')
+    $('#' + stepPlanImageId).maphilight({
+        fillColor: '00cbff',
+        fillOpacity: 0.8
+    });
+    $('#' + currentId).addClass('map-previous');
+};
+
+function mapBack(){
+    $(".map-previous").removeClass('map-previous');
+    $(".map-current").remove();
+}
 
 
 
-
+/*Тултипы на генплане*/
 function move(e, b, r) //для получения координат мышки
 {
     e = e || window.event
@@ -399,25 +417,57 @@ $(document).ready(function() {
         $(".tool").remove();
     });
 });
-
-function over(tip) //функция при наведении
-{
+var mapMainPlanArray = [
+    '1 Этаж;13 квартип;от 2 153 000 руб.',
+    '2 Этаж;13 квартип;от 2 153 000 руб.',
+    '3 Этаж;13 квартип;от 2 153 000 руб.', 
+    '4 Этаж;13 квартип;от 2 153 000 руб.',
+    '5 Этаж;13 квартип;от 2 153 000 руб.',
+    '6 Этаж;13 квартип;от 2 153 000 руб.',
+    '7 Этаж;13 квартип;от 2 153 000 руб.',
+    '8 Этаж;13 квартип;от 2 153 000 руб.',
+    '9 Этаж;13 квартип;от 2 153 000 руб.',
+    '10 Этаж;13 квартип;от 2 153 000 руб.',
+    '11 Этаж;13 квартип;от 2 153 000 руб.',
+    '12 Этаж;13 квартип;от 2 153 000 руб.',
+    '13 Этаж;13 квартип;от 2 153 000 руб.',
+    '14 Этаж;13 квартип;от 2 153 000 руб.',
+    '15 Этаж;13 квартип;от 2 153 000 руб.',
+    '16 Этаж;13 квартип;от 2 153 000 руб.',
+    '17 Этаж;13 квартип;от 2 153 000 руб.',
+    '18 Этаж;13 квартип;от 2 153 000 руб.',
+    '19 Этаж;13 квартип;от 2 153 000 руб.',
+    '20 Этаж;13 квартип;от 2 153 000 руб.',
+    '21 Этаж;13 квартип;от 2 153 000 руб.',
+    '22 Этаж;13 квартип;от 2 153 000 руб.',
+    '23 Этаж;13 квартип;от 2 153 000 руб.',
+    '24 Этаж;13 квартип;от 2 153 000 руб.',
+    '25 Этаж;13 квартип;от 2 153 000 руб.'
+];
+function over(tip){ //функция при наведении
+    //обрабатываем массив с данными
+    data = mapMainPlanArray[tip-1];
+    data = data.split(';');
+    step = data[0];
+    countOfApartments = data[1];
+    price = data[2];
     //добавляем тултип
-    $('<div class="tool"></div>').appendTo('body').html(tip);
+    $('<div class="tool"></div>').appendTo('body').html(step + ", " + countOfApartments + ", " + price);
     move(0, 0, 0);
-}
+};
+
+
+
 
 $(document).ready(function(){
   $("#apartment-carousel").owlCarousel({
   	items: 1,
   	nav: true,
   	rewind: true
-  	// navContainer: "sliderControls"
   });
   $("#personal-carousel").owlCarousel({
   	items: 1,
   	nav: true,
   	rewind: true
-  	// navContainer: "sliderControls"
   });
 });
