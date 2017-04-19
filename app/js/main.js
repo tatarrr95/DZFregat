@@ -379,17 +379,19 @@ function alloha(){
 function selectStep(stepPlanId, stepPlanImageId, currentId){
     $("#select-apartment-by-genplan").prepend($(".map-steps-wrapper").clone());
     $(".map-steps-content").first().prepend($("#" + stepPlanId).clone());
-    $(".map-steps-wrapper").first().addClass('map-current')
+    $(".map-steps-wrapper").first().addClass('map-current');
     $('#' + stepPlanImageId).maphilight({
         fillColor: '00cbff',
         fillOpacity: 0.8
     });
     $('#' + currentId).addClass('map-previous');
+    window.location.hash="select-apartment-by-genplan";
 };
 
 function mapBack(){
     $(".map-previous").removeClass('map-previous');
     $(".map-current").remove();
+    window.location.hash="select-apartment";
 }
 
 
