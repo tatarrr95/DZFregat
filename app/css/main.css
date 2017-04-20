@@ -1820,9 +1820,17 @@ button {
   background-repeat: no-repeat !important; }
 
 .map-steps-wrapper {
-  text-align: center; }
+  text-align: center;
+  width: 1200px;
+  margin: auto; }
   .map-steps-wrapper .map-steps-content {
     display: inline-block; }
+  .map-steps-wrapper .map-kvartira-more-img {
+    width: 50%;
+    float: left; }
+  .map-steps-wrapper .map-kvartira-more-actions {
+    width: 50%;
+    float: left; }
 
 .map-previous {
   display: none; }
