@@ -608,6 +608,11 @@ label
   background-color: #fafafa
   color: $color-blue
 
+@media all and (max-width: 1000px)
+  .select-apartment-buttons-genplan
+    display: none
+
+
 .select-apartment-buttons
   margin: auto
   max-width: 490px
@@ -1881,6 +1886,18 @@ button
   text-align: center
   width: 1200px
   margin: auto
+  .map-steps-footer
+    margin-bottom: 80px
+    .map-back
+      cursor: pointer
+      float: left
+      margin-left: 90px
+      font-size: 25px
+    .map-more-about-actions
+      cursor: pointer
+      float: right
+      margin-right: 90px
+      font-size: 25px
   .map-steps-content
     display: inline-block
   .map-kvartira-more-img
@@ -1889,6 +1906,27 @@ button
   .map-kvartira-more-actions
     width: 50%
     float: left
+    padding-top: 75px
+    button
+      width: 300px
+      margin: auto
+      margin-bottom: 15px
+      height: 40px
+  .map-steps-header
+    margin-bottom: 40px
+    .map-steps-header-item
+      float: left
+      width: 25%
+      .map-steps-header-item-header
+        color: $color-blue
+        font-size: 20px
+        font-weight: bold
+        display: block
+        margin-bottom: 10px
+      .map-steps-header-item-text
+        color: #000
+        font-size: 20px
+
 
 .map-previous
   display: none

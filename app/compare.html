@@ -1,359 +1,423 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
+
 <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1"> 
-      <title>Сравнение квартир</title>
-      <!-- SEO -->
-      <meta name="description" content="">
-      <meta name="keywords" content="">
-      <meta name="autor" content="">
-      <meta http-equiv="Cache-Control" content="no-cache">
-      <!-- favicon.ico -->
-      <link rel="shortcut icon" href="" type="image/x-icon">
-      <link rel="icon" href="" type="image/x-icon">
-      <!-- build:css css/vendor.css -->
-      <!-- bower:css -->
-      <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
-      <link rel="stylesheet" href="bower/remodal/dist/remodal.css" />
-      <link rel="stylesheet" href="bower/remodal/dist/remodal-default-theme.css" />
-      <!-- endbower -->
-      <link rel="stylesheet" href="css/vendor/bootstrap.css">
-      <link rel="stylesheet" href="css/vendor/nouislider.css">
-      <!-- endbuild -->
-      <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-      <!-- build:css css/main.css -->
-      <link rel="stylesheet" href="css/sprite.css">
-      <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet" href="css/animista.css">
-      <!-- endbuild -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Сравнение квартир</title>
+    <!-- SEO -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="autor" content="">
+    <!-- favicon.ico -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="css/vendor/bootstrap-grid.css">
+    <link rel="stylesheet" href="bower/remodal/dist/remodal.css" />
+    <link rel="stylesheet" href="bower/remodal/dist/remodal-default-theme.css" />
+    <link rel="stylesheet" href="css/animista.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css css/nouislider-carousel.css -->
+    <link rel="stylesheet" href="css/vendor/nouislider.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.css">
+    <link rel="stylesheet" href="css/vendor/owl.theme.default.css">
+    <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="css/sprite.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
 </head>
+
 <body>
-      <!--[if lt IE 7]>
+    <!--[if lt IE 7]>
       <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите</a> его.</p>
       <![endif]-->
-
-      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
-      <div class="container-fluid">
-
-            <!-- Header -->
-            <div class="top-header row">
-                  <div class="col-md-7 col-md-offset-1">
-                        <div class="header-logo img-responsive pull-right">
-                              <a href="/"><img class="img-responsive" src="img/logo.png" alt=""></a>
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="top-header row">
+            <div class="col-md-7 col-md-offset-1">
+                <div class="header-logo img-responsive pull-right">
+                    <a href="/"><img class="img-responsive" src="img/logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-6 col-md-offset-5">
+                <div class="header-number clearfix">
+                    <i class="sprite sprite-telephone"></i>
+                    <a href="tel: +74232025009">+7 (423) 202-50-09</a>
+                </div>
+            </div>
+            <div class="col-md-3 header-menu">
+                <a class="a-pointer" data-remodal-target="menu">
+                    <i id="elem-menu" class="sprite sprite-menu"></i>
+                    <span>МЕНЮ</span>
+                </a>
+            </div>
+        </div>
+        <!--  -->
+        <div class="row page-header page-news-header">
+            <div class="resp-width center-block">
+                <span class="page-header-title">Сравнение квартир</span>
+            </div>
+        </div>
+        <div class="row page-content compare-content">
+            <div class="resp-width center-block">
+                <div id="select-apartment" class="row">
+                    <ul class="apartment-list">
+                        <li class="clearfix">
+                            <ul class="apartment-list-item clearfix">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <li><i class="sprite sprite-dom"></i></li>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <li class="main-desc">
+                                            <span class="title">1 комнатная квартира</span>
+                                            <div class="subtitle clearfix">
+                                                <i class="sprite sprite-etagi"></i>
+                                                <span class="floor">5 этажей</span>
+                                                <i class="sprite sprite-ploshad"></i>
+                                                <span class="area">27 кв.м</span>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><span class="pricee">1 700 000 руб</span></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="clearfix">
+                            <ul class="apartment-list-item clearfix">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <li><i class="sprite sprite-dom"></i></li>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <li class="main-desc">
+                                            <span class="title">1 комнатная квартира</span>
+                                            <div class="subtitle clearfix">
+                                                <i class="sprite sprite-etagi"></i>
+                                                <span class="floor">5 этажей</span>
+                                                <i class="sprite sprite-ploshad"></i>
+                                                <span class="area">27 кв.м</span>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><span class="pricee">1 700 000 руб</span></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="clearfix">
+                            <ul class="apartment-list-item clearfix">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <li><i class="sprite sprite-dom"></i></li>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <li class="main-desc">
+                                            <span class="title">1 комнатная квартира</span>
+                                            <div class="subtitle clearfix">
+                                                <i class="sprite sprite-etagi"></i>
+                                                <span class="floor">5 этажей</span>
+                                                <i class="sprite sprite-ploshad"></i>
+                                                <span class="area">27 кв.м</span>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <li><span class="pricee">1 700 000 руб</span></li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row page-content page-compare-calc-content page-calc-content">
+        <div class="resp-width center-block">
+            <span class="page-header-title">Выберете квартиру</span>
+            <div class="features-buttons clearfix">
+                <button onclick="calcTotalBody()" id="calc-total-body-button" class="features-buttons-select-apartment">По сумме кредита</button>
+                <button onclick="calcAnnBody()" id="calc-ann-body-button" class="features-buttons-task-question">По ежемесячному платежу</button>
+            </div>
+            <div class="calc-form" id="calc-total-body">
+                <!-- <form> -->
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Стоимость квартиры</span>
+                        <span class="input-story">Руб.</span>
+                        <input id="totalPriceValue" type="text" value="500000">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="minTotalPrice" class="regulator-from">500 000</span>
+                            <div class="calc-range" id="totalPrice"></div>
+                            <span id="maxTotalPrice" class="regulator-to">12 000 000</span>
                         </div>
-                  </div>
-                  <div class="col-md-6 col-md-offset-5">
-                        <div class="header-number clearfix">
-                              <i class="sprite sprite-telephone"></i>
-                              <span>+7 (423) 202-50-09</span>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Первоначальный взнос</span>
+                        <span class="input-story">Руб.</span>
+                        <input id="firstPaymentValue" type="text" value="0">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span class="regulator-from">0</span>
+                            <div class="calc-range" id="firstPayment"></div>
+                            <span id="maxFirstPayment" class="regulator-to">450 000</span>
                         </div>
-                  </div>
-                  <div class="col-md-3 header-menu">
-                        <a class="a-pointer" data-remodal-target="menu">
-                              <i id="elem-menu" class="sprite sprite-menu"></i>
-                              <span>МЕНЮ</span>
-                        </a>
-                  </div>
-            </div>
-            <!--  -->
-
-            <div class="row page-header page-news-header">
-                  <div class="resp-width center-block">
-                        <span class="page-header-title">Сравнение квартир</span>                         
-                  </div>
-            </div>
-
-            <div class="row page-content compare-content">
-                  <div class="resp-width center-block">
-                       <div id="select-apartment" class="row">
-                              <ul class="apartment-list">
-                                    <li class="clearfix">
-                                          <ul class="apartment-list-item clearfix">
-                                                <div class="row">
-                                                      <div class="col-md-2">
-                                                            <li><i class="sprite sprite-dom"></i></li>
-                                                      </div>
-                                                      <div class="col-md-5">
-                                                            <li class="main-desc">
-                                                                  <span class="title">1 комнатная квартира</span>
-                                                                  <div class="subtitle clearfix">
-                                                                        <i class="sprite sprite-etagi"></i>
-                                                                        <span class="floor">5 этажей</span>
-                                                                        <i class="sprite sprite-ploshad"></i>
-                                                                        <span class="area">27 кв.м</span>
-                                                                  </div>
-                                                            </li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><span class="pricee">1 700 000 руб</span></li>
-                                                      </div>
-                                                </div>
-                                          </ul>
-                                    </li>
-                                    <li class="clearfix">
-                                          <ul class="apartment-list-item clearfix">
-                                                <div class="row">
-                                                      <div class="col-md-2">
-                                                            <li><i class="sprite sprite-dom"></i></li>
-                                                      </div>
-                                                      <div class="col-md-5">
-                                                            <li class="main-desc">
-                                                                  <span class="title">1 комнатная квартира</span>
-                                                                  <div class="subtitle clearfix">
-                                                                        <i class="sprite sprite-etagi"></i>
-                                                                        <span class="floor">5 этажей</span>
-                                                                        <i class="sprite sprite-ploshad"></i>
-                                                                        <span class="area">27 кв.м</span>
-                                                                  </div>
-                                                            </li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><span class="pricee">1 700 000 руб</span></li>
-                                                      </div>
-                                                </div>
-                                          </ul>
-                                    </li>
-                                    <li class="clearfix">
-                                          <ul class="apartment-list-item clearfix">
-                                                <div class="row">
-                                                      <div class="col-md-2">
-                                                            <li><i class="sprite sprite-dom"></i></li>
-                                                      </div>
-                                                      <div class="col-md-5">
-                                                            <li class="main-desc">
-                                                                  <span class="title">1 комнатная квартира</span>
-                                                                  <div class="subtitle clearfix">
-                                                                        <i class="sprite sprite-etagi"></i>
-                                                                        <span class="floor">5 этажей</span>
-                                                                        <i class="sprite sprite-ploshad"></i>
-                                                                        <span class="area">27 кв.м</span>
-                                                                  </div>
-                                                            </li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-broni"></i><span>Забронировать</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-pdf"></i><span>Распечатать предложение</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><i class="sprite sprite-calcipoteka"></i><span>Рассчитать ипотеку</span></li>
-                                                      </div>
-                                                      <div class="col-md-4">
-                                                            <li><span class="pricee">1 700 000 руб</span></li>
-                                                      </div>
-                                                </div>
-                                          </ul>
-                                    </li>
-                              </ul>
-
+                    </div>
+                </div>
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name"></span>
+                        <span class="input-story">%</span>
+                        <input id="firstPercentValue" type="text" value="0">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="minFirstPercent" class="regulator-from">0</span>
+                            <div class="calc-range" id="firstPercent"></div>
+                            <span id="maxFirstPercent" class="regulator-to">90</span>
                         </div>
-                  </div>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Срок кредита</span>
+                        <span class="input-story">Лет</span>
+                        <input id="longTimeValue" type="text" value="1">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="minLongTime" class="regulator-from">1</span>
+                            <div class="calc-range" id="longTime"></div>
+                            <span id="maxLongTime" class="regulator-to">30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Процентная ставка, годовых</span>
+                        <span class="input-story">%</span>
+                        <input id="yearPercentValue" type="text" value="10.8">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="minYearPercent" class="regulator-from">10.8</span>
+                            <div class="calc-range" id="yearPercent"></div>
+                            <span id="maxYearPercent" class="regulator-to">25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <div class="features-buttons clearfix">
+                            <button onclick="calculateIncome(parseInt(document.getElementById('totalPriceValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('firstPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('longTimeValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('yearPercentValue').value.replace(/\s/gi, '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
+                            <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        </div>
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="info">
+                            <div class="info-inner">
+                                <span>Ежемесячный платеж:</span>
+                                <span id="monthIncome" class="summ">-</span>
+                                <span class="summ">РУБ</span>
+                            </div>
+                            <span>
+                                                     *данный рассчет приведен для общей информации я не является публичной офертой
+                                               </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- </form> -->
             </div>
+            <div class="calc-form" id="calc-ann-body" style="display: none">
+                <!-- <form> -->
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Ежемесячный доход</span>
+                        <span class="input-story">Руб.</span>
+                        <input id="sum_annPaymentValue" type="text" value="0">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="min_sum_annPayment" class="regulator-from">0</span>
+                            <div class="calc-range" id="sum_annPayment"></div>
+                            <span id="max_sum_annPayment" class="regulator-to">500 000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Первоначальный взнос</span>
+                        <span class="input-story">Руб.</span>
+                        <input id="sum_firstPaymentValue" type="text" value="0">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="min_sum_firstPayment" class="regulator-from">0</span>
+                            <div class="calc-range" id="sum_firstPayment"></div>
+                            <span id="max_sum_firstPayment" class="regulator-to">7 200 000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Срок кредита</span>
+                        <span class="input-story">Лет</span>
+                        <input id="sum_longTimeValue" type="text" value="1">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="min_sum_longTime" class="regulator-from">1</span>
+                            <div class="calc-range" id="sum_longTime"></div>
+                            <span id="max_sum_longTime" class="regulator-to">30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row border-bot">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <span class="calc-input-name">Процентная ставка, годовых</span>
+                        <span class="input-story">%</span>
+                        <input id="sum_yearPercentValue" type="text" value="10.8">
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="regulator clearfix">
+                            <span id="min_sum_yearPercent" class="regulator-from">10.8</span>
+                            <div class="calc-range" id="sum_yearPercent"></div>
+                            <span id="max_sum_yearPercent" class="regulator-to">25</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calc-line clearfix row">
+                    <div class="calc-line-left clearfix col-md-12">
+                        <div class="features-buttons clearfix">
+                            <button onclick="calculateTotalPrice(parseInt(document.getElementById('sum_annPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_firstPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_longTimeValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_yearPercentValue').value.replace(/\s/gi, '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
+                            <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
+                        </div>
+                    </div>
+                    <div class="calc-line-right clearfix col-md-12">
+                        <div class="info">
+                            <div class="info-inner">
+                                <span>Стоимость квартиры</span>
+                                <span id="flatPrice" class="summ">-</span>
+                                <span class="summ">РУБ</span>
+                            </div>
+                            <span>
+                                                     *данный рассчет приведен для общей информации я не является публичной офертой
+                                               </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- </form> -->
             </div>
-
-            <div class="row page-content page-compare-calc-content page-calc-content">
-                  <div class="resp-width center-block">
-                         <span class="page-header-title">Выберете квартиру</span> 
-                       <div class="features-buttons clearfix">
-                                                <button class="features-buttons-select-apartment">По сумме кредита</button>
-                                                      <button class="features-buttons-task-question">По ежемесячному платежу</button>
-                                                </div>
-                        <div class="calc-form">
-                              <form action="">
-                                    <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Стоимость квартиры</span>
-                                                <span class="input-story">Руб.</span>
-                                                <input id="calcPriceInput" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span class="regulator-from">500 000</span>
-                                                      <div class="calc-range" id="calcPrice"></div>
-                                                      <span class="regulator-to">12 000 000</span>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                                     <div class="calc-line clearfix row">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Первоначальный взнос</span>
-                                                <span class="input-story">Руб.</span>
-                                                <input id="calcFirstVznosInput" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span class="regulator-from">0</span>
-                                                      <div class="calc-range" id="calcFirstVznos"></div>
-                                                      <span class="regulator-to">7 200 000</span>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                                     <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name"></span>
-                                                <span class="input-story">%</span>
-                                                <input id="calcFirstVznosProcentInput" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span class="regulator-from">0</span>
-                                                      <div class="calc-range" id="calcFirstVznosProcent"></div>
-                                                      <span class="regulator-to">90</span>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                                     <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Срок кредита</span>
-                                                <span class="input-story">Лет</span>
-                                                <input id="calcSrokInput" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span class="regulator-from">1</span>
-                                                      <div class="calc-range" id="calcSrok"></div>
-                                                      <span class="regulator-to">30</span>
-                                                </div>
-                                          </div>
-                                    </div>
-
-                                     <div class="calc-line clearfix row border-bot">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <span class="calc-input-name">Процентная ставка, годовых</span>
-                                                <span class="input-story">%</span>
-                                                <input id="calcProcentInput" type="text">
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                                <div class="regulator clearfix">
-                                                      <span class="regulator-from">10.8</span>
-                                                      <div class="calc-range" id="calcProcent"></div>
-                                                      <span class="regulator-to">25</span>
-                                                </div>
-                                          </div>
-                                    </div>
-                                    <div class="calc-line clearfix row">
-                                          <div class="calc-line-left clearfix col-md-12">
-                                                <div class="features-buttons clearfix">
-                                                <button class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
-                                                      <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
-                                                </div>
-                                                
-                                          </div>
-                                          <div class="calc-line-right clearfix col-md-12">
-                                           <div class="info"> 
-                                                 <div class="info-inner">
-                                                       <span>Ежемесячный платеж:</span>
-                                                       <span class="summ">113 634 РУБ</span>
-                                                 </div>
-                                                 <span>
-                                                       *данный рассчет приведен для общей информации я не является публичной офертой
-                                                 </span>
-                                           </div>
-                                     </div>
-                               </div>
-                         </form>
-                        </div> 
-                  </div>
+        </div>
+    </div>
+    <!-- Копирайты -->
+    <div class="row subfooter">
+        <div class="col-md-18 col-md-offset-3">
+            <div class="col-md-8 left">
+                <span>© «Жилкапинвест» — 2016</span>
             </div>
+            <div class="col-md-8 center">
+                <a href="">Официальный сайт ООО "Жилакапинвест"</a>
+            </div>
+            <div class="col-md-8 right">
+                <a href="">Разработка сайта dizlab.com</a>
+            </div>
+        </div>
+    </div>
+    <!-- модальные окна -->
+    <!-- меню -->
+    <div class="remodal menu-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false, modifier: menu-modal-wrapper">
+        <button data-remodal-action="close" class="modal-close"></button>
+        <div class="menu-logo">
+            <img class="img-responsive" src="img/logo.png" alt="">
+        </div>
+        <div class="menu-links">
+            <a href="about.html" class="menu-link">О застройщике</a>
+            <a href="calc.html" class="menu-link">Ипотечный калькулятор</a>
+            <a href="documentation.html" class="menu-link">Документация</a>
+            <a href="news.html" class="menu-link">Новости</a>
+            <a href="discounts.html" class="menu-link">Акции и скидки</a>
+            <a href="discounts-item.html" class="menu-link">Акции и скидки: Акция</a>
+            <a href="process.html" class="menu-link">Ход строительства</a>
+        </div>
+        <div class="menu-footer">
+            <div class="menu-footer-line clearfix">
+                <i class="sprite sprite-menu-geo"></i>
+                <span>
+                                    Офис продаж: ул.Ватутина, 4В, секция 5, офис 9
+                              </span>
+            </div>
+            <div class="menu-footer-line clearfix">
+                <i class="sprite sprite-menu-number"></i>
+                <span>
+                                    8(423)202-50-09
+                              </span>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- build:js scripts/jquery.js -->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower/remodal/dist/remodal.js"></script>
+    <script src="bower/wow/dist/wow.js"></script>
+    <!-- endbower -->
+    <script src="js/vendor/wNumb.js"></script>
+    <script src="js/vendor/nouislider.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/calculator.js -->
+    <script src="js/calculator.js"></script>
+    <!-- endbuild -->
+</body>
 
-      	<!-- Копирайты -->
-      	<div class="row subfooter">
-      		<div class="col-md-18 col-md-offset-3">
-      			<div class="col-md-8 left">
-      				<span>© «Жилкапинвест» — 2016</span>
-      			</div>
-      			<div class="col-md-8 center">
-      				<a href="">Официальный сайт ООО "Жилакапинвест"</a>
-      			</div>
-      			<div class="col-md-8 right">
-      				<a href="">Разработка сайта dizlab.com</a>
-      			</div>
-      		</div>
-      	</div>
-
-      	<!-- модальные окна -->
-      	<!-- меню -->
-      	<div class="remodal menu-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false, modifier: menu-modal-wrapper">
-
-      		<button data-remodal-action="close" class="modal-close"></button>
-      		<div class="menu-logo">
-      			<img class="img-responsive" src="img/logo.png" alt="">
-      		</div>
-      		<div class="menu-links">
-                        <a href="about.html" class="menu-link">О застройщике</a>
-                        <a href="calc.html" class="menu-link">Ипотечный калькулятор</a>
-                        <a href="documentation.html" class="menu-link">Документация</a>
-                        <a href="news.html" class="menu-link">Новости</a>
-                        <a href="discounts.html" class="menu-link">Акции и скидки</a>
-                        <a href="discounts-item.html" class="menu-link">Акции и скидки: Акция</a>
-                        <a href="process.html" class="menu-link">Ход строительства</a>
-                  </div>
-      		<div class="menu-footer">
-      			<div class="menu-footer-line clearfix">
-      				<i class="sprite sprite-menu-geo"></i>
-      				<span>
-      					Офис продаж: ул.Ватутина, 4В, секция 5, офис 9
-      				</span>
-      			</div>
-      			<div class="menu-footer-line clearfix">
-      				<i class="sprite sprite-menu-number"></i>
-      				<span>
-      					8(423)202-50-09
-      				</span>
-      			</div>
-      		</div>			
-      	</div>
-
-
-      </div>
-      <!-- build:js scripts/vendor.js -->
-      <!-- bower:js -->
-      <script src="bower/jquery/dist/jquery.js"></script>
-      <script src="bower/remodal/dist/remodal.js"></script>
-      <!-- endbower -->
-      <script src="js/vendor/wNumb.js"></script>
-      <script src="js/vendor/nouislider.js"></script>
-      <script src="bower/waypoints/lib/jquery.waypoints.js"></script>
-      <script src="bower/wow/dist/wow.js"></script>
-      <!-- endbuild -->
-
-      <!-- build:js scripts/main.js -->
-      <script src="js/main.js"></script>
-      <!-- endbuild -->
-
-  </body>
-  </html>
+</html>

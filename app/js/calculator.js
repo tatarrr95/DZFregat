@@ -1,3 +1,29 @@
+function calcTotalBody() {
+    $('#calc-total-body').css('display', 'block');
+    $('#calc-ann-body').css('display', 'none');
+    $('#calc-total-body-button').css({
+        'background-color': '#0aaed3',
+        'color': '#fff'
+    });
+    $('#calc-ann-body-button').css({
+        'background-color': '#fafafa',
+        'color': '#0aaed3'
+    });
+};
+
+function calcAnnBody() {
+    $('#calc-total-body').css('display', 'none');
+    $('#calc-ann-body').css('display', 'block');
+    $('#calc-total-body-button').css({
+        'background-color': '#fafafa',
+        'color': '#0aaed3'
+    });
+    $('#calc-ann-body-button').css({
+        'background-color': '#0aaed3',
+        'color': '#fff'
+    });
+};
+
 var totalPriceSlider = document.getElementById('totalPrice');
 var firstPaymentSlider = document.getElementById('firstPayment');
 var firstPercentSlider = document.getElementById('firstPercent');
