@@ -4,6 +4,15 @@ $(document).ready(function(){
         mobile: true
     });
 
+    // Маски для форм
+    $("#consulting-telephone").mask("+7 (000) 000-00-00")
+    $("#floor-from").mask("00");
+    $("#floor-to").mask("00");
+    $("#area-from").mask("00");
+    $("#area-to").mask("00");
+    $("#price-from").mask("0000000");
+    $("#price-to").mask("0000000");
+
     // Слайдеры
     $("#apartment-carousel").owlCarousel({
         items: 1,
@@ -57,6 +66,8 @@ if (floorRange != null) {
             'max': 4000000
         }
     });
+
+
     floorRange.noUiSlider.on('slide', function() {
         $('#floor-from').val(floorRange.noUiSlider.get()[0])
         $('#floor-to').val(floorRange.noUiSlider.get()[1])
@@ -66,8 +77,36 @@ if (floorRange != null) {
         $('#area-to').val(areaRange.noUiSlider.get()[1])
     });
     priceRange.noUiSlider.on('slide', function() {
-        $('#price-from').val(priceRange.noUiSlider.get()[0])
-        $('#price-to').val(priceRange.noUiSlider.get()[1])
+        $('#price-from').val(priceRange.noUiSlider.get()[0].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '))
+        $('#price-to').val(priceRange.noUiSlider.get()[1].toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '))
+    });
+    $('#price-from').on("change", function(){
+        var value = parseInt($(this).val().replace(/\s/gi, ''));
+        priceRange.noUiSlider.set([value,]);
+        $(this).val($(this).val().toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    });
+    $('#price-to').on("change", function(){
+        var value = parseInt($(this).val().replace(/\s/gi, ''));
+        priceRange.noUiSlider.set([,value]);
+        $(this).val($(this).val().toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
+    });
+
+    $('#floor-from').on("change", function(){
+        var value = parseInt($(this).val().replace(/\s/gi, ''));
+        floorRange.noUiSlider.set([value,]);
+    });
+    $('#floor-to').on("change", function(){
+        var value = parseInt($(this).val().replace(/\s/gi, ''));
+        floorRange.noUiSlider.set([,value]);
+    });
+
+    $('#area-from').on("change", function(){
+        var value = parseInt($(this).val().replace(/\s/gi, ''));
+        areaRange.noUiSlider.set([value,]);
+    });
+    $('#area-to').on("change", function(){
+        var value = parseInt($(this).val().replace(/\s/gi, ''));
+        areaRange.noUiSlider.set([,value]);
     });
 }
 

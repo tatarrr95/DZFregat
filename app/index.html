@@ -278,7 +278,7 @@
                                 <div class="inputs clearfix">
                                     <div class="from">
                                         <span>от</span>
-                                        <input id="floor-from" type="text" placeholder="1">
+                                        <input id="floor-from" type="number" placeholder="1">
                                     </div>
                                     <div class="to">
                                         <span>до</span>
@@ -870,7 +870,7 @@
                         <div class="consulting-personal">
                             <div class="owl-carousel" id="personal-carousel">
                                 <div>
-                                    <img class="img-responsive" src="img/meneger2.png">
+                                    <img style="height: auto; width: 100%" src="img/meneger2.png">
                                     <div class="slide-description">
                                         <span class="slide-description-title">
                                             Оксана Хорошун
@@ -881,7 +881,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <img class="img-responsive" src="img/meneger1.png">
+                                    <img style="height: auto; width: 100%" src="img/meneger1.png">
                                     <div class="slide-description">
                                         <span class="slide-description-title">
                                             Ирина Степанюк
@@ -902,17 +902,17 @@
                             <span class="description">
                                 Остались вопросы? Оставьте ваши контактные данные и менеджер нашей компании перезвонит вам, ответит на все вопросы и подберет для вас оптимальные условия
                             </span>
-                            <form class="clearfix" action="">
+                            <form class="clearfix" action="dfg.html">
                                 <div class="form-left">
-                                    <input type="text" placeholder="Ваше имя">
-                                    <input type="text" placeholder="Ваш телефон">
-                                    <input type="text" placeholder="Ваше email">
-                                    <input type="checkbox" class="checkbox" id="consult-check">
+                                    <input name="consulting-name" type="text" placeholder="Ваше имя" required>
+                                    <input name="consulting-number" id="consulting-telephone" type="text" placeholder="Ваш телефон" required>
+                                    <input name="consulting-email" type="email" placeholder="Ваше email" required>
+                                    <input name="consulting-dooble" type="checkbox" class="checkbox" id="consult-check" required>
                                     <label for="consult-check">Продублировать это сообщение на мой e-mail</label>
                                 </div>
                                 <div class="form-right">
-                                    <textarea name=""></textarea>
-                                    <button class="features-buttons-select-apartment">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+                                    <textarea name="consulting-text" name=""></textarea>
+                                    <button type="submit" class="features-buttons-select-apartment">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
                                 </div>
                             </form>
                         </div>
@@ -1275,6 +1275,7 @@
     <!-- build:js scripts/genplan.js -->
     <script src="js/genplan.js"></script>
     <!-- endbuild -->
+    <script src="js/vendor/jquery.mask.min.js"></script>
 </body>
 
 </html>

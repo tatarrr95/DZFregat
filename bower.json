@@ -6,6 +6,7 @@
     "modernizer": "^2.8.2",
     "remodal": "^1.1.1",
     "wow": "^1.1.2",
-    "waypoints": "^4.0.1"
+    "waypoints": "^4.0.1",
+    "jquery-mask-plugin": "^1.14.10"
   }
 }
