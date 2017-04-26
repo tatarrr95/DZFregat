@@ -152,7 +152,7 @@
                         <div class="calc-line-left clearfix col-md-12">
                             <div class="features-buttons clearfix">
                                 <button onclick="calculateIncome(parseInt(document.getElementById('totalPriceValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('firstPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('longTimeValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('yearPercentValue').value.replace(/\s/gi, '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
-                                <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
+                                <button data-remodal-target="modal-zajavka" class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
                             </div>
                         </div>
                         <div class="calc-line-right clearfix col-md-12">
@@ -232,7 +232,7 @@
                         <div class="calc-line-left clearfix col-md-12">
                             <div class="features-buttons clearfix">
                                 <button onclick="calculateTotalPrice(parseInt(document.getElementById('sum_annPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_firstPaymentValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_longTimeValue').value.replace(/\s/gi, '')), parseInt(document.getElementById('sum_yearPercentValue').value.replace(/\s/gi, '')));" class="features-buttons-select-apartment">РАССЧИТАТЬ</button>
-                                <button class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
+                                <button data-remodal-target="modal-zajavka" class="features-buttons-task-question">ОТПРАВИТЬ ЗАЯВКУ</button>
                             </div>
                         </div>
                         <div class="calc-line-right clearfix col-md-12">
@@ -298,6 +298,23 @@
             </div>
         </div>
     </div>
+
+
+    <div class="remodal modal-zajavka" data-remodal-id="modal-zajavka" data-remodal-options="hashTracking: false">
+        <button data-remodal-action="close" class="modal-close"></button>
+        <form class="clearfix">
+            <span>ОСТАВИТЬ ЗАЯВКУ</span>
+            <input name="consulting-name" type="text" placeholder="Ваше имя" required>
+            <input name="consulting-number" id="consulting-telephone" type="text" placeholder="Ваш телефон" required>
+            <input name="consulting-email" type="email" placeholder="Ваше email" required>
+            <textarea name="consulting-text" placeholder="Введите комментарий"></textarea>
+            <div class="modal-zajavka-button-wrapper">
+                <button type="submit" class="features-buttons-select-apartment">ОТПРАВИТЬ</button>
+            </div>
+        </form>
+    </div>
+
+
     <!-- build:js scripts/jquery.js -->
     <script src="bower/jquery/dist/jquery.js"></script>
     <!-- endbuild -->
